@@ -1,0 +1,5 @@
+---
+title: "Shamindra's Shrotriya's blog"
+site: distill::distill_website
+listing: posts
+---
