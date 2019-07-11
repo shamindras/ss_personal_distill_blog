@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://www.shamindras.com/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -20,366 +19,39 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Shamindra's Blog: Shamindra's Shrotriya's blog</title>
+  <title>Setting up a Distill Blog with Netlify</title>
+  
+  <meta property="description" itemprop="description" content="First part of a series on how I setup this Blog"/>
   
   
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2019-07-11"/>
+  <meta property="article:created" itemprop="dateCreated" content="2019-07-11"/>
+  <meta name="article:author" content="Shamindra Shrotriya"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Shamindra&#39;s Blog: Shamindra&#39;s Shrotriya&#39;s blog"/>
+  <meta property="og:title" content="Setting up a Distill Blog with Netlify"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="First part of a series on how I setup this Blog"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Shamindra&#39;s Blog"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Shamindra&#39;s Blog: Shamindra&#39;s Shrotriya&#39;s blog"/>
+  <meta property="twitter:title" content="Setting up a Distill Blog with Netlify"/>
+  <meta property="twitter:description" content="First part of a series on how I setup this Blog"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra's Shrotriya's blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Setting up a Distill Blog with Netlify"]},{"type":"character","attributes":{},"value":["First part of a series on how I setup this Blog\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-11-2019"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","fig_caption"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
   
-  <script type="application/javascript">
-  
-    window.headroom_prevent_pin = false;
-  
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-  
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-  
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-  
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-  
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/01_01_create_github_distill_repo.png","images/01_02_newly_created_distill_repo.png","images/05_01_newlyr_created_distill_blog.png","images/08_01_netlify_github_continuous_deployment.png","images/08_02_netlify_give_personal_blog_access.png","images/08_03_netlify_deploy_master_branch_blog.png","images/08_04_netlify_deployment_settings.png","images/08_05_netlify_continous_deployment_settings.png","images/08_06_netlify_adding_custom_domain.png","images/08_07_netlify_checking_custom_domains.png","images/old_backup/01_01_create_github_distill_repo_mac_render.png","images/old_backup/01_02_newly_created_distill_repo_macrender.png","images/old_backup/05_01_newlyr_created_distill_blog_old.png","images/old_backup/08_05_netlify_continous_deployment_settings_old.png","setting-up-a-distill-blog-with-netlify_files/bowser-1.9.3/bowser.min.js","setting-up-a-distill-blog-with-netlify_files/distill-2.2.21/template.v2.js","setting-up-a-distill-blog-with-netlify_files/jquery-1.11.3/jquery.min.js","setting-up-a-distill-blog-with-netlify_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
-  
-  <style type="text/css">
-  
-  /* Theme (user-documented overrideables for nav appearance) */
-  
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .distill-site-nav a:hover {
-    color: white;
-  }
-  
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-  
-  .distill-site-header {
-  
-  }
-  
-  .distill-site-footer {
-  
-  }
-  
-  
-  /* Site Header */
-  
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-  
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-  
-  
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-  
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-  
-  .distill-site-header .title {
-    font-size: 18px;
-  }
-  
-  .distill-site-header .logo {
-    padding: 0;
-  }
-  
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-  
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-  
-  
-  
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-  
-  
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-  
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-  
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-  
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .nav-dropdown-active {
-    display: block;
-  }
-  
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-  
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-  
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-  
-  
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative;}
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-  
-  /* Site Footer */
-  
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-  
-  /* Headroom */
-  
-  d-title {
-    padding-top: 6rem;
-  }
-  
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-  
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-  
-  .headroom--unpinned {
-    top: -100px;
-  }
-  
-  .headroom--pinned {
-    top: 0;
-  }
-  
-  </style>
-  
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
   
@@ -1255,404 +927,297 @@
   </script>
   
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="setting-up-a-distill-blog-with-netlify_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="setting-up-a-distill-blog-with-netlify_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="setting-up-a-distill-blog-with-netlify_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="setting-up-a-distill-blog-with-netlify_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Shamindra's Shrotriya's blog","authors":[]}
+{"title":"Setting up a Distill Blog with Netlify","description":"First part of a series on how I setup this Blog","authors":[{"author":"Shamindra Shrotriya","authorURL":"https://www.shamindras.com/","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-07-11T00:00:00.000-04:00","citationText":"Shrotriya, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Shamindra's Blog</a>
-</div>
-<div class="nav-right">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="index.xml">
-<i class="fa fa-rss"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-<style type="text/css">
-
-/* Styles for listing layout (hide title) */
-.layout-listing d-title, .layout-listing .d-title {
-  display: none;
-}
-
-/* Styles for posts lists (not auto-injected) */
-
-
-.posts-with-sidebar {
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
-.posts-list .description h2,
-.posts-list .description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-.posts-list .description h2 {
-  font-weight: 700;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-list h2.post-tag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 12px;
-}
-.posts-list {
-  margin-top: 60px;
-  margin-bottom: 24px;
-}
-
-.posts-list .post-preview {
-  text-decoration: none;
-  overflow: hidden;
-  display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
-}
-
-.post-preview-last {
-  border-bottom: none !important;
-}
-
-.posts-list .posts-list-caption {
-  grid-column: screen;
-  font-weight: 400;
-}
-
-.posts-list .post-preview h2 {
-  margin: 0 0 6px 0;
-  line-height: 1.2em;
-  font-style: normal;
-  font-size: 24px;
-}
-
-.posts-list .post-preview p {
-  margin: 0 0 12px 0;
-  line-height: 1.4em;
-  font-size: 16px;
-}
-
-.posts-list .post-preview .thumbnail {
-  box-sizing: border-box;
-  margin-bottom: 24px;
-  position: relative;
-  max-width: 500px;
-}
-.posts-list .post-preview img {
-  width: 100%;
-  display: block;
-}
-
-.posts-list .metadata {
-  font-size: 12px;
-  line-height: 1.4em;
-  margin-bottom: 18px;
-}
-
-.posts-list .metadata > * {
-  display: inline-block;
-}
-
-.posts-list .metadata .publishedDate {
-  margin-right: 1em;
-}
-
-.posts-list .metadata .tags {
-  margin-top: 1em;
-}
-
-.posts-list .tags .tag {
-  color: rgba(0,0,0,0.67);
-  padding: 0.3em 0.5em;
-  margin: 0;
-  font-size: 80%;
-  border: 1px solid rgba(0,0,0,0.4);
-  border-radius: 3px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.posts-list img {
-  opacity: 1;
-}
-
-.posts-list img[data-src] {
-  opacity: 0;
-}
-
-.posts-more {
-  clear: both;
-}
-
-
-.posts-sidebar {
-  font-size: 16px;
-}
-
-.posts-sidebar h3 {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.sidebar-section {
-  margin-bottom: 30px;
-}
-
-.categories ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.categories li {
-  color: rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
-}
-
-.categories li>a {
-  border-bottom: none;
-}
-
-.categories li>a:hover {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.categories .active {
-  font-weight: 600;
-}
-
-.categories .category-count {
-  color: rgba(0, 0, 0, 0.4);
-}
-
-
-@media(min-width: 768px) {
-  .posts-list .post-preview h2 {
-    font-size: 26px;
-  }
-  .posts-list .post-preview .thumbnail {
-    float: right;
-    width: 35%;
-    margin-bottom: 0;
-  }
-  .posts-list .post-preview .description {
-    float: left;
-    width: 45%;
-  }
-  .posts-list .post-preview .metadata {
-    float: left;
-    width: 15%;
-    margin-top: 8px;
-  }
-  .posts-list .post-preview p {
-    margin: 0 0 12px 0;
-    line-height: 1.5em;
-    font-size: 16px;
-  }
-  .posts-with-sidebar .posts-list {
-    float: left;
-    width: 72%;
-  }
-  .posts-with-sidebar .posts-sidebar {
-    float: right;
-    width: 20%;
-    margin-top: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-}
-
-.downlevel .posts-list .post-preview {
-  color: inherit;
-}
-
-</style>
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).load(function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace("#", "");
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if (category == page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption">Shamindra's Shrotriya's blog</h1>
-<a href="posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">July 11, 2019</div>
-</div>
-<div class="thumbnail"></div>
-<div class="description">
-<h2>Setting up a Distill Blog with Netlify</h2>
-<p>First part of a series on how I setup this Blog</p>
-</div>
-</a>
-<a href="posts/2019-07-10-welcome-to-shamindras-blog/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">July 10, 2019</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to Shamindra’s Blog</h2>
-<p>Detailing interesting things in the life of a PhD statistics
-student at CMU</p>
-</div>
-</a>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Shamindra’s Shrotriya’s blog</h1>
-
+<h1>Setting up a Distill Blog with Netlify</h1>
+<p><p>First part of a series on how I setup this Blog</p></p>
 </div>
 
+<div class="d-byline">
+  Shamindra Shrotriya <a href="https://www.shamindras.com/" class="uri">https://www.shamindras.com/</a> 
+  
+<br/>07-11-2019
+</div>
 
 <div class="d-article">
-
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#step-1-create-new-distill-blog-repo">Step 1: Create new distill blog repo</a></li>
+<li><a href="#step-2-clone-the-repo-locally">Step 2: Clone the repo locally</a></li>
+<li><a href="#step-3-create-the-distill-blog-files">Step 3: Create the distill blog files</a></li>
+<li><a href="#step-4-customize-the-welcome-blogpost">Step 4: Customize the welcome blogpost</a></li>
+<li><a href="#step-5-customize-your-blog-layout">Step 5: Customize your blog layout</a></li>
+<li><a href="#step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</a></li>
+<li><a href="#step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</a></li>
+<li><a href="#step-8-deploy-your-website">Step 8: Deploy your website</a></li>
+<li><a href="#step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</a></li>
+<li><a href="#step-10-future-additions-and-extras">Step 10: Future additions and extras</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<h2 id="introduction">Introduction</h2>
+<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/">distill</a> package by the <a href="h//www.rstudio.com/">RStudio</a> team. The main tools used I used to create this blog are:</p>
+<ul>
+<li>My personal <a href="https://github.com/shamindras">Github account</a></li>
+<li>The <a href="https://www.rstudio.com/products/rstudio/">RStudio editor</a></li>
+<li>The <code>R</code> packages <a href="https://github.com/r-lib/here"><code>here</code></a> and <a href="https://github.com/rstudio/distill"><code>distill</code></a></li>
+<li>My macbook pro (2017 edition) and the <a href="https://www.iterm2.com/">iterm2</a> editor</li>
+<li>My personal <a href="https://app.netlify.com">netlify account</a> and also my personal domain bought from <a href="https://domains.google/">Google Domains</a></li>
+</ul>
+<p>The details of <em>how</em> I used the tools used are all noted below.</p>
+<p><em>Importantly</em>, I should note that the RStudio distill team has already created a <a href="https://rstudio.github.io/distill/blog.html">nice distill blog creation tutorial</a> which I thoroughly used. I wrote this here in my own words so that I can remember the details going forward. I also added more details on deployment with Google Domains and Netlify that would hopefully be useful to new <code>R</code> users.</p>
+<aside>
+Admittedly this post is a bit verbose, but hopefully the details help users new to the <code>distill</code> blogging package.
+</aside>
+<h2 id="step-1-create-new-distill-blog-repo">Step 1: Create new distill blog repo</h2>
+<p>I opted to manage my blog versioning using Git/Github. I started by going to my personal github account and create a new repository. I called mine <code>ss_personal_distill_blog</code> and also initialized it with a <code>README.md</code> and included an <code>.gitignore</code> for <code>R</code> since that will the blogging language of choice here 😄. This is shown in the screenshot below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/01_01_create_github_distill_repo.png" width="150%" /></p>
+</div>
+<aside>
+Options for creating the Github repo for the distill blog
+</aside>
+<p>Once created the repo will appear in github as seen in the following screenshot</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/01_02_newly_created_distill_repo.png" width="150%" /></p>
+</div>
+<aside>
+Newly created Github repo for the distill blog
+</aside>
+<h2 id="step-2-clone-the-repo-locally">Step 2: Clone the repo locally</h2>
+<p>With the github repo created, I switched locally on my mac to <code>iterm2</code> terminal and cloned the repo locally using the following command:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+git clone git@github.com:shamindras/ss_personal_distill_blog.git</code></pre>
+</div>
+<p>And the cloning quickly finished with the following output</p>
+<pre class="markup"><code>
+Cloning into &#39;ss_personal_distill_blog&#39;...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.</code></pre>
+<p>Now I simply changed into the newly cloned blog directory using the following command:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+cd ss_personal_distill_blog</code></pre>
+</div>
+<p>Using the <code>tree</code> command resulted in the following directory structure so far:</p>
+<pre class="markup"><code>
+.
+├── .git
+├── .gitignore
+└── README.md</code></pre>
+<p>Great, now the repo was setup locally. At this stage there is just a simple <code>README.md</code> which will get added to a bit later, but the main focus is to start creating the <code>distill</code> blog within this directory locally.</p>
+<h2 id="step-3-create-the-distill-blog-files">Step 3: Create the distill blog files</h2>
+<p>In order to start creating the blog contents I opened up an instance of <code>RStudio</code> from within my new directory on my macbook via the following terminal command:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+open -a /Applications/RStudio.app .</code></pre>
+</div>
+<aside>
+<strong>Note:</strong> The <code>.</code> at the end of the command ensures that <code>RStudio</code> opens in this newly created blog directory
+</aside>
+<p>With <code>RStudio</code> opened we can now run the following <code>R</code> commands in just the <code>console</code> to create the install the required and distill blog setup packages:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+req_pckgs &lt;- c(&quot;distill&quot;, &quot;here&quot;)
+install.packages(pkgs = req_pckgs)
+library(here)
+library(distill)</code></pre>
+</div>
+<p>Now we can create our blog using the following 2 commands from the freshly installed <code>distill</code> package using the following command run in the <code>console</code></p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+distill::create_blog(dir = here::here(), 
+                     title = &quot;Shamindra&#39;s Shrotriya&#39;s blog&quot;, 
+                     gh_pages = TRUE)</code></pre>
+</div>
+<p>Note that we set <code>gh_pages = TRUE</code> to ensure that we can host this blog on <a href="https://pages.github.com/">github pages</a> down the line if needed. You can omit this if you don’t want the option to have <em>github pages</em> as your host in the future. I will be using <code>Netlify</code> to host my blog (see below), but it is good to have an additional host option for such little setup cost!</p>
+<p>My blog directory now looked like this:</p>
+<pre class="markup"><code>
+.
+├── .git
+├── .gitignore
+├── .nojekyll
+├── README.md
+├── _posts
+├── _site.yml
+├── about.Rmd
+├── docs
+├── index.Rmd
+└── ss_personal_distill_blog.Rproj</code></pre>
+<p>Pretty cool! Note that there is a newly created <code>_posts/</code> directory for future blogposts. And there is a directory called <code>docs</code> to store all our processed blogposts later. If we had set <code>gh_pages = FALSE</code> the <code>docs/</code> directory would be automatically replaced by a <code>_site/</code> directory. More on this point later.</p>
+<h2 id="step-4-customize-the-welcome-blogpost">Step 4: Customize the welcome blogpost</h2>
+<p>So distill already had us underway with a default welcome post contained in the <code>welcome.Rmd</code> file for us. There are a bunch of javascript related files automatically generated in the <code>_posts/welcome/welcome_files/</code> directory but these don’t need to be altered by the user. I just needed to modify <code>welcome.Rmd</code> contents per my preference as with any regular <code>Rmd</code> file and click <code>Knit</code> in RStudio to refresh it. We can see this in the <code>_posts</code> directory:</p>
+<pre class="markup"><code>
+./_posts/welcome
+├── welcome.Rmd
+├── welcome.html
+└── welcome_files</code></pre>
+<p>One thing that slightly bothered me is that the default <strong>welcome</strong> blogpost has no <strong>date</strong> prefix in the directory. This would be nice to have in order to sort all future blogposts chronologically. Although I can could’ve changed this manually. For simplicity I opted to delete the default welcome folder altogether and recreated it with the date prefix as I prefer as detailed below.</p>
+<p>To delete the default welcome folder, I just ran the following code at my terminal:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+rm -rf _posts/welcome</code></pre>
+</div>
+<aside>
+<strong>Note:</strong> ⚠️ Always be careful using <code>rm -rf</code>
+</aside>
+<p>With the default welcome post deleted, I created my own custom welcome blogpost as follows:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+distill::create_post(title = &quot;Welcome to Shamindra’s Blog&quot;,
+                     author = &quot;Shamindra Shrotriya&quot;, 
+                     date_prefix = TRUE)</code></pre>
+</div>
+<p>Now the welcome post has this nice <strong>date prefix</strong> structure since we passed this option as <code>TRUE</code>. Let’s see what the <code>_posts/</code> directory looks like now</p>
+<pre class="markup"><code>
+_posts/2019-07-10-welcome-to-shamindras-blog
+└── welcome-to-shamindras-blog.Rmd`</code></pre>
+<p>Neat - just how I like it! I then modified the content of the new welcome post by going to the following file:</p>
+<pre class="markup"><code>
+_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
+<p>I modified the contents and then <strong>knitted</strong> the <code>Rmd</code> file once done to refresh and save the contents.</p>
+<p>Now I had locally created my first personalized content, a simple welcome post 😎.</p>
+<aside>
+My welcome blog entry can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd">here</a> for reference.
+</aside>
+<h2 id="step-5-customize-your-blog-layout">Step 5: Customize your blog layout</h2>
+<p>Now I needed to customize the blog header banner and setup links and update contents as required.</p>
+<p>We will start with the <code>_site.yml</code> contents which controls the page layout. I modified the <code>_site.yml</code> file which contains default metadata settings for the blog to have the following contents:</p>
+<pre class="markup"><code>
+name: &quot;test_distill_blog&quot;
+title: &quot;Shamindra&#39;s Blog&quot;
+description: |
+  Shamindra Shrotriya&#39;s personal blog/ site. Some fun posts
+  on math, statistics and the PhD student life.
+output_dir: &quot;_site&quot;
+navbar:
+  right:
+    - text: &quot;Home&quot;
+      href: index.html
+    - text: &quot;About&quot;
+      href: about.html
+    - icon: fa fa-rss
+      href: index.xml
+collections:
+  posts:
+    share: [twitter, linkedin]
+base_url: https://www.shamindras.com/
+output: distill::distill_article</code></pre>
+<aside>
+My <code>_site.yml</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a> for reference.
+</aside>
+<p>I updated the <code>About.Rmd</code> file as required and knit it. This is a default <code>Rmd</code> that <code>distill</code> conveniently creates this file to give readers some background on the site purpose and of course about the author.</p>
+<aside>
+My <code>About.Rmd</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd">here</a> for reference.
+</aside>
+<p>No need to update the default distill <code>Index.Rmd</code> file that is automatically created. I simply opened it and <code>knit</code> it manually in <code>RStudio</code> to update the site contents.</p>
+<p>I also updated the <code>README.md</code> to add some useful information (for any users who stumble onto the github page) and saved it. No need to knit anything here as it is a simple <code>markdown file</code>.</p>
+<aside>
+My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a> for reference.
+</aside>
+<p>Now in <code>Rstudio</code> I just knit the <code>welcome.Rmd</code> post and also ran the following command in the <code>console</code></p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+rmarkdown::render_site(input = here::here())</code></pre>
+</div>
+<p>The locally created <code>distill</code> blog was now created and rendered and looked like this in the <code>RStudio</code> viewer pane:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/05_01_newlyr_created_distill_blog.png" width="1660" /></p>
+</div>
+<p>Pretty cool - I now had a working local version of our blog in <code>RStudio</code>.</p>
+<h2 id="step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</h2>
+<p>Note that all our changes are so far in our local git repo. We need to get this blog online! A first step is to <code>commit</code> and <code>push</code> them to our <code>github</code> repo. I did this in my local directory in the terminal as follows: in git at my terminal as follows:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+git add -A # Add all new changes
+git commit -m &quot;ENH: Created welcome post with date prefix, deleted default post&quot;
+git push origin master</code></pre>
+</div>
+<p>And the changes are now reflected in the github <code>master</code> branch!</p>
+<h2 id="step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</h2>
+<p>Although the blog was our blog contents are in a public online place i.e. <code>github</code>, I just needed to link it to a service that deploys websites from <code>github</code>. But first I needed to go buy a domain name for my blog. I went to <a href="https://domains.google/#/">Google Domains</a> and bought <code>www.shamindras.com</code> for about $15/yr.</p>
+<p>There are free alternatives e.g.  <a href="https://pages.github.com/">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
+<h2 id="step-8-deploy-your-website">Step 8: Deploy your website</h2>
+<p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.</p>
+<p>I then logged in to Netlify and clicked on the green <code>New site from Git</code> button to get started. In the following menu I clicked the <code>Github Continuous Deployment</code> icon:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_01_netlify_github_continuous_deployment.png" width="150%" /></p>
+</div>
+<p>I then manually searched for my blog repo i.e. <code>ss_personal_distill_blog</code>. Initially this did not appear, so I clicked the green <strong>Configure the Netlify app on GitHub</strong> link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my <code>github</code> blog repo.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_02_netlify_give_personal_blog_access.png" width="150%" /></p>
+</div>
+<p>I clicked on my site that appears and then ensured that I selected to ensure that the <strong>Branch to Deploy</strong> option is set to <code>master</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_03_netlify_deploy_master_branch_blog.png" width="150%" /></p>
+</div>
+<aside>
+This simply means that netlify will only build the site based on what happens in my <code>master</code> branch in my <a href="https://github.com/shamindras/ss_personal_distill_blog">github repo</a>
+</aside>
+<p>I then clicked <strong>Deploy Site</strong> and then saw the following deployment settings:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_04_netlify_deployment_settings.png" width="150%" /></p>
+</div>
+<p>I clicked thee <strong>Site Settings</strong> button. Looks like my site name on <code>Netlify</code> is <code>goofy-babbage-7f05c8</code>. Cute, though I’ll personalize by clicking the <strong>Change Site Name</strong> button. I changed it to <code>ss-personal-distill-blog</code> for my easy reference.</p>
+<p>I clicked the <strong>Build and Deploy</strong> button next and after clicking the <strong>Edit Settings</strong> button modified the <strong>Publish directory</strong> to be <code>_site</code> as shown below:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_05_netlify_continous_deployment_settings.png" width="150%" /></p>
+</div>
+<p>This is where all our blogposts in our <code>github</code> repo will be rendered to <code>html</code> by <code>distill</code> once we <code>knit</code> them. Netlify will just pick them up from here everytime you refresh them and deploy our website accordingly</p>
+<p>Next I need to manage the domain i.e. tell Netlify to deploy my site on the custom domain I just purchased from Google Domains.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_06_netlify_adding_custom_domain.png" width="150%" /></p>
+</div>
+<p>After clicking verify we have the following domains now set, with <code>www.shamindras.com</code> being the primary domain.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/08_07_netlify_checking_custom_domains.png" width="150%" /></p>
+</div>
+<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t event need to write the <code>www.</code> going forward. Thanks Netlify 🙇.</p>
+<h2 id="step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</h2>
+<p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at &lt;www.shamindras.com&gt;. So effectively Netlify and github were talking to each other 🤝.</p>
+<h2 id="step-10-future-additions-and-extras">Step 10: Future additions and extras</h2>
+<p>Now that the blog/site is created there are a number of features I’d like to add. The most important being more blogposts and personal content. However it would also be nice to have the following features:</p>
+<ul>
+<li>Documenting a general distill blogging workflow
+<ul>
+<li>sidenote: This is done here, but having a more customized version would be helpful</li>
+</ul></li>
+<li>Setting up Disquis to enable user comments on blogposts</li>
+<li>How to setup Blog Gallery for featured posts</li>
+<li>How to setup email subscription (for blog)</li>
+<li>Setting up Google Analytics for blog user activity tracking</li>
+</ul>
+<p>I will make sure to document the setup process as part of a series of future blog posts</p>
+<p>If you managed to read this far, then I sincerely thank you. I hope to make even better technical and personal blogposts going forward.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
