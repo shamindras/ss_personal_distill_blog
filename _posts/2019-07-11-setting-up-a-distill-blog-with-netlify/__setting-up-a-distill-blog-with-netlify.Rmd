@@ -1,7 +1,7 @@
 ---
 title: "Setting up a Distill Blog with Netlify"
 description: |
-  First part of a series on how I setup this `Distill` themed blog with `Netlify`
+  First part of a series on how I setup this `Distill` theme blog
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
@@ -24,8 +24,8 @@ IMAGES_PATH <- here::here("_posts",
 
 ## Step 0: Introduction
 
-This is a meta blogpost to describe how I setup this personal academic blog. It
-is based on the relatively new [distill](https://rstudio.github.io/distill/)
+This is a meta blogpost to describe how I setup this personal academic blog.
+It is based on the relatively new [distill](https://rstudio.github.io/distill/)
 package by the [RStudio](h//www.rstudio.com/) team. The main tools used I used
 to create this blog are:
 
@@ -67,8 +67,7 @@ knitr::include_graphics(path =
 
 <aside> Options for creating the Github repo for the `distill` blog </aside>
 
-Once created the repo will appear in `github` as seen in the following
-screenshot
+Once created the repo will appear in `github` as seen in the following screenshot
 
 ```{r step_01_02_screenshot, out.width="150%"}
 knitr::include_graphics(path =
@@ -80,8 +79,8 @@ knitr::include_graphics(path =
 
 ## Step 2: Clone the repo locally
 
-With the `github` repo created, I switched locally on my mac to `iterm2`
-terminal and cloned the repo locally using the following command:
+With the `github` repo created, I switched locally on my mac to `iterm2` terminal
+and cloned the repo locally using the following command:
 
 ```{bash step_02_01, eval=FALSE, echo=TRUE}
 git clone git@github.com:shamindras/ss_personal_distill_blog.git
