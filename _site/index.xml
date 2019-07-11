@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Shamindra's Blog</title>
+    <link>https://www.shamindras.com/</link>
+    <atom:link href="https://www.shamindras.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Shamindra Shrotriya's personal blog/ site. Some fun posts
+on math, statistics and the PhD student life.
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Welcome to Shamindra’s Blog</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</link>
+      <description>Detailing interesting things in the life of a PhD statistics
+student at CMU</description>
+      <guid>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</guid>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
