@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
+    "title": "Setting up a Distill Blog with Netlify",
+    "description": "First part of a series on how I setup this `Distill` themed blog with `Netlify`",
+    "author": [
+      {
+        "name": "Shamindra Shrotriya",
+        "url": "https://www.shamindras.com/"
+      }
+    ],
+    "date": "2019-07-11",
+    "categories": [],
+    "preview": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/images/08_06_netlify_adding_custom_domain.png",
+    "last_modified": "2019-07-11T15:57:17-04:00",
+    "preview_width": 707,
+    "preview_height": 387
+  },
+  {
     "path": "posts/2019-07-10-welcome-to-shamindras-blog/",
     "title": "Welcome to Shamindra’s Blog",
     "description": "Detailing interesting things in the life of a PhD statistics\nstudent at CMU",
@@ -12,6 +29,6 @@
     "date": "2019-07-10",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-07-10T22:54:26-04:00"
+    "last_modified": "2019-07-11T09:50:10-04:00"
   }
 ]
