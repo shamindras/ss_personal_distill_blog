@@ -14,6 +14,7 @@ output:
     self_contained: false
     toc: true
     toc_depth: 2
+bibliography: ../../refs.bib    
 ---
 
 ```{r setup, include=FALSE}
@@ -41,6 +42,14 @@ features of editing `Rmd` documents.
 
 ## Interesting Papers
 
+- Enjoyed reading this paper on the mathematical description of the carbon cycle
+[@rothman14_earth_carbon_cycle]
+  <details><summary>Key Points</summary>
+  <p>
+  - I enjoyed
+  </p>
+  </details>
+  
 ## Personal Blogging Front
 
 Besides this post `r emo::ji("smile")` the main things I got up to
@@ -48,8 +57,3 @@ on the personal blogging from were:
 
 - Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/) on the fun setup process with the [RStudio distill package]() and
 also [Netlify]() and [Google Domains]()
-  <details><summary>Details</summary>
-  <p>
-  - I enjoyed
-  </p>
-  </details>
