@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2019-07-12-shamindras-july-2019-roundup/",
+    "title": "Shamindra's July 2019 Roundup",
+    "description": "A quick roundup of any interesting July 2019\nactivities",
+    "author": [
+      {
+        "name": "Shamindra Shrotriya",
+        "url": "https://www.shamindras.com/"
+      }
+    ],
+    "date": "2019-07-12",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-07-12T10:48:47-04:00"
+  },
+  {
     "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
     "title": "Setting up a Distill Blog with Netlify",
     "description": "First part of a series on how I setup this `Distill` themed blog with `Netlify`",

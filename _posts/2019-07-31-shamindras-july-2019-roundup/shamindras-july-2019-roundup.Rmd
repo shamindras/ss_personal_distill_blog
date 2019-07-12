@@ -1,0 +1,55 @@
+---
+title: "Shamindra's July 2019 Roundup"
+description: |
+  A quick roundup of any interesting July 2019
+  activities
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 07-31-2019
+slug: shrotriya2019july19rndup
+draft: true
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This is a new feature I'm going to experiment with, namely documenting
+anything interesting I come across (articles, lectures, books, papers
+etc.) and any activities I get up to. This is more for my personal
+benefit but may also help others. Let's see how this experiment goes!
+
+## Interesting Articles
+
+- Came across this [exhaustive `BibTex` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib) 
+which will be a really handy reference going forward for $\LaTeX$ documents
+
+- This [Pimp my RMD: a few tips for R Markdown](https://holtzy.github.io/Pimp-my-rmd/#highlight_a_piece_of_text) document is a very good site to help deal with really slick 
+features of editing `Rmd` documents. 
+  - One nice feature I noticed was to use `HTML` to center
+  an image per [here](https://holtzy.github.io/Pimp-my-rmd/#center_an_image)
+
+## Interesting Books
+
+## Interesting Papers
+
+## Personal Blogging Front
+
+Besides this post `r emo::ji("smile")` the main things I got up to
+on the personal blogging from were:
+
+- Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/) on the fun setup process with the [RStudio distill package]() and
+also [Netlify]() and [Google Domains]()
+  <details><summary>Details</summary>
+  <p>
+  - I enjoyed
+  </p>
+  </details>
