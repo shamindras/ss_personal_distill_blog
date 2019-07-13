@@ -1338,6 +1338,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#exploring-the-oxford-comma-with-purrr-and-glue">Exploring the Oxford Comma with <code>purrr</code> and <code>glue</code></a></li>
 <li><a href="#questions-for-the-audience">Questions for the audience</a></li>
+<li><a href="#creating-numbered-bibtex-entries">Creating numbered bibtex entries</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
@@ -1345,7 +1346,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 library(tidyverse)
-library(glue)</code></pre>
+library(glue)
+library(magrittr)</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1390,6 +1392,81 @@ all_comma_exprs &lt;- all_perms %&gt;%
 <ol type="1">
 <li>Could the above <code>pmap_lgl</code> function be replaced with a more simpler approach to generate all 3 word permutations without replacement? This approach is not as transparent as I would like it to be</li>
 </ol>
+<h2 id="creating-numbered-bibtex-entries">Creating numbered bibtex entries</h2>
+<h3 id="the-central-problem">The central problem</h3>
+<p>In this case I had several bibtex entries of the form:</p>
+<pre class="markup"><code>
+@misc{doe2019_lec1,
+author        = {Doe, John},
+title         = {Lecture Note 1 - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
+}</code></pre>
+<p>Specifically 30 such sequential entries to create for lectures <code>1-30</code>. Rather than do this manually (which frankly) wouldn’t have taken long, I realized that this would be fun scripting exercise with just <code>glue</code>, <code>purrr</code>, and <code>stringr</code>.</p>
+<p><strong>Goal:</strong> Create 30 such entries and print to the console to directly-copy paste to my bibtex file.</p>
+<h3 id="the-tidy-approach">The tidy approach</h3>
+<p>First step is to write a function that takes a lecture number (integer) as an input and then outputs a single bibtex entry for that lecture.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+get_lec_bibtex &lt;- function(lec_num){
+  # Get the padded lecture number i.e. 1 -&gt; &quot;01&quot;
+  lec_num_pad &lt;- stringr::str_pad(string = lec_num, width = 2, 
+                                  side = &quot;left&quot;, pad = &quot;0&quot;)
+  
+  # Construct the bibtex entry
+  out_bbtex_str &lt;- glue::glue(
+&quot;@misc{doe2019_lec&lt;lec_num&gt;,
+author        = {Doe, John},
+title         = {Lecture Note &lt;lec_num&gt; - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture&lt;lec_num_pad&gt;.pdf},
+}&quot;, .open = &quot;&lt;&quot;, .close = &quot;&gt;&quot;)
+
+  base::return(out_bbtex_str)
+}</code></pre>
+</div>
+<p>Let’s just test this out quickly:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+test_lec_num &lt;- 1
+get_lec_bibtex(lec_num = test_lec_num)</code></pre>
+<pre><code>
+@misc{doe2019_lec1,
+author        = {Doe, John},
+title         = {Lecture Note 1 - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
+}</code></pre>
+</div>
+<p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
+<p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+lec_nums &lt;- c(1, 30)
+lec_nums %&gt;% 
+  purrr::map(.x = ., .f = ~get_lec_bibtex(lec_num = .x))</code></pre>
+<pre><code>
+[[1]]
+@misc{doe2019_lec1,
+author        = {Doe, John},
+title         = {Lecture Note 1 - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
+}
+
+[[2]]
+@misc{doe2019_lec30,
+author        = {Doe, John},
+title         = {Lecture Note 30 - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture30.pdf},
+}</code></pre>
+</div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

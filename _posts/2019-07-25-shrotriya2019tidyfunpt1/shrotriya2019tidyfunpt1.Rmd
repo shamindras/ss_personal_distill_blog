@@ -17,8 +17,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(tidyverse)
-library(glue)
 ```
 
 ## Exploring the Oxford Comma with `purrr` and `glue`
@@ -26,6 +24,7 @@ library(glue)
 ```{r setup_oxc_01_01, eval=FALSE, echo=TRUE, cache=TRUE}
 library(tidyverse)
 library(glue)
+library(magrittr)
 ```
 ```{r setup_oxc_01_02, echo=TRUE, cache=TRUE}
 
@@ -70,5 +69,72 @@ all_comma_exprs %>% DT::datatable(data = .)
 
 1. Could the above `pmap_lgl` function be replaced with a more simpler
 approach to generate all 3 word permutations without replacement? This     approach is not as transparent as I would like it to be
+
+
+## Creating numbered bibtex entries
+
+### The central problem
+
+In this case I had several bibtex entries of the form:
+
+```markup
+@misc{doe2019_lec1,
+author        = {Doe, John},
+title         = {Lecture Note 1 - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
+}
+```
+
+Specifically 30 such sequential entries to create for lectures `1-30`. Rather
+than do this manually (which frankly) wouldn't have taken long, I realized that
+this would be fun scripting exercise with just `glue`, `purrr`, and `stringr`. 
+
+**Goal:** Create 30 such entries and print to the console to directly-copy 
+paste to my bibtex file.
+
+### The tidy approach
+
+First step is to write a function that takes a lecture number (integer)
+as an input and then outputs a single bibtex entry for that lecture.
+
+```{r bbtex_01_01, eval=TRUE, echo=TRUE, cache=TRUE}
+get_lec_bibtex <- function(lec_num){
+  # Get the padded lecture number i.e. 1 -> "01"
+  lec_num_pad <- stringr::str_pad(string = lec_num, width = 2, 
+                                  side = "left", pad = "0")
+  
+  # Construct the bibtex entry
+  out_bbtex_str <- glue::glue(
+"@misc{doe2019_lec<lec_num>,
+author        = {Doe, John},
+title         = {Lecture Note <lec_num> - STAT10A},
+month         = {March},
+year          = {2018},
+url           = {https://statschool/~doe/stats10A/Lectures/Lecture<lec_num_pad>.pdf},
+}", .open = "<", .close = ">")
+
+  base::return(out_bbtex_str)
+}
+```
+
+Let's just test this out quickly:
+
+```{r bbtex_01_02, eval=TRUE, echo=TRUE, cache=TRUE}
+test_lec_num <- 1
+get_lec_bibtex(lec_num = test_lec_num)
+```
+
+Great - looks like it is working as required with the correct string padding
+in the lecture number in the pdf filename!
+
+Let's finish this by creating all the entries using `purrr`:
+
+```{r bbtex_01_03, eval=TRUE, echo=TRUE, cache=TRUE}
+lec_nums <- c(1, 30)
+lec_nums %>% 
+  purrr::map(.x = ., .f = ~get_lec_bibtex(lec_num = .x))
+```
 
 
