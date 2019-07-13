@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2019-07-25-shrotriya2019tidyfunpt1/",
+    "title": "Fun with the Tidyverse - Part 1",
+    "description": "First part in a series of doing useful tasks with \nthe `Tidyverse`",
+    "author": [
+      {
+        "name": "Shamindra Shrotriya",
+        "url": "https://www.shamindras.com/"
+      }
+    ],
+    "date": "2019-07-25",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-07-12T21:18:09-04:00"
+  },
+  {
     "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
     "title": "Setting up a Distill Blog with Netlify",
     "description": "First part of a series on how I setup this `Distill` themed blog with `Netlify`",

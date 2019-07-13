@@ -1,0 +1,74 @@
+---
+title: "Fun with the Tidyverse - Part 1"
+description: |
+  First part in a series of doing useful tasks with 
+  the `Tidyverse`
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 07-25-2019
+slug: shrotriya2019distillpt1
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(glue)
+```
+
+## Exploring the Oxford Comma with `purrr` and `glue`
+
+```{r setup_oxc_01_01, eval=FALSE, echo=TRUE, cache=TRUE}
+library(tidyverse)
+library(glue)
+```
+```{r setup_oxc_01_02, echo=TRUE, cache=TRUE}
+
+# Define our unique GLOBAL word values
+WORD_VALS <- c("eats", "shoots", "leaves")
+
+# A function to check how 
+is_unq_perm <- function(word1, word2, word3){
+    words_vec <- c(word1, word2, word3)
+    base::return(length(words_vec) - length(unique(words_vec)) == 0)
+}
+
+# Generate all unique 3-word permutations without replacement from the three
+# unique words
+all_perms <- tidyr::crossing(word1 = WORD_VALS, word2 = WORD_VALS, 
+                             word3 = WORD_VALS) %>% 
+                dplyr::mutate(.data = ., 
+                              is_unq_perm = purrr::pmap_lgl(.l = ., 
+                                                            is_unq_perm)) %>% 
+                dplyr::filter(.data = ., is_unq_perm) %>% 
+                dplyr::select(-is_unq_perm)
+
+all_perms %>% DT::datatable(data = ., filter = "none")
+
+all_comma_exprs <- all_perms %>%
+                    dplyr::mutate(non_oxford_comma = 
+                                      glue::glue_data(.x = ., 
+                                                      "{word1}, {word2} and {word3}"), 
+                                  oxford_comma = 
+                                      glue::glue_data(.x = ., 
+                                                      "{word1}, {word2}, and {word3}")) %>% 
+                    dplyr::select(non_oxford_comma, oxford_comma)
+```
+
+We can display the side-by-side output in an interactive table
+
+```{r setup_oxc_01_03, cache=TRUE}
+all_comma_exprs %>% DT::datatable(data = .)
+```
+
+## Questions for the audience
+
+1. Could the above `pmap_lgl` function be replaced with a more simpler
+approach to generate all 3 word permutations without replacement? This     approach is not as transparent as I would like it to be
+
+
