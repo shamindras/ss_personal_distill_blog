@@ -1339,16 +1339,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</a></li>
 <li><a href="#task-2-generating-numbered-bibtex-entries">Task 2: Generating numbered BibTeX entries</a></li>
 <li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-IMAGES_PATH &lt;- here::here(&quot;_posts&quot;,
-                          &quot;2019-07-25-shrotriya2019tidyfunpt1&quot;,
-                          &quot;images&quot;)
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
-                                                       &quot;tidyverse.png&quot;)))</code></pre>
+
 </div>
 <h2 id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
 <h3 id="the-central-problem">The central problem</h3>
@@ -1588,8 +1584,10 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 <p>Yay - this works as expected! We can now paste into BibTeX as required.</p>
 <p>Note that we only created it for lectures 1 and 30 for easy scrolling. But for all lectures we can just replace <code>c(1, 30)</code> with <code>1:30</code> in the above code.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and post in the comments for any feedback you have 👍.</p>
+<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and post in the comments any feedback you have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
+<h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
+<p>I’d like to thank my brother Salil Shrotriya for helping me create the preview image for this post using his cool photoshop skills. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers/raw/master/SVG/">here</a></p>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-wiki_serial_comma">
 <p>Wikipedia. 2019. “Serial Comma - Wikipedia, the Free Encyclopedia.” <a href="https://en.wikipedia.org/wiki/Serial_comma">https://en.wikipedia.org/wiki/Serial_comma</a>.</p>
