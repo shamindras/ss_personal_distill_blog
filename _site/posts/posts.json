@@ -1,7 +1,7 @@
 [
   {
-    "path": "posts/2019-07-25-shrotriya2019tidyfunpt1/",
-    "title": "Fun with the Tidyverse - Part 1",
+    "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
+    "title": "Tidyverse Fun - Part 1",
     "description": "First part in a series of doing useful tasks with \nthe `Tidyverse`",
     "author": [
       {
@@ -9,10 +9,12 @@
         "url": "https://www.shamindras.com/"
       }
     ],
-    "date": "2019-07-25",
+    "date": "2019-07-15",
     "categories": [],
-    "preview": {},
-    "last_modified": "2019-07-13T16:55:04-04:00"
+    "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo.png",
+    "last_modified": "2019-07-15T14:07:03-04:00",
+    "preview_width": 3000,
+    "preview_height": 2000
   },
   {
     "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
@@ -27,7 +29,7 @@
     "date": "2019-07-11",
     "categories": [],
     "preview": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-07-11T15:57:17-04:00",
+    "last_modified": "2019-07-11T23:19:06-04:00",
     "preview_width": 707,
     "preview_height": 387
   },
