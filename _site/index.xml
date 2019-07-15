@@ -8,7 +8,17 @@
 on math, statistics and the PhD student life.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Tidyverse Fun - Part 1</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</link>
+      <description>First part in a series of doing useful tasks with 
+the `Tidyverse`</description>
+      <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo.png" medium="image" type="image/png" width="3000" height="2000"/>
+    </item>
     <item>
       <title>Setting up a Distill Blog with Netlify</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>

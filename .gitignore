@@ -34,3 +34,7 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+
+# Blogpost - cache
+_posts/2019-07-25-shrotriya2019tidyfunpt1/shrotriya2019tidyfunpt1_cache/html5/
+_posts/2019-07-15-shrotriya2019tidyfunpt1/shrotriya2019tidyfunpt1_cache
