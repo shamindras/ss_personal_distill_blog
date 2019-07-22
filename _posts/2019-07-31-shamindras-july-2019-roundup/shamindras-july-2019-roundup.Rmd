@@ -40,6 +40,19 @@ features of editing `Rmd` documents.
 
 ## Interesting Books
 
+### Non-fiction
+
+- Continued reading this fantastic book [@steele2004cauchyscwarzmaster_book] on the Art of Mathematical inequalities by [Prof. Michael Steele](http://www-stat.wharton.upenn.edu/~steele/). This book is simply
+amazing in that Prof. Steele walks through deriving mathematical 
+inequalities as if you were having a chat with a whiteboard. I'll be working through the problems in detail (the text contains full
+solutions for self-study). Who knows perhaps I'll blog about it in the future.
+
+### Fiction
+
+- Read Celeste Ng's [Everything I Never Told You](https://www.celesteng.com/everything-i-never-told-you). Very nicely
+written debut novel by Ng, though quite dark and brooding in tone. Would
+not recommend as a pick me up but certainly would for a nice American-Asian character study set in the 1970s.
+
 ## Interesting Papers
 
 - Enjoyed reading this paper on the mathematical description of the carbon cycle
@@ -55,5 +68,7 @@ features of editing `Rmd` documents.
 Besides this post `r emo::ji("smile")` the main things I got up to
 on the personal blogging from were:
 
-- Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/) on the fun setup process with the [RStudio distill package]() and
-also [Netlify]() and [Google Domains]()
+- Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/) on the fun setup process with the [RStudio distill package](https://rstudio.github.io/distill/blog.html) and
+also [Netlify](https://netlify.com) and [Google Domains](https://domains.google)
+- Wrote a [fun blogpost](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/) on solving a couple of quick text-based tasks
+using the `tidyverse` including [generating Oxford Comma triples](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-1-generating-oxford-comma-triples) and also [Generating numbered BibTeX entries](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-2-generating-numbered-bibtex-entries)
