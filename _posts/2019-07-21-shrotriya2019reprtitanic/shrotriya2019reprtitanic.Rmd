@@ -1,0 +1,148 @@
+---
+title: "Reproducibility Challenge: Titanic Suvivors"
+description: |
+    Using the `Tidyverse` to reproduce a plot on the
+    survivorship of the Titanic
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 07-21-2019
+preview: images/feb-2019-significance-cover.png
+slug: shrotriya2019reprtitanic
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Background and Goal
+
+In the February 2019 issue of [Significance Magazine](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x) notably featured a story
+of the titanic disaster [@friendly2019titanicviz] and visualization of key survival statistics. As a fan
+of `R` and data visualization as a key exploratory tool in any analysis I 
+enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash was clearly conveyed to 
+the general public.
+
+<aside>
+```{r main-src-cover, echo=FALSE}
+IMAGES_PATH <- here::here("_posts",
+                          "2019-07-21-shrotriya2019reprtitanic",
+                          "images")
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+                                                       "feb-2019-significance-cover.png")))
+```
+The cool cover that inspired this post
+</aside>
+
+Of particular note was the following data visualization poster printed shortly 
+after the tragedy:
+
+<center>
+```{r main-src-poster, echo=FALSE, fig.cap='G.Bron’s chart of “The Loss of the ‘Titanic’”, from The Sphere, May 1912.'}
+IMAGES_PATH <- here::here("_posts",
+                          "2019-07-21-shrotriya2019reprtitanic",
+                          "images")
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+                                                       "main-titanic-poster.png")))
+```
+</center>
+
+Specifically this poster, per the article is credited as follows:
+
+> G.Bron's chart of “The Loss of the ‘Titanic'”, from The Sphere, 4 May 1912. 
+Each subgroup is shown by a bar whose area is proportional to the numbers of cases. 
+© Illustrated London News Ltd/Mary Evans.
+
+I found this to be a very cool data visualization of
+the survivorship by class, gender, and adulthood. As a statistics graduate student, I care a lot about reproducibility of results not only as a basic check, but to really appreciate the results and more importantly any implicit assumptions behind the results.
+So this led to the following goal and effectively this
+blogpost:
+
+<aside>
+**Note:** Replicability is better, but reproducibility is a good start and often more feasible
+</aside>
+
+**Goal:** Given the same Titanic survivors data could we recreate a similar looking chart 
+using `R` and specifically the `tidyverse` set 
+of tools?
+
+## Collecting and cleaning the data
+
+First let's begin by loading our required data cleaning and 
+plotting packages.
+
+```{r setup_ttnic_01_00, echo=TRUE, cache=TRUE}
+library(tidyverse)
+library(magrittr)
+library(janitor)
+```
+
+In the article the authors cite several resources for collecting the data for this task. We note that the 
+data is already *pre-baked* into `R` and located in `datasets::Titanic` when `R` loads.
+
+We can source it, clean it for our exploration, using
+the handy `janitor::clean_names` function for column
+name cleaning and converting various categorical variables 
+(*age, sex, survivorship, and passenger class*) to
+factors for easy plotting later.
+
+```{r setup_ttnic_01_01, echo=TRUE, cache=TRUE}
+ttnc_cln <- datasets::Titanic %>% 
+        tibble::as_tibble() %>% 
+        janitor::clean_names(dat = .) %>% 
+        dplyr::mutate(.data = .,
+                      class = as.factor(class),
+                      age = as.factor(age),
+                      survived = as.factor(survived),
+                      n_sgnd = ifelse(survived == "No",
+                                      -1*n, n))
+
+# Display first 8 rows in a nice centered table
+ttnc_cln %>% 
+  dplyr::slice(.data = ., 1:8) %>% 
+  knitr::kable(x = ., align = 'c')
+```
+
+Looks nice. Next step - plotting!
+
+## Plotting the Data
+
+The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let's do it!
+
+```{r setup_ttnic_01_02, echo=TRUE, cache=TRUE, layout="l-screen"}
+out_plot <- ttnc_cln %>% 
+    ggplot2::ggplot(data = ., 
+                    aes(x = sex, y = n_sgnd, fill = survived)) +
+    ggplot2::geom_bar(stat = "identity") +
+    ggplot2::coord_flip() +
+    ggplot2::facet_wrap(~ class, ncol = 1, 
+                        strip.position = "right") +
+    scale_fill_manual(values=c("#3C4144", "#D2D3D1")) +
+    ggplot2::theme_bw() +
+    ggplot2::theme(panel.background = element_rect(fill = "#969898"),
+                   panel.grid.major = element_blank(), 
+                   panel.grid.minor = element_blank(),
+                   axis.title.x = element_blank(),
+                   axis.title.y = element_blank(),
+                   #strip.text.y = element_text(angle = 180),
+                   legend.position = "none") +
+    ggplot2::labs(title = 'The LOSS of the "TITANIC"',
+                  subtitle = glue::glue("The Results Analyzed and Shown",
+                                        'in a special "Sphere" Diagram',
+                                        .sep = " "), 
+                  caption = glue::glue("Note: The Black color indicates",
+                                       "Passengers and Crew NOT SAVED.", 
+                                       "The White color indicates SAVED.",
+                                        .sep = " "))
+out_plot
+```
+
+## Conclusion
+
+Reproducing is time consuming
