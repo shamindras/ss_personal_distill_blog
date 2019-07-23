@@ -186,3 +186,10 @@ modern `tidyverse` ecosystem we have at our fingertips. Will do
 a similar reproducibility challenge again for 
 sure `r emo::ji("victory")`. Please leave a comment below if you
 have any feedback on this post
+
+## Acknowledgments {.appendix}
+
+I'd like to thank my brother Salil Shrotriya for helping
+me create the preview image for this post using his cool
+photoshop skills. The hex sticker `png` files were sourced
+from [here](https://github.com/rstudio/hex-stickers/raw/master/SVG/)
