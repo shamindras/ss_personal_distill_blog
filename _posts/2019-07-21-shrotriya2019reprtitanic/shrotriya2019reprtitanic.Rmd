@@ -1,0 +1,188 @@
+---
+title: "Reproducibility Challenge: Titanic Suvivors Plot"
+description: |
+    Using the `Tidyverse` to reproduce a plot on the
+    survivorship of the Titanic
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 07-21-2019
+preview: images/logo.png
+slug: shrotriya2019reprtitanic
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+In the February 2019 issue of [Significance Magazine](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x) notably featured a story of the titanic disaster [@friendly2019titanicviz] and 
+visualization of key survival statistics. As a fan of `R` and data visualization 
+I enjoyed this article and recommended it to anyone with similar interests. 
+Although the subject is rather tragic, by reading the article I did get a 
+better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.
+
+<aside>
+```{r main-src-cover, echo=FALSE, fig.cap='Feb 2019 Significance Magazine cover', out.extra="class=external"}
+IMAGES_PATH <- here::here("_posts",
+                          "2019-07-21-shrotriya2019reprtitanic",
+                          "images")
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+                                                       "feb-2019-significance-cover.png")))
+```
+</aside>
+
+## Reproducibility Challenge
+
+Of particular note in the article was the following data visualization poster printed shortly 
+after the tragedy:
+
+<center>
+```{r main-src-poster, echo=FALSE, fig.cap='G.Bron’s chart of "The Loss of the Titanic", from The Sphere, May 1912.', out.extra="class=external"}
+IMAGES_PATH <- here::here("_posts",
+                          "2019-07-21-shrotriya2019reprtitanic",
+                          "images")
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+                                                       "main-titanic-poster.png")))
+```
+</center>
+
+I found this to be a very cool data visualization of
+the survivorship by class, gender, and adulthood. As a statistics graduate student, I care a lot about reproducibility of results not only as a basic check, but to really appreciate the results and more importantly any implicit assumptions behind the results.
+So this led to the following goal and effectively this
+blogpost:
+
+<aside>
+**Note:** Replicability is better, but reproducibility is a good start and often a more practically feasible undertaking
+</aside>
+
+**Goal:** Given the same Titanic survivors data could we recreate a similar looking chart 
+using `R` and specifically the `tidyverse` set 
+of tools?
+
+## Collecting and cleaning the data
+
+First let's begin by loading our required data cleaning and 
+plotting packages.
+
+```{r setup_ttnic_01_00, echo=TRUE, cache=TRUE}
+library(tidyverse)
+library(janitor)
+library(plotly)
+```
+
+In the article the authors cite several resources for collecting the data for this task. Per the article we note that the 
+data is already *pre-baked* into `R` and located in `datasets::Titanic` when `R` loads, which is convenient `r emo::ji("sunglasses")`.
+
+We can source the data and start cleaning it for our 
+exploration, using the handy `janitor::clean_names` function for column name cleaning and converting various categorical variables 
+(*age, sex, survivorship, and passenger class*) to factors for easy plotting later.
+
+```{r setup_ttnic_01_01, echo=TRUE, cache=TRUE}
+# Basic cleaning of names and filtering out non-zero counts
+t1 <- datasets::Titanic %>% 
+        as_tibble() %>% 
+        janitor::clean_names(dat = .) %>% 
+        dplyr::filter(.data = ., n != 0) %>% 
+        dplyr::mutate(.data = .,
+                      new_sex = ifelse(age == "Child", age, sex),
+                      n_sgnd = ifelse(survived == "No", -1*n, n)) %>% 
+        dplyr::select(class, new_sex, survived, n_sgnd)
+
+# Passenger (non-crew) level aggregation
+t2 <- t1 %>% 
+        dplyr::filter(class != "Crew") %>% 
+        dplyr::mutate(class = "Pass.") %>% 
+        dplyr::group_by(class, new_sex, survived) %>%
+        dplyr::summarize(n_sgnd = sum(n_sgnd))        
+
+# Crew (non-passenger) level aggregation
+t3 <- t1 %>% 
+        dplyr::mutate(class = "Pass.\nCrew") %>% 
+        dplyr::group_by(class, new_sex, survived) %>%
+        dplyr::summarize(n_sgnd = sum(n_sgnd))        
+
+# Combined cleaned plotting dataset
+ttnc_cln <- t1 %>% 
+              dplyr::bind_rows(t2) %>% 
+              dplyr::bind_rows(t3) %>% 
+              dplyr::mutate(.data = .,
+                            class = as.factor(class),
+                            new_sex = as.factor(new_sex),
+                            survived = as.factor(survived))
+
+# Display first 8 rows in a nice centered table
+ttnc_cln %>% 
+  dplyr::slice(.data = ., 1:8) %>% 
+  knitr::kable(x = ., align = 'c')
+```
+
+Looks nice. As you can see, the data cleaning was done in stages where 3 
+datasets `t1, t2, t3` were built up. Essentially by staring at the plot it is
+clear that plots are split by class i.e. $1^{st}$ Class, $2^{nd}$ Class etc.
+This is the cleaned `t1` data frame. However there are aggregate versions 
+of these classes at combined *Passenger* level and *Passenger and Crew* level
+which are the `t2` and `t3` tibbles respectively. Finally we concatenate them
+together into `ttnc_cln` and ensure our categorical variables are cast as 
+`factors`.
+
+Next step - plotting!
+
+## Plotting the Data
+
+The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let's do it!
+
+```{r setup_ttnic_01_02, echo=TRUE, cache=TRUE, layout="l-screen"}
+out_plot <- ttnc_cln %>%               
+              ggplot2::ggplot(data = ., 
+                              aes(x = new_sex, y = n_sgnd, fill = survived)) +
+              ggplot2::geom_bar(stat = "identity") +
+              ggplot2::facet_wrap(~ class, ncol = 1, 
+                                  strip.position = "right",
+                                  scales = "free_y") +
+              ggplot2::coord_flip() +
+              scale_fill_manual(values=c("#3C4144", "#D2D3D1")) +
+              ggplot2::theme_bw() +
+              ggplot2::theme(panel.background = element_rect(fill = "#969898"),
+                             panel.grid.major = element_blank(), 
+                             panel.grid.minor = element_blank(),
+                             axis.title.x = element_blank(),
+                             axis.title.y = element_blank(),
+                             strip.text.y = element_text(angle = 360),
+                             legend.position = "none") +
+              scale_y_continuous(breaks=seq(-1500,600,150)) +
+              ggplot2::labs(title = 'The LOSS of the "TITANIC"',
+                            subtitle = glue::glue("The Results Analyzed and Shown",
+                                                  'in a special "Sphere" Diagram',
+                                                  .sep = " "), 
+                            caption = glue::glue("Note: The Black color indicates",
+                                                 "Passengers and Crew NOT SAVED.", 
+                                                 "The White color indicates SAVED.",
+                                                  .sep = " "))
+
+out_plot
+```
+
+## Conclusion
+
+- Overall looks like the plot was able to be reproduced to a decent level of accuracy
+- To get the colors to be close to the plot, I simply opened the 
+[article online](https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x) and used the [Colorzilla for Chrome](http://colorzilla.com/chrome/) addin to select the color
+manually. This is a really nice tool to use for reproducing colors
+viewed through a browser
+- I don't quite like that the non-survivors here are shown on a
+negative scale, but this was the quick hack I could perform to get
+bars flipped for non-survivors vs. survivors
+- **Summary:** Overall this was a really fun challenge and I learned
+a lot about old-school data visualization using the glorius 
+modern `tidyverse` ecosystem we have at our fingertips. Will do 
+a similar reproducibility challenge again for 
+sure `r emo::ji("victory")`. Please leave a comment below if you
+have any feedback on this post

@@ -8,7 +8,17 @@
 on math, statistics and the PhD student life.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 15 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Reproducibility Challenge: Titanic Suvivors Plot</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</link>
+      <description>Using the `Tidyverse` to reproduce a plot on the
+survivorship of the Titanic</description>
+      <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo.png" medium="image" type="image/png" width="3000" height="2000"/>
+    </item>
     <item>
       <title>Tidyverse Fun - Part 1</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
