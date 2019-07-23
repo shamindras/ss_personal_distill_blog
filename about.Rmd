@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 <center>
 ```{r main-src-poster, echo=FALSE, fig.cap="Photo Credit: Salil Shrotriya", out.extra="class=external", out.height= "50%", out.width = "60%"}
 IMAGES_PATH <- here::here("data", "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, "about-profile.png")))
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, "about-profile.jpg")))
 ```
 </center>
 

@@ -7,6 +7,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-10-2019
+preview: images/about-profile.jpg
 output:
   distill::distill_article:
     self_contained: false
@@ -19,21 +20,39 @@ library(emo) # For emoji's
 
 ## Welcome - Let's Get Statistical!
 
-Hi there! I'm Shamindra and a graduate student in Statistics at the wonderful Carnegie Mellon University (Go Tartans!). I've decided to start blogging 
-to document my learning and development in statistics as a new graduate student. 
+Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/) at the
+wonderful [Carnegie Mellon University](https://www.cmu.edu/). I’ve decided to start 
+blogging to document my learning and development in statistics as a new 
+graduate student.
 
-I'd like it to be a fun place to document interesting things I like to read 
-about in the statistics and machine learning space (`rstats`, `python`, `theory`)  as well as anything else I am into e.g. books, cricket (the Australian version of baseball) etc.
+I’d like it to be a fun place to document interesting things I like to 
+read about in the statistics and machine learning space (`statistical theory/methodology research`, `rstats`, `python` etc) as well as anything else I am generally into e.g. books, sports.
 
-Please browse around, leave a (friendly) comment, and most importantly enjoy 
-as we explore together!
+Feel free to pull up a chair, leave a comment, and join me 
+so that we can explore together `r emo::ji("100")`.
 
 ## Credits
 
-The credit to starting this blog goes to the following people from the interweb
-who stopped me from procrastinating (all of whom I have not yet met in person `r emo::ji("smile")`). I
+The credit to starting this blog goes to the following people. I
 hope to not disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 
 - [Yihui Xie](https://yihui.name/), [JJ Allaire](https://github.com/jjallaire) and [Rich Iannone](https://twitter.com/riannone)- For co-developing the fantastic `radix` package which upon which this blog/ site is based
-- [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/) encouraging people like me to (finally!) create a blog.
+- [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/) encouraging people like me to (finally!) create a blog
+- My parents for encouraging to communicate my passion for Statistics.
+I secretly think that this is their way of minimizing my passionate
+rants about the bootstrap in our Skype chats. That will still continue though `r emo::ji("smile")`
 
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://twitter.com/shamindraas" class="fa fa-twitter" style="font-size:36px;"></a>
+    <a href="https://www.linkedin.com/in/shamindras/" class="fa fa-linkedin" style="font-size:46px;"></a>
+    <a href="https://github.com/shamindras" class="fa fa-github"  style="font-size:36px;"></a>
+</p>
+
+## Acknowledgments {.appendix}
+
+I'd like to thank my brother Salil Shrotriya for taking my
+profile pic which happens to be the preview image for this post. 
