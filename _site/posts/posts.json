@@ -1,7 +1,7 @@
 [
   {
     "path": "posts/2019-07-21-shrotriya2019reprtitanic/",
-    "title": "Reproducibility Challenge: Titanic Suvivors",
+    "title": "Reproducibility Challenge: Titanic Suvivors Plot",
     "description": "Using the `Tidyverse` to reproduce a plot on the\nsurvivorship of the Titanic",
     "author": [
       {
@@ -11,10 +11,10 @@
     ],
     "date": "2019-07-21",
     "categories": [],
-    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/feb-2019-significance-cover.png",
-    "last_modified": "2019-07-22T19:59:29-04:00",
-    "preview_width": 1236,
-    "preview_height": 1536
+    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo.png",
+    "last_modified": "2019-07-23T12:06:58-04:00",
+    "preview_width": 3000,
+    "preview_height": 2000
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",

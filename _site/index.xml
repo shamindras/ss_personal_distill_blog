@@ -10,14 +10,14 @@ on math, statistics and the PhD student life.
     <generator>Distill</generator>
     <lastBuildDate>Sun, 21 Jul 2019 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>Reproducibility Challenge: Titanic Suvivors</title>
+      <title>Reproducibility Challenge: Titanic Suvivors Plot</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</link>
       <description>Using the `Tidyverse` to reproduce a plot on the
 survivorship of the Titanic</description>
       <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/feb-2019-significance-cover.png" medium="image" type="image/png" width="1236" height="1536"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo.png" medium="image" type="image/png" width="3000" height="2000"/>
     </item>
     <item>
       <title>Tidyverse Fun - Part 1</title>

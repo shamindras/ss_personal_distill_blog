@@ -1,5 +1,4 @@
 base
-titanic
 tidyverse
 ggplot2
 tibble
@@ -9,5 +8,5 @@ purrr
 dplyr
 stringr
 forcats
-magrittr
 janitor
+plotly
