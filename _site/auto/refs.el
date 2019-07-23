@@ -7,7 +7,7 @@
     "korostelev2011asymptoticminimax_book"
     "wainwright_highdimstats_book"
     "candesstat300c_lec01"
-    "jordan2019artificial"
+    "wiki_serial_comma"
     "xu2017information"
     "pmlr-v51-russo16"
     "dunn46_recor_linkag"
