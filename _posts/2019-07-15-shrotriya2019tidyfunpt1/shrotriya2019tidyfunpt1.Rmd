@@ -1,11 +1,11 @@
 ---
 title: "Tidyverse Fun - Part 1"
-categories:
-  - tidyverse
-  - rstats
 description: |
   First part in a series of doing useful tasks with 
   the `Tidyverse`
+categories:
+  - tidyverse
+  - rstats
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/

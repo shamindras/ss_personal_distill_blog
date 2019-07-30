@@ -1,12 +1,12 @@
 ---
 title: "Reproducibility Challenge: Titanic Suvivors Plot"
+description: |
+    Using the `Tidyverse` to reproduce a plot on the
+    survivorship of the Titanic
 categories:
   - tidyverse
   - rstats
   - reproducibility
-description: |
-    Using the `Tidyverse` to reproduce a plot on the
-    survivorship of the Titanic
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
