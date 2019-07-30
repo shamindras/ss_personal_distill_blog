@@ -10,11 +10,13 @@
       }
     ],
     "date": "2019-07-21",
-    "categories": [],
-    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo.png",
-    "last_modified": "2019-07-23T13:31:54-04:00",
-    "preview_width": 3000,
-    "preview_height": 2000
+    "categories": [
+      "tidyverse",
+      "rstats",
+      "reproducibility"
+    ],
+    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
+    "last_modified": "2019-07-30T11:58:28-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -27,11 +29,12 @@
       }
     ],
     "date": "2019-07-15",
-    "categories": [],
-    "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo.png",
-    "last_modified": "2019-07-21T20:26:37-04:00",
-    "preview_width": 3000,
-    "preview_height": 2000
+    "categories": [
+      "tidyverse",
+      "rstats"
+    ],
+    "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
+    "last_modified": "2019-07-30T11:58:23-04:00"
   },
   {
     "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
@@ -61,8 +64,12 @@
       }
     ],
     "date": "2019-07-10",
-    "categories": [],
-    "preview": "posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile.jpg",
-    "last_modified": "2019-07-23T14:02:22-04:00"
+    "categories": [
+      "personal"
+    ],
+    "preview": "posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-100.png",
+    "last_modified": "2019-07-30T12:20:06-04:00",
+    "preview_width": 746,
+    "preview_height": 746
   }
 ]

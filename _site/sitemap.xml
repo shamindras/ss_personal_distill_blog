@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://www.shamindras.com/about.html</loc>
-    <lastmod>2019-07-23T14:04:56-04:00</lastmod>
+    <lastmod>2019-07-30T12:20:32-04:00</lastmod>
   </url>
   <url>
     <loc>https://www.shamindras.com/</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/</loc>
-    <lastmod>2019-07-23T13:31:54-04:00</lastmod>
+    <lastmod>2019-07-30T11:58:28-04:00</lastmod>
   </url>
   <url>
     <loc>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/</loc>
-    <lastmod>2019-07-21T20:26:37-04:00</lastmod>
+    <lastmod>2019-07-30T11:58:23-04:00</lastmod>
   </url>
   <url>
     <loc>https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/</loc>
@@ -26,6 +26,6 @@
   </url>
   <url>
     <loc>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog/</loc>
-    <lastmod>2019-07-23T14:02:22-04:00</lastmod>
+    <lastmod>2019-07-30T12:20:06-04:00</lastmod>
   </url>
 </urlset>

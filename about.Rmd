@@ -9,19 +9,19 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 <center>
-```{r main-src-poster, echo=FALSE, fig.cap="Photo Credit: Salil Shrotriya", out.extra="class=external", out.height= "50%", out.width = "60%"}
+```{r main-src-poster, echo=FALSE}
 IMAGES_PATH <- here::here("data", "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, "about-profile.jpg")))
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, "about-profile-circular-scaled-100.png")))
 ```
 </center>
 
-Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/) at the
-wonderful [Carnegie Mellon University](https://www.cmu.edu/). I’ve decided to start 
+Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/){target="_blank"} at the
+wonderful [Carnegie Mellon University](https://www.cmu.edu/){target="_blank"}. I’ve decided to start 
 blogging to document my learning and development in statistics as a new 
 graduate student.
 
 I’d like it to be a fun place to document interesting things I like to 
-read about in the statistics and machine learning space (`statistical theory/methodology research`, `rstats`, `python` etc) as well as anything else I am generally into e.g. books, sports.
+read about in the statistics and machine learning space (statistical theory/methodology research, rstats, python etc) as well as anything else I am generally into e.g. books, sports.
 
 Feel free to pull up a chair, leave a comment, and join me 
 so that we can explore together `r emo::ji("100")`.
@@ -31,7 +31,12 @@ so that we can explore together `r emo::ji("100")`.
 
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
-    <a href="https://twitter.com/shamindraas" class="fa fa-twitter" style="font-size:36px;"></a>
-    <a href="https://www.linkedin.com/in/shamindras/" class="fa fa-linkedin" style="font-size:46px;"></a>
-    <a href="https://github.com/shamindras" class="fa fa-github"  style="font-size:36px;"></a>
+    <a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a>
+    <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin" style="font-size:46px;"></a>
+    <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>
 </p>
+
+## Acknowledgments {.appendix}
+
+I'd like to thank Salil Shrotriya for taking the
+profile pic.

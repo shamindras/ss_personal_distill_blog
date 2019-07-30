@@ -4,16 +4,18 @@ description: |
   Shamindra Shrotriya's personal blog/ site. Some fun posts
   on math, statistics and the PhD student life.
 output_dir: "_site"
+base_url: https://www.shamindras.com/
 navbar:
-  right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
+  left:
+    - text: "About Me"
       href: about.html
     - icon: fa fa-rss
       href: index.xml
 collections:
   posts:
     share: [twitter, linkedin]
-base_url: https://www.shamindras.com/
+    feed_items_max: false
+twitter:
+  site: "@shamindraas"
+  creator: "@shamindraas"
 output: distill::distill_article
