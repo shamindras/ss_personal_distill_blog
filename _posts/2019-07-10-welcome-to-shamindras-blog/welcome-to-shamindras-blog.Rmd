@@ -1,10 +1,10 @@
 ---
-title: "Welcome to Shamindra’s Blog"
-categories:
-  - personal
+title: "Welcome to Shamindra’s Site"
 description: |
   Detailing interesting things in the life of a PhD statistics
   student at CMU
+categories:
+  - personal
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
@@ -24,7 +24,7 @@ library(emo) # For emoji's
 
 Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/) at the
 wonderful [Carnegie Mellon University](https://www.cmu.edu/). I’ve decided to start 
-blogging to document my learning and development in statistics as a new 
+blogging to document my learning and development in statistics as a 
 graduate student.
 
 I’d like it to be a fun place to document interesting things I like to 

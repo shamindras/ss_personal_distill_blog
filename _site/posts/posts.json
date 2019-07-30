@@ -16,7 +16,7 @@
       "reproducibility"
     ],
     "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-07-30T11:58:28-04:00"
+    "last_modified": "2019-07-30T12:25:30-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -34,7 +34,7 @@
       "rstats"
     ],
     "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-07-30T11:58:23-04:00"
+    "last_modified": "2019-07-30T13:10:30-04:00"
   },
   {
     "path": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/",
@@ -47,15 +47,17 @@
       }
     ],
     "date": "2019-07-11",
-    "categories": [],
+    "categories": [
+      "distill"
+    ],
     "preview": "posts/2019-07-11-setting-up-a-distill-blog-with-netlify/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-07-11T23:19:06-04:00",
+    "last_modified": "2019-07-30T13:16:07-04:00",
     "preview_width": 707,
     "preview_height": 387
   },
   {
     "path": "posts/2019-07-10-welcome-to-shamindras-blog/",
-    "title": "Welcome to Shamindra’s Blog",
+    "title": "Welcome to Shamindra’s Site",
     "description": "Detailing interesting things in the life of a PhD statistics\nstudent at CMU",
     "author": [
       {
@@ -68,7 +70,7 @@
       "personal"
     ],
     "preview": "posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-100.png",
-    "last_modified": "2019-07-30T12:20:06-04:00",
+    "last_modified": "2019-07-30T13:11:41-04:00",
     "preview_width": 746,
     "preview_height": 746
   }

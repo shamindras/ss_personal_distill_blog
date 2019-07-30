@@ -2,6 +2,8 @@
 title: "Setting up a Distill Blog with Netlify"
 description: |
   First part of a series on how I setup this `Distill` themed blog with `Netlify`
+categories:
+  - distill
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
