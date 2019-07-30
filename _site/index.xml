@@ -17,7 +17,7 @@ on math, statistics and the PhD student life.
 survivorship of the Titanic</description>
       <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo.png" medium="image" type="image/png" width="3000" height="2000"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Tidyverse Fun - Part 1</title>
@@ -27,7 +27,7 @@ survivorship of the Titanic</description>
 the `Tidyverse`</description>
       <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo.png" medium="image" type="image/png" width="3000" height="2000"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Setting up a Distill Blog with Netlify</title>
@@ -46,7 +46,7 @@ the `Tidyverse`</description>
 student at CMU</description>
       <guid>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</guid>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile.jpg" medium="image" type="image/jpeg"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-100.png" medium="image" type="image/png" width="746" height="746"/>
     </item>
   </channel>
 </rss>

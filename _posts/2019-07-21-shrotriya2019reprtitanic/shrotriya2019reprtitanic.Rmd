@@ -1,5 +1,9 @@
 ---
 title: "Reproducibility Challenge: Titanic Suvivors Plot"
+categories:
+  - tidyverse
+  - rstats
+  - reproducibility
 description: |
     Using the `Tidyverse` to reproduce a plot on the
     survivorship of the Titanic
@@ -7,7 +11,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-21-2019
-preview: images/logo.png
+preview: images/logo-01.jpg
 slug: shrotriya2019reprtitanic
 bibliography: ../../refs.bib
 output:
@@ -139,7 +143,7 @@ Next step - plotting!
 
 The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let's do it!
 
-```{r setup_ttnic_01_02, echo=TRUE, cache=TRUE, layout="l-screen"}
+```{r setup_ttnic_01_02, echo=TRUE, cache=TRUE, layout="l-page"}
 out_plot <- ttnc_cln %>%               
               ggplot2::ggplot(data = ., 
                               aes(x = new_sex, y = n_sgnd, fill = survived)) +
@@ -189,7 +193,6 @@ have any feedback on this post
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank my brother Salil Shrotriya for helping
-me create the preview image for this post using his cool
-photoshop skills. The hex sticker `png` files were sourced
-from [here](https://github.com/rstudio/hex-stickers/raw/master/SVG/)
+I'd like to thank Salil Shrotriya for creating the 
+preview image for this post. The hex sticker `png` files 
+were sourced from [here](https://github.com/rstudio/hex-stickers)

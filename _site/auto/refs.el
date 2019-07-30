@@ -11,6 +11,7 @@
     "xu2017information"
     "pmlr-v51-russo16"
     "dunn46_recor_linkag"
-    "rothman14_earth_carbon_cycle"))
+    "rothman14_earth_carbon_cycle"
+    "friendly2019titanicviz"))
  :bibtex)
 

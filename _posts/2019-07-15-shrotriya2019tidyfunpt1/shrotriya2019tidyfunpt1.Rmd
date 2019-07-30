@@ -1,5 +1,8 @@
 ---
 title: "Tidyverse Fun - Part 1"
+categories:
+  - tidyverse
+  - rstats
 description: |
   First part in a series of doing useful tasks with 
   the `Tidyverse`
@@ -7,7 +10,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-15-2019
-preview: images/logo.png
+preview: images/logo-01.jpg
 slug: shrotriya2019tidyfunpt1
 bibliography: ../../refs.bib
 output:
@@ -21,7 +24,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r prev_img, preview=TRUE, results='hide'}
+```{r prev_img, preview=TRUE, results='hide', echo=FALSE}
 IMAGES_PATH <- here::here("_posts",
                           "2019-07-25-shrotriya2019tidyfunpt1",
                           "images")
@@ -253,7 +256,6 @@ Stay tuned for more blogposts solving more such tasks.
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank my brother Salil Shrotriya for helping
-me create the preview image for this post using his cool
-photoshop skills. The hex sticker `png` files were sourced
-from [here](https://github.com/rstudio/hex-stickers/raw/master/SVG/)
+I'd like to thank Salil Shrotriya for creating the 
+preview image for this post. The hex sticker `png` files 
+were sourced from [here](https://github.com/rstudio/hex-stickers)

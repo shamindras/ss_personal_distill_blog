@@ -1,5 +1,7 @@
 ---
 title: "Welcome to Shamindra’s Blog"
+categories:
+  - personal
 description: |
   Detailing interesting things in the life of a PhD statistics
   student at CMU
@@ -7,7 +9,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-10-2019
-preview: images/about-profile.jpg
+preview: images/about-profile-circular-scaled-100.png
 output:
   distill::distill_article:
     self_contained: false
@@ -47,12 +49,12 @@ rants about the bootstrap in our Skype chats. That will still continue though `r
 
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
-    <a href="https://twitter.com/shamindraas" class="fa fa-twitter" style="font-size:36px;"></a>
-    <a href="https://www.linkedin.com/in/shamindras/" class="fa fa-linkedin" style="font-size:46px;"></a>
-    <a href="https://github.com/shamindras" class="fa fa-github"  style="font-size:36px;"></a>
+    <a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a>
+    <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin" style="font-size:46px;"></a>
+    <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>
 </p>
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank my brother Salil Shrotriya for taking my
-profile pic which happens to be the preview image for this post. 
+I'd like to thank Salil Shrotriya for taking my profile
+pic which is the preview image for this post. 
