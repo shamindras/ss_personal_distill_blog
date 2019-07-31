@@ -4,6 +4,7 @@ site: distill::distill_website
 listing: 
     posts:
         - 2019-07-10-welcome-to-shamindras-blog
+        - 2019-07-30-shrotriya2019july19roundup
         - 2019-07-21-shrotriya2019reprtitanic
         - 2019-07-15-shrotriya2019tidyfunpt1
         - 2019-07-11-setting-up-a-distill-blog-with-netlify
