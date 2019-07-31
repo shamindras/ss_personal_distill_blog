@@ -9,7 +9,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-10-2019
-preview: images/about-profile-circular-scaled-100.png
+preview: images/about-profile-circular-scaled-50.png
 output:
   distill::distill_article:
     self_contained: false
@@ -22,8 +22,8 @@ library(emo) # For emoji's
 
 ## Welcome - Let's Get Statistical!
 
-Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/) at the
-wonderful [Carnegie Mellon University](https://www.cmu.edu/). I’ve decided to start 
+Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/){target="_blank"} at the
+wonderful [Carnegie Mellon University](https://www.cmu.edu/){target="_blank"}. I’ve decided to start 
 blogging to document my learning and development in statistics as a 
 graduate student.
 
@@ -38,8 +38,8 @@ so that we can explore together `r emo::ji("100")`.
 The credit to starting this blog goes to the following people. I
 hope to not disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 
-- [Yihui Xie](https://yihui.name/), [JJ Allaire](https://github.com/jjallaire) and [Rich Iannone](https://twitter.com/riannone)- For co-developing the fantastic `radix` package which upon which this blog/ site is based
-- [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/) encouraging people like me to (finally!) create a blog
+- [Yihui Xie](https://yihui.name/){target="_blank"}, [JJ Allaire](https://github.com/jjallaire){target="_blank"} and [Rich Iannone](https://twitter.com/riannone){target="_blank"} - for co-developing the fantastic `radix` package which upon which this blog/ site is based
+- [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/){target="_blank"} encouraging people like me to (finally!) create a blog
 - My parents for encouraging to communicate my passion for Statistics.
 I secretly think that this is their way of minimizing my passionate
 rants about the bootstrap in our Skype chats. That will still continue though `r emo::ji("smile")`
