@@ -1,4 +1,4 @@
-name: "test_distill_blog"
+name: "ss_personal_distill_blog"
 title: "Shamindra Shrotriya"
 description: |
   Shamindra Shrotriya's personal blog/ site. Some fun posts
@@ -6,6 +6,9 @@ description: |
 output_dir: "_site"
 base_url: https://www.shamindras.com/
 navbar:
+  logo:
+    image: data/images/about-profile-circular-scaled-50.png
+    href: https://www.shamindras.com/
   left:
     - text: "About Me"
       href: about.html
@@ -13,7 +16,7 @@ navbar:
       href: index.xml
 collections:
   posts:
-    share: [twitter, linkedin]
+    share: [twitter, linkedin, pinterest, facebook]
     feed_items_max: false
 twitter:
   site: "@shamindraas"

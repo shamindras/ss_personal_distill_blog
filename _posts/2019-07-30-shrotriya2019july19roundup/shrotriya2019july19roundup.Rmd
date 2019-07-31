@@ -11,7 +11,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-31-2019
-preview: images/preview-july-2019.png
+preview: images/preview-july-2019-02.png
 slug: shrotriya2019july19roundup
 bibliography: ../../refs.bib
 output:

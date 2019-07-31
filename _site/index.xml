@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Shamindra Shrotriya</title>
+    <link>https://www.shamindras.com/</link>
+    <atom:link href="https://www.shamindras.com/index.xml" rel="self" type="application/rss+xml"/>
+    <description>Shamindra Shrotriya's personal blog/ site. Some fun posts
+on math, statistics and the PhD student life.
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Shamindra's July 2019 Roundup</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</link>
+      <description>A quick roundup of any interesting July 2019 activities</description>
+      <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</guid>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" width="3360" height="1718"/>
+    </item>
+    <item>
+      <title>Reproducibility Challenge: Titanic Suvivors Plot</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</link>
+      <description>Using the `Tidyverse` to reproduce a plot on the
+survivorship of the Titanic</description>
+      <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Tidyverse Fun - Part 1</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</link>
+      <description>First part in a series of doing useful tasks with 
+the `Tidyverse`</description>
+      <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Setting up a Distill Blog with Netlify</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify</link>
+      <description>First part of a series on how I setup this `Distill` themed blog with `Netlify`</description>
+      <guid>https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify</guid>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" width="707" height="387"/>
+    </item>
+    <item>
+      <title>Welcome to Shamindra’s Site</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</link>
+      <description>Detailing interesting things in the life of a PhD statistics
+student at CMU</description>
+      <guid>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</guid>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-50.png" medium="image" type="image/png" width="373" height="373"/>
+    </item>
+  </channel>
+</rss>
