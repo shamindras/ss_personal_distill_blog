@@ -64,7 +64,7 @@ included an `.gitignore` for `R` since that will the blogging language of
 choice here `r emo::ji("smile")`. This is shown in the screenshot below.
 
 <center>
-```{r step-01-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-01-01-screenshot, fig.cap="Setting up the Site Github repo", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "01_01_create_github_distill_repo.png"))
@@ -77,7 +77,7 @@ Once created the repo will appear in `github` as seen in the following
 screenshot
 
 <center>
-```{r step-01-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-01-02-screenshot, fig.cap="New Site Github repo with README.md", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "01_02_newly_created_distill_repo.png"))
@@ -320,7 +320,7 @@ The locally created `distill` blog was now created and rendered and looked like
 this in the `RStudio` viewer pane:
 
 <center>
-```{r step-05-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", cache=TRUE}
+```{r step-05-02-screenshot, fig.cap="Newly Created Distill Blog (local)", echo=FALSE, out.extra="class=external", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "05_01_newlyr_created_distill_blog.png"))
@@ -369,7 +369,7 @@ I then logged in to Netlify and clicked on the green `New site from Git` button
 to get started. In the following menu I clicked the `Github Continuous
 Deployment` icon:
 
-```{r step-08-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-01-screenshot, fig.cap="Creating New Site with Netlify", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_01_netlify_github_continuous_deployment.png"))
@@ -382,7 +382,7 @@ site. This is so Netlify can automatically sync with the github repo and deploy
 changes going forward as I make them directly to my `github` blog repo.
 
 <center>
-```{r step-08-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-02-screenshot, fig.cap="Giving Netlify New Github repo Access", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_02_netlify_give_personal_blog_access.png"))
@@ -392,20 +392,20 @@ knitr::include_graphics(path =
 I clicked on my site that appears and then ensured that I selected to ensure
 that the **Branch to Deploy** option is set to `master`.
 
-```{r step-08-03-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+<center>
+```{r step-08-03-screenshot, fig.cap="Configuring Netlify Build Options", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_03_netlify_deploy_master_branch_blog.png"))
 ```
-
-<aside> This simply means that netlify will only build the site based on what
-happens in my `master` branch in my [github
+</center> <aside> This simply means that netlify will only build the site based
+on what happens in my `master` branch in my [github
 repo](https://github.com/shamindras/ss_personal_distill_blog) </aside>
 
 I then clicked **Deploy Site** and then saw the following deployment settings:
 
 <center>
-```{r step-08-04-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-04-screenshot, fig.cap="Default Netlify Site Name", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_04_netlify_deployment_settings.png"))
@@ -422,7 +422,7 @@ Settings** button modified the **Publish directory** to be `_site` as shown
 below:
 
 <center>
-```{r step-08-05-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-05-screenshot, fig.cap="Setup Continuous Deployment with Netlify", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_05_netlify_continous_deployment_settings.png"))
@@ -437,7 +437,7 @@ Next I need to manage the domain i.e. tell Netlify to deploy my site on the
 custom domain I just purchased from Google Domains.
 
 <center>
-```{r step-08-06-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-06-screenshot, fig.cap="Customize Site Domains with Netlify", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_06_netlify_adding_custom_domain.png"))
@@ -448,7 +448,7 @@ After clicking verify we have the following domains now set, with
 `www.shamindras.com` being the primary domain.
 
 <center>
-```{r step-08-07-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
+```{r step-08-07-screenshot, fig.cap="All Custom Domains for Site with Netlify", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_07_netlify_checking_custom_domains.png"))
@@ -464,8 +464,7 @@ Thanks Netlify `r emo::ji("thanks")`.
 With everything setup and configured on github/Netlify the deployment should be
 near instantaneous. But after about 20 mins my blog appeared at
 [www.shamindras.com](www.shamindras.com){target="_blank"}. So effectively
-Netlify and github were now talking to each other and site is setup. Woohoo `r
-emo::ji("peace")`!
+Netlify and github were now talking to each other and site is setup!
 
 ## Step 10: Future additions and extras
 

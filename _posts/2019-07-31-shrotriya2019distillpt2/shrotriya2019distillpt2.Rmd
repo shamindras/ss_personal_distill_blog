@@ -307,8 +307,8 @@ automatically:
 - **Clear knitr cache** for all posts and thoroughly re-render the
 site
 
-I expect to do this using a combination of `R` functions/`Makefile`
-workflow, but do stay tuned!
+I expect to do this using a combination of `R` functions/`Makefile` workflow,
+but do stay tuned!
 
 ## Concluding Thoughts
 
