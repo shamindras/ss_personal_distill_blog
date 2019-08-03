@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = FALSE)
 <center>
 ```{r main-src-poster, echo=FALSE}
 IMAGES_PATH <- here::here("data", "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
                                                        "about-profile-circular-scaled-75.png")))
 ```
 </center>
@@ -33,8 +33,7 @@ explore together `r emo::ji("100")`.
 <!-- Add icon library --> <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Add font awesome icons --> 
-<p style="text-align: center;">
+<!-- Add font awesome icons --> <p style="text-align: center;">
     <a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a>
     <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin-square" style="font-size:46px;"></a>
     <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>

@@ -969,23 +969,24 @@
 <li><a href="#step-0-introduction">Step 0: Introduction</a></li>
 <li><a href="#step-1-setup-disqus-comments">Step 1: Setup Disqus comments</a></li>
 <li><a href="#step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</a></li>
-<li><a href="#step-3-add-netlify-badge">Step 3: Add Netlify badge</a></li>
+<li><a href="#step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</a></li>
 <li><a href="#step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</a></li>
-<li><a href="#step-5-add-change-tracking-and-logo">Step 5: Add change tracking and logo</a></li>
+<li><a href="#step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
 <li><a href="#concluding-thoughts">Concluding Thoughts</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <h2 id="step-0-introduction">Step 0: Introduction</h2>
-<p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blogusing the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
-<p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out.</p>
+<p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
+<p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
+<p>Fortunately <code>distill</code> comes with easy to configure settings as well see below. I’ve only implemented some of the options available. I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users to check out.</p>
+<aside>
+Admittedly this blogpost is verbose, but hopefully the details help <strong>new users</strong> of the <code>distill</code> blogging package.
+</aside>
+<p>With that said, here are some key upgrades I made to this blog.</p>
 <h2 id="step-1-setup-disqus-comments">Step 1: Setup Disqus comments</h2>
-<p>We should setup some method of comments for our blog. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following option to <em>Install Disqus on my site</em>.</p>
-<center>
-<div class="layout-chunk" data-layout="l-body">
-
-</div>
-</center>
+<p>I really wanted to setup some comments system for each blogpost. This way I can learn new tips from readers and find out how to improve posts going forward. I will go with the recommended <a href="https://disqus.com" target="_blank">Disqus comments option</a> from the <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing" target="_blank">distill blog</a>. I simply created a <a href="https://disqus.com" target="_blank">Disqus</a> account and selected <strong>Get Started</strong>. I then clicked the following button to <em>Install Disqus on my site</em>.</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-01-02-screenshot"></span>
@@ -996,7 +997,7 @@ Figure 1: Getting Started with Disqus
 </div>
 </div>
 </center>
-<p>I was then presented with the following options menu. I entered <code>https:://www.shamindras.com/</code> for the website name and manually set my <strong>Disqus shortname</strong> to be <code>shamindras-distill</code>. This shortname is important to note down as we’ll see shortly.</p>
+<p>I was then presented with the following Disqus site configuration menu. I entered <code>https:://www.shamindras.com/</code> for my <strong>Website Name</strong> and manually set my <strong>Disqus shortname</strong> to be <code>shamindras-distill</code> to be easier to remember and specific to this site, in case I make more websites later on. This Disqus shortname is important to note down (🖊) as we’ll see shortly.</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-01-03-screenshot"></span>
@@ -1008,6 +1009,9 @@ Figure 2: Setup Disqus shortname
 </div>
 </center>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
+<aside>
+As a student got to always know when to get a freebie <code>r emo::ji("smile")</code>
+</aside>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-01-04-screenshot"></span>
@@ -1018,7 +1022,7 @@ Figure 3: Select Basic (Free, Ads supported) mode
 </div>
 </div>
 </center>
-<p>In terms of implementing <code>Disqus</code> on my site, I clicked on the following option to install it manually, since <code>distill</code> makes this easy:</p>
+<p>In terms of implementing <code>Disqus</code> on my site, I clicked on the following button to install Disqus on my site manually:</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-01-05-screenshot"></span>
@@ -1029,7 +1033,7 @@ Figure 4: Manual installation of Disqus
 </div>
 </div>
 </center>
-<p>Finally for configuring <code>Disqus</code> I ensured that I set the following options. I particularly like setting an opiononated comments policy and selected the <a href="https://grist.org/grist-comment-policy/" target="_blank">Grist Comment Policy</a></p>
+<p>Before finishing the manual installation of <code>Disqus</code> I ensured that I set the following configuration options. I particularly like setting an opiononated comments policy and selected the <a href="https://grist.org/grist-comment-policy/" target="_blank">Grist Comment Policy</a>:</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-01-06-screenshot"></span>
@@ -1040,12 +1044,17 @@ Figure 5: Disqus Configuration Settings
 </div>
 </div>
 </center>
-<p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code>:</p>
+<p>Finally to ensure that the implementation is completed I added the following line to the <code>_site.yml</code> post using the <strong>Disqus shortname</strong> set earlier i.e. <code>shamindras-distill</code> and ensuring <code>hidden: true</code> so that the comments are not expanded by default:</p>
+<aside>
+<strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="bash"><code>
 collections:
   posts:
-    disqus: shamindras-distill</code></pre>
+    disqus:
+      shortname: shamindras-distill
+      hidden: true</code></pre>
 </div>
 <p>We now see the following comments option at the bottom of every post:</p>
 <center>
@@ -1058,6 +1067,7 @@ Figure 6: Distill Disqus Comments Selection
 </div>
 </div>
 </center>
+<p>You can read more about setting up comments from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/blog.html#comments-and-sharing">here</a></p>
 <h2 id="step-2-setup-google-analytics-tracking">Step 2: Setup Google Analytics tracking</h2>
 <p>I also wanted to setup basic user viewing tracking for my site. Fortunately <code>distill</code> can be easily configured to work with <a href="https://analytics.google.com/analytics/web" target="_blank">Google Analytics</a>. In order to set this up I simply created an account for <code>Google Analytics</code> (using my personal gmail account). I then logged in and selected the option to track my website as follows:</p>
 <center>
@@ -1070,12 +1080,16 @@ Figure 7: Google Analytics Settings
 </div>
 </div>
 </center>
-<p>I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
+<p>Note that I specified the <strong>Website Name</strong> field to be <code>shamindras-distill</code>. This is indeed the same as the Disqus shortname from earlier but did not have to be. I just did it for consistency and easy reference. I was then given a <strong>Google Analytics token</strong> and concluded this setup by adding the token to the <code>_site.yml</code> file as follows:</p>
+<aside>
+<strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="bash"><code>
 google_analytics: &quot;UA-145015693-1&quot;</code></pre>
 </div>
-<h2 id="step-3-add-netlify-badge">Step 3: Add Netlify badge</h2>
+<p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
+<h2 id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
 <p>Since <a href="https://www.netlify.com" target="_blank">Netlify</a> is the web hosting platform for my site (see setup details <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/#step-8-deploy-your-website" target="_blank">here</a>). I just logged into my Netlify account and went to my <strong>Site Details</strong> and obtained the following code from the <strong>Status Badges</strong> option.</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
@@ -1088,8 +1102,11 @@ Figure 8: Netlify Badge Code
 </div>
 </center>
 <p>I copy-pasted the above code in at the top of my site <code>README.md</code> file. This let’s me quickly know whether my website is up and running as expected by simply checking out my <a href="https://github.com/shamindras/ss_personal_distill_blog" target="_blank">github page</a>.</p>
+<aside>
+<strong>Note:</strong> You can see my <code>README.md</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a>
+</aside>
 <h2 id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
-<p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for twitter, linkedin, pinterest, and facebook. I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
+<p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="bash"><code>
 collections:
@@ -1108,13 +1125,16 @@ Figure 9: Distill Sharing Options
 </div>
 </center>
 <p>I also added in the following lines to <code>_site.yml</code> to ensure that <a href="https://rstudio.github.io/distill/metadata.html#twitter-card" target="_blank">twitter cards</a> are correctly generated when posts are shared on twitter:</p>
+<aside>
+<strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
+</aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="bash"><code>
 twitter:
   site: &quot;@shamindraas&quot;
   creator: &quot;@shamindraas&quot;</code></pre>
 </div>
-<h2 id="step-5-add-change-tracking-and-logo">Step 5: Add change tracking and logo</h2>
+<h2 id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
 <p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="bash"><code>
@@ -1124,9 +1144,9 @@ repository_url: https://github.com/shamindras/ss_personal_distill_blog</code></p
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-05-01-screenshot"></span>
-<img src="images/step_05_trackcorr_01.png" alt="Getting Started with Disqus" width="489" class=external />
+<img src="images/step_05_trackcorr_01.png" alt="Changes and Corrections Tracking" width="489" class=external />
 <p class="caption">
-Figure 10: Getting Started with Disqus
+Figure 10: Changes and Corrections Tracking
 </p>
 </div>
 </div>
@@ -1141,10 +1161,22 @@ navbar:
     - icon: fa fa-rss
       href: index.xml</code></pre>
 </div>
-<p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file.</p>
 <aside>
-<strong>Note: </strong> The <code>index.xml</code> file is generated automatically from the <code>index.Rmd</code>
+<strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
 </aside>
+<p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="bash"><code>
+rmarkdown::render_site(here::here())</code></pre>
+</div>
+<h2 id="next-steps">Next Steps</h2>
+<p>In terms of core <code>distill</code> blog settings, these are the main options that I’m happy to implement for now. For me the next steps are more about <strong>customizing my own blog workflow</strong>. This will involve setting up utilities to automatically:</p>
+<ul>
+<li><strong>Wrap Rmd files</strong> to 80 characters for consistency</li>
+<li>Quickly <strong>delete unused files</strong> e.g. <code>DS_Store</code> files on mac</li>
+<li><strong>Clear knitr cache</strong> for all posts and thoroughly re-render the site</li>
+</ul>
+<p>I expect to do this using a combination of <code>R</code> functions/<code>Makefile</code> workflow, but do stay tuned!</p>
 <h2 id="concluding-thoughts">Concluding Thoughts</h2>
 <p>As it can be seen it is quite easy to customize <code>distill</code> for commonly required features. Really great work by the RStudio team in making such customizations so user-friendly.</p>
 <p>Could have added the following e.g. subscriptions (see site),</p>

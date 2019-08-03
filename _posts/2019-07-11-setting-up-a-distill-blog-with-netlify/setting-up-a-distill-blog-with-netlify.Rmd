@@ -463,8 +463,9 @@ Thanks Netlify `r emo::ji("thanks")`.
 
 With everything setup and configured on github/Netlify the deployment should be
 near instantaneous. But after about 20 mins my blog appeared at
-<www.shamindras.com>. So effectively Netlify and github were talking to each
-other `r emo::ji("peace")`.
+[www.shamindras.com](www.shamindras.com){target="_blank"}. So effectively
+Netlify and github were now talking to each other and site is setup. Woohoo `r
+emo::ji("peace")`!
 
 ## Step 10: Future additions and extras
 
@@ -480,6 +481,8 @@ would also be nice to have the following features:
 
 I will make sure to document the setup process as part of a series of future
 blog posts
+
+## Concluding Thoughts
 
 If you managed to read this far, then I sincerely thank you. I hope to make
 even better technical and personal blogposts going forward.

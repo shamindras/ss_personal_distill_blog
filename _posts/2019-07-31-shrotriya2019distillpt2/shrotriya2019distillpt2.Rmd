@@ -27,32 +27,37 @@ IMAGES_PATH <- here::here("_posts",
 ## Step 0: Introduction
 
 This is a meta blogpost and a second-part in a series to describe how I setup
-this personal academic blogusing the amazing
+this personal academic blog using the amazing
 [distill](https://rstudio.github.io/distill/){target="_blank"} package by the
 [RStudio](h//www.rstudio.com/){target="_blank"} team.
 
 The first part of this meta blogpost series can be [found
-here](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"}.
+here](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"},
+where I detailed the steps to setup this blog using Netlify and Google Domains.
 If you haven't setup a `distill` themed blog then you are encouraged to check
-it out.
+it out before reading this post.
+
+Fortunately `distill` comes with easy to configure settings as well see below.
+I've only implemented some of the options available. I should note that the
+RStudio `distill` team has already created an [excellent distill blog creation
+tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
+thoroughly used and highly recommend to new users to check out.
+
+<aside> Admittedly this blogpost is verbose, but hopefully the details help
+**new users** of the `distill` blogging package.  </aside>
+
+With that said, here are some key upgrades I made to this blog.
 
 ## Step 1: Setup Disqus comments
 
-We should setup some method of comments for our blog. I will go with the
-recommended [Disqus comments option](https://disqus.com){target="_blank"} from
-the [distill
+I really wanted to setup some comments system for each blogpost. This way I can
+learn new tips from readers and find out how to improve posts going forward. I
+will go with the recommended [Disqus comments
+option](https://disqus.com){target="_blank"} from the [distill
 blog](https://rstudio.github.io/distill/blog.html#comments-and-sharing){target="_blank"}.
 I simply created a [Disqus](https://disqus.com){target="_blank"} account and
-selected **Get Started**. I then clicked the following option to *Install
+selected **Get Started**. I then clicked the following button to *Install
 Disqus on my site*.
-
-<center>
-```{r step-01-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", cache=TRUE, eval=FALSE}
-knitr::include_graphics(path =
-                            fs::path(IMAGES_PATH,
-                                     "step_01_disqus_01.png"))
-```
-</center>
 
 <center>
 ```{r step-01-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", cache=TRUE}
@@ -62,10 +67,11 @@ knitr::include_graphics(path =
 ```
 </center>
 
-I was then presented with the following options menu. I entered
-`https:://www.shamindras.com/` for the website name and manually set my
-**Disqus shortname** to be `shamindras-distill`. This shortname is important to
-note down as we'll see shortly.
+I was then presented with the following Disqus site configuration menu. I
+entered `https:://www.shamindras.com/` for my **Website Name** and manually set
+my **Disqus shortname** to be `shamindras-distill` to be easier to remember and
+specific to this site, in case I make more websites later on. This Disqus
+shortname is important to note down (`r emo::ji("pen")`) as we'll see shortly.
 
 <center>
 ```{r step-01-03-screenshot, fig.cap="Setup Disqus shortname", echo=FALSE, out.extra="class=external", cache=TRUE}
@@ -75,10 +81,12 @@ knitr::include_graphics(path =
 ```
 </center>
 
-
 After clicking **Create Site** in the previous menu I proceeded to select the
 _free_ plan option by subscribing to the *Basic, Free, Ads Supported* comments
 option as seen below:
+
+<aside> As a student got to always know when to get a freebie `r
+emo::ji("smile")` </aside>
 
 <center>
 ```{r step-01-04-screenshot, fig.cap="Select Basic (Free, Ads supported) mode", echo=FALSE, out.extra="class=external", cache=TRUE}
@@ -88,8 +96,9 @@ knitr::include_graphics(path =
 ```
 </center>
 
-In terms of implementing `Disqus` on my site, I clicked on the following option
-to install it manually, since `distill` makes this easy:
+
+In terms of implementing `Disqus` on my site, I clicked on the following button
+to install Disqus on my site manually:
 
 <center>
 ```{r step-01-05-screenshot, fig.cap="Manual installation of Disqus", echo=FALSE, out.extra="class=external", cache=TRUE}
@@ -99,10 +108,10 @@ knitr::include_graphics(path =
 ```
 </center>
 
-Finally for configuring `Disqus` I ensured that I set the following options. I
-particularly like setting an opiononated comments policy and selected the
-[Grist Comment
-Policy](https://grist.org/grist-comment-policy/){target="_blank"}
+Before finishing the manual installation of `Disqus` I ensured that I set the
+following configuration options. I particularly like setting an opiononated
+comments policy and selected the [Grist Comment
+Policy](https://grist.org/grist-comment-policy/){target="_blank"}:
 
 <center>
 ```{r step-01-06-screenshot, fig.cap="Disqus Configuration Settings", echo=FALSE, out.extra="class=external", cache=TRUE}
@@ -114,12 +123,19 @@ knitr::include_graphics(path =
 
 Finally to ensure that the implementation is completed I added the following
 line to the `_site.yml` post using the **Disqus shortname** set earlier i.e.
-`shamindras-distill`:
+`shamindras-distill` and ensuring `hidden: true` so that the comments are not
+expanded by default:
+
+<aside> **Note:** You can see my `_site.yml` with these settings
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
+</aside>
 
 ```{bash step-01-07, eval=FALSE, echo=TRUE}
 collections:
   posts:
-    disqus: shamindras-distill
+    disqus:
+      shortname: shamindras-distill
+      hidden: true
 ```
 
 We now see the following comments option at the bottom of every post:
@@ -131,6 +147,9 @@ knitr::include_graphics(path =
                                      "step_01_disqus_07.png"))
 ```
 </center>
+
+You can read more about setting up comments from the official `distill` blog
+[here](https://rstudio.github.io/distill/blog.html#comments-and-sharing)
 
 ## Step 2: Setup Google Analytics tracking
 
@@ -149,14 +168,24 @@ knitr::include_graphics(path =
 ```
 </center>
 
-I was then given a **Google Analytics token** and concluded this setup by
-adding the token to the `_site.yml` file as follows:
+Note that I specified the **Website Name** field to be `shamindras-distill`.
+This is indeed the same as the Disqus shortname from earlier but did not have
+to be. I just did it for consistency and easy reference. I was then given a
+**Google Analytics token** and concluded this setup by adding the token to the
+`_site.yml` file as follows:
+
+<aside> **Note:** You can see my `_site.yml` with these settings
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
+</aside>
 
 ```{bash step-02-02, eval=FALSE, echo=TRUE}
 google_analytics: "UA-145015693-1"
 ```
 
-## Step 3: Add Netlify badge
+You can read more about setting up Google Analytics from the official `distill`
+blog [here](https://rstudio.github.io/distill/website.html#google-analytics)
+
+## Step 3: Add Netlify Status Badge
 
 Since [Netlify](https://www.netlify.com){target="_blank"} is the web hosting
 platform for my site (see setup details
@@ -177,12 +206,16 @@ let's me quickly know whether my website is up and running as expected by
 simply checking out my [github
 page](https://github.com/shamindras/ss_personal_distill_blog){target="_blank"}.
 
+<aside> **Note:** You can see my `README.md` with these settings
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md)
+</aside>
+
 ## Step 4: Add blog post sharing options
 
 It is easy to configure distill to allow for easy sharing of posts using a
-variety of social media platforms. I allow for twitter, linkedin, pinterest,
-and facebook. I did this by simply adding the following line in the `_site.yml`
-file:
+variety of social media platforms. I allow for **twitter, linkedin, pinterest,
+and facebook.** I did this by simply adding the following line in the
+`_site.yml` file:
 
 ```{bash step-04-01, eval=FALSE, echo=TRUE}
 collections:
@@ -204,13 +237,17 @@ I also added in the following lines to `_site.yml` to ensure that [twitter
 cards](https://rstudio.github.io/distill/metadata.html#twitter-card){target="_blank"}
 are correctly generated when posts are shared on twitter:
 
+<aside> **Note:** You can see my `_site.yml` with these settings
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
+</aside>
+
 ```{bash step-04-02, eval=FALSE, echo=TRUE}
 twitter:
   site: "@shamindraas"
   creator: "@shamindraas"
 ```
 
-## Step 5: Add change tracking and logo
+## Step 5: Add Corrections/Change Tracking and RSS feed
 
 I frequently make edits to blogposts and intend to do so going forward.
 Fortunately `distill` makes it easy **track changes/corrections** made to
@@ -224,7 +261,7 @@ repository_url: https://github.com/shamindras/ss_personal_distill_blog
 Now the following appears at the bottom of all blogposts:
 
 <center>
-```{r step-05-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", cache=TRUE}
+```{r step-05-01-screenshot, fig.cap="Changes and Corrections Tracking", echo=FALSE, out.extra="class=external", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "step_05_trackcorr_01.png"))
@@ -245,12 +282,33 @@ navbar:
       href: index.xml
 ```
 
+<aside> **Note:** You can see my `_site.yml` with these settings
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
+</aside>
 
 The critical elements are adding in the `base_url` fields and adding in `fa
-fa-rss` which is derived from the `index.xml` file.
+fa-rss` which is derived from the `index.xml` file.  The `index.xml` file is
+automatically generated from the `index.Rmd` when you render the `distill` blog
+using the usual command:
 
-<aside> **Note: ** The `index.xml` file is generated automatically from the
-`index.Rmd` </aside>
+```{bash step-05-03, eval=FALSE, echo=TRUE}
+rmarkdown::render_site(here::here())
+```
+
+## Next Steps
+
+In terms of core `distill` blog settings, these are the main options that I'm
+happy to implement for now. For me the next steps are more about **customizing
+my own blog workflow**. This will involve setting up utilities to
+automatically:
+
+- **Wrap Rmd files** to 80 characters for consistency
+- Quickly **delete unused files** e.g. `DS_Store` files on mac
+- **Clear knitr cache** for all posts and thoroughly re-render the
+site
+
+I expect to do this using a combination of `R` functions/`Makefile`
+workflow, but do stay tuned!
 
 ## Concluding Thoughts
 
