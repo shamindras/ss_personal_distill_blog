@@ -1,11 +1,16 @@
-name: "test_distill_blog"
+name: "ss_personal_distill_blog"
 title: "Shamindra Shrotriya"
 description: |
   Shamindra Shrotriya's personal blog/ site. Some fun posts
   on math, statistics and the PhD student life.
 output_dir: "_site"
+favicon: data/images/about-profile-circular-scaled-100.png
 base_url: https://www.shamindras.com/
+repository_url: https://github.com/shamindras/ss_personal_distill_blog
 navbar:
+  logo:
+    image: data/images/about-profile-circular-scaled-100.png
+    href: https://www.shamindras.com/
   left:
     - text: "About Me"
       href: about.html
@@ -13,8 +18,10 @@ navbar:
       href: index.xml
 collections:
   posts:
-    share: [twitter, linkedin]
+    disqus: shamindras-distill
+    share: [twitter, linkedin, pinterest, facebook]
     feed_items_max: false
+google_analytics: "UA-145015693-1"
 twitter:
   site: "@shamindraas"
   creator: "@shamindraas"

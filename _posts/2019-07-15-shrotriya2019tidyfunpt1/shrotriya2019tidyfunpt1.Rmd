@@ -1,7 +1,7 @@
 ---
 title: "Tidyverse Fun - Part 1"
 description: |
-  First part in a series of doing useful tasks with 
+  First part in a series of doing useful tasks with
   the `Tidyverse`
 categories:
   - tidyverse
@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
 IMAGES_PATH <- here::here("_posts",
                           "2019-07-25-shrotriya2019tidyfunpt1",
                           "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, 
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
                                                        "tidyverse.png")))
 ```
 
@@ -36,15 +36,14 @@ knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
 
 ### The central problem
 
-Based on a fun conversation with my statistics cohort 
-over dinner we got to discussing the famous *Oxford Comma* [@wiki_serial_comma] (or *Serial Comma* depending on your
-persuasion). I've never really adopted the use but my
-friends made a compelling argument on it's general lack
-of ambiguity in phrases compared to not using it.
+Based on a fun conversation with my statistics cohort over dinner we got to
+discussing the famous *Oxford Comma* [@wiki_serial_comma] (or *Serial Comma*
+depending on your persuasion). I've never really adopted the use but my friends
+made a compelling argument on it's general lack of ambiguity in phrases
+compared to not using it.
 
-We will use the Oxford comma on the famous *ambiguous*
-phrase (here used without the Oxford Comma 
-before 'shoots'):
+We will use the Oxford comma on the famous *ambiguous* phrase (here used
+without the Oxford Comma before 'shoots'):
 
 > Eats, shoots and leaves
 
@@ -52,8 +51,8 @@ After adding in the Oxford Comma this would become:
 
 > Eats, shoots, and leaves
 
-**Goal:** A fun experiment would be to generate *all permutations* of this phrase with and without 
-the Oxford Comma.
+**Goal:** A fun experiment would be to generate *all permutations* of this
+phrase with and without the Oxford Comma.
 
 ### Generating all word-triple permutations the `tidy` way
 
@@ -70,8 +69,9 @@ library(glue)
 WORD_VALS <- c("eats", "shoots", "leaves")
 ```
 
-Generate all unique 3-word permutations without replacement from the three unique words. We'll create a helper
-function to check that a vector of words is unique.
+Generate all unique 3-word permutations without replacement from the three
+unique words. We'll create a helper function to check that a vector of words is
+unique.
 
 ```{r setup_oxc_01_03, echo=TRUE, cache=TRUE}
 is_unq_perm <- function(word1, word2, word3){
@@ -80,71 +80,63 @@ is_unq_perm <- function(word1, word2, word3){
 }
 ```
 
-Here we simply generated every possible 3 word triple
-with replacement using the `tidyr::crossing` function.
-We simply filter these $3^3 = 27$ triples for unique
-triples using the `is_unq_perm` function applied
-row-by-row using `purrr::pmap_lgl`. The `_lgl` simply
-returns a `TRUE/FALSE` logical value as intended by
-the applied function.
+Here we simply generated every possible 3 word triple with replacement using
+the `tidyr::crossing` function. We simply filter these $3^3 = 27$ triples for
+unique triples using the `is_unq_perm` function applied row-by-row using
+`purrr::pmap_lgl`. The `_lgl` simply returns a `TRUE/FALSE` logical value as
+intended by the applied function.
 
-<aside>
-This generates a *Cartesian product* of all the 3 word
-triples
-</aside>
+<aside> This generates a *Cartesian product* of all the 3 word triples </aside>
 
 ```{r setup_oxc_01_04, echo=TRUE, cache=TRUE}
 # Generate the unique word-triples
-all_perms <- tidyr::crossing(word1 = WORD_VALS, 
-                             word2 = WORD_VALS, 
-                             word3 = WORD_VALS) %>% 
-                dplyr::mutate(.data = ., 
-                              is_unq_perm = purrr::pmap_lgl(.l = ., 
-                                                            is_unq_perm)) %>% 
-                dplyr::filter(.data = ., is_unq_perm) %>% 
+all_perms <- tidyr::crossing(word1 = WORD_VALS,
+                             word2 = WORD_VALS,
+                             word3 = WORD_VALS) %>%
+                dplyr::mutate(.data = .,
+                              is_unq_perm = purrr::pmap_lgl(.l = .,
+                                                            is_unq_perm)) %>%
+                dplyr::filter(.data = ., is_unq_perm) %>%
                 dplyr::select(-is_unq_perm)
 
 # Display output in a nice centered table
-all_perms %>% 
+all_perms %>%
   knitr::kable(x = ., align = 'c',
-               col.names = c("Word 1", 
-                             "Word 2", 
+               col.names = c("Word 1",
+                             "Word 2",
                              "Word 3"))
 ```
 
-Great - that part is done! Now we just need to generate
-for each triple of words an oxford comma and non-oxford
-comma version. This is done easily using the amazing
-`glue` package as seen below:
+Great - that part is done! Now we just need to generate for each triple of
+words an oxford comma and non-oxford comma version. This is done easily using
+the amazing `glue` package as seen below:
 
 ```{r setup_oxc_01_05, cache=TRUE, echo=TRUE}
 exprs <- all_perms %>%
-          dplyr::mutate(non_oxford_comma = 
-                          glue::glue_data(.x = ., 
-                          "{word1}, {word2} and {word3}"), 
-                        oxford_comma = 
-                          glue::glue_data(.x = ., 
-                          "{word1}, {word2}, and {word3}")) %>% 
+          dplyr::mutate(non_oxford_comma =
+                          glue::glue_data(.x = .,
+                          "{word1}, {word2} and {word3}"),
+                        oxford_comma =
+                          glue::glue_data(.x = .,
+                          "{word1}, {word2}, and {word3}")) %>%
           dplyr::select(non_oxford_comma, oxford_comma)
 ```
 
-We can display the side-by-side output of the Non-Oxford
-Comma vs. Oxford comma for the $6$ generated triples as
-follows:
+We can display the side-by-side output of the Non-Oxford Comma vs. Oxford comma
+for the $6$ generated triples as follows:
 
 ```{r setup_oxc_01_06, cache=TRUE, echo=TRUE}
 # Display output in a nice centered table
-exprs %>% 
-  knitr::kable(x = ., 
-               align = 'c', 
-               col.names = c("Non-Oxford Comma", 
+exprs %>%
+  knitr::kable(x = .,
+               align = 'c',
+               col.names = c("Non-Oxford Comma",
                              "Oxford Comma"))
 ```
 
-So there you have it. Have fun generating your
-own version of Oxford Comma triples to engage
-in civil discussion with your fellow grammar 
-focused friends `r emo::ji("smile")`.
+So there you have it. Have fun generating your own version of Oxford Comma
+triples to engage in civil discussion with your fellow grammar focused friends
+`r emo::ji("smile")`.
 
 ## Task 2: Generating numbered BibTeX entries
 
@@ -163,25 +155,24 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 ```
 
 Specifically 30 such sequential entries to create for lectures `1-30`. Rather
-than do this manually, I realized that
-this would be fun scripting exercise with using the
-`tidyverse` packages `glue`, `purrr`, and `stringr`.
+than do this manually, I realized that this would be fun scripting exercise
+with using the `tidyverse` packages `glue`, `purrr`, and `stringr`.
 
-**Goal:** Create 30 such BibTeX entries and print to 
-the console to directly-copy paste to my BibTeX file.
+**Goal:** Create 30 such BibTeX entries and print to the console to
+directly-copy paste to my BibTeX file.
 
 ### The `tidy` approach
 
-First step is to write a function that takes a lecture number (integer)
-as an input and then outputs a single BibTeX entry for that lecture.
+First step is to write a function that takes a lecture number (integer) as an
+input and then outputs a single BibTeX entry for that lecture.
 
 ```{r bbtex_01_01, eval=TRUE, echo=TRUE, cache=TRUE}
 # Generate BibTeX entry for a single lecture number
 get_lec_bibtex <- function(lec_num){
   # Get the 2 character padded lecture number i.e. 1 -> "01"
-  lec_num_pad <- stringr::str_pad(string = lec_num, width = 2, 
+  lec_num_pad <- stringr::str_pad(string = lec_num, width = 2,
                                   side = "left", pad = "0")
-  
+
   # Construct the BibTeX entry
   out_bbtex_str <- glue::glue(
     "@misc{doe2019_lec<lec_num>,
@@ -190,26 +181,22 @@ get_lec_bibtex <- function(lec_num){
     month  = {March},
     year   = {2018},
     url    = {https://www.hpg/~doe/st10A/lecs/lec<lec_num_pad>.pdf}}",
-    .open = "<", 
+    .open = "<",
     .close = ">")
 
   base::return(out_bbtex_str)
 }
 ```
 
-Note that by default `glue` allows you to substitute input text in
-between `{` and `}` markers. However BibTeX entries *already
-have* literal default `{}` tags that we need to include in
-our function output. Rather than escaping them the `glue` 
-package conveniently allows us to change the default opening 
-and closing markers `r emo::ji("hundred")`! We simply set 
-these to be angle brackets `< >` using the `.open` and `.close` 
-options above.
+Note that by default `glue` allows you to substitute input text in between `{`
+and `}` markers. However BibTeX entries *already have* literal default `{}`
+tags that we need to include in our function output. Rather than escaping them
+the `glue` package conveniently allows us to change the default opening and
+closing markers `r emo::ji("hundred")`! We simply set these to be angle
+brackets `< >` using the `.open` and `.close` options above.
 
-<aside>
-Luckily we don't have *literal* angle brackets in our BibTeX
-output to deal with
-</aside>
+<aside> Luckily we don't have *literal* angle brackets in our BibTeX output to
+deal with </aside>
 
 Let's just test this out quickly:
 
@@ -218,11 +205,10 @@ lec_no <- 1
 get_lec_bibtex(lec_num = lec_no)
 ```
 
-Great - looks like it is working as required with the correct string padding
-in the lecture number in the pdf filename!
+Great - looks like it is working as required with the correct string padding in
+the lecture number in the pdf filename!
 
-<aside>
-**Note:** We used the `stringr` `str_pad` to convert `1` to `"01"`
+<aside> **Note:** We used the `stringr` `str_pad` to convert `1` to `"01"`
 </aside>
 
 ### Apply to all lectures using `purrr`
@@ -231,31 +217,28 @@ Let's finish this by creating all the entries using `purrr`:
 
 ```{r bbtex_01_03, eval=TRUE, echo=TRUE, cache=TRUE}
 lec_nums <- c(1, 30)
-lec_nums %>% 
-  purrr::map_chr(.x = ., .f = ~get_lec_bibtex(lec_num = .x)) %>% 
+lec_nums %>%
+  purrr::map_chr(.x = ., .f = ~get_lec_bibtex(lec_num = .x)) %>%
   cat(., sep = "\n\n")
 ```
 
-Yay - this works as expected! We can now paste into BibTeX 
-as required.
+Yay - this works as expected! We can now paste into BibTeX as required.
 
-Note that we only created it for lectures 1 and 30 for easy 
-scrolling. But for all lectures we can just 
-replace `c(1, 30)` with `1:30` in the above code.
+Note that we only created it for lectures 1 and 30 for easy scrolling. But for
+all lectures we can just replace `c(1, 30)` with `1:30` in the above code.
 
 ## Conclusion
 
-This post was for me to document and serve as a guide to automating 
-a couple of fun text-based tasks that I came across in my work
-(and social life!). Using the `tidy` framework can be a fun way
-to solve these tasks (but certainly not the only way in `R`). 
-Have fun playing around with the above and post in the comments
-any feedback you have `r emo::ji("thumbsup")`.
+This post was for me to document and serve as a guide to automating a couple of
+fun text-based tasks that I came across in my work (and social life!). Using
+the `tidy` framework can be a fun way to solve these tasks (but certainly not
+the only way in `R`).  Have fun playing around with the above and post in the
+comments any feedback you have `r emo::ji("thumbsup")`.
 
 Stay tuned for more blogposts solving more such tasks.
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank Salil Shrotriya for creating the 
-preview image for this post. The hex sticker `png` files 
-were sourced from [here](https://github.com/rstudio/hex-stickers)
+I'd like to thank Salil Shrotriya for creating the preview image for this post.
+The hex sticker `png` files were sourced from
+[here](https://github.com/rstudio/hex-stickers)

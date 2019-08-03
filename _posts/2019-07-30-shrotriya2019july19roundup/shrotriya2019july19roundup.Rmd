@@ -11,7 +11,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-31-2019
-preview: images/preview-july-2019.png
+preview: images/preview-july-2019-02.png
 slug: shrotriya2019july19roundup
 bibliography: ../../refs.bib
 output:
@@ -28,18 +28,18 @@ library(bookdown)
 
 ## Introduction
 
-This is a new feature I'm going to experiment with, namely documenting
-anything interesting I come across (articles, lectures, books, papers
+This is a new feature I'm going to experiment with, namely documenting anything
+interesting I come across (articles, lectures, books, papers
                                               etc.) and any activities I get up to. This is more for my personal
 benefit but may also help others. Let's see how this experiment goes!
 
 ## Interesting Articles
 
-- Came across this [exhaustive `BibTex` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib){target="_blank"} 
+- Came across this [exhaustive `BibTex` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib){target="_blank"}
 which will be a really handy reference going forward for $\LaTeX$ documents
 
-- This [Pimp my RMD: a few tips for R Markdown](https://holtzy.github.io/Pimp-my-rmd/#highlight_a_piece_of_text){target="_blank"} document is a very good site to help deal with really slick 
-features of editing `Rmd` documents. 
+- This [Pimp my RMD: a few tips for R Markdown](https://holtzy.github.io/Pimp-my-rmd/#highlight_a_piece_of_text){target="_blank"} document is a very good site to help deal with really slick
+features of editing `Rmd` documents.
     - One nice feature I noticed was to use `HTML` to [center an image](https://holtzy.github.io/Pimp-my-rmd/#center_an_image){target="_blank"}
 
 ## Interesting Books
@@ -47,49 +47,53 @@ features of editing `Rmd` documents.
 ### Non-fiction
 
 - Continued reading this fantastic book [@steele2004cauchyscwarzmaster_book] called the *Art of Mathematical inequalities* by [Prof. Michael Steele](http://www-stat.wharton.upenn.edu/~steele/){target="_blank"}. This book is simply
-amazing in that Prof. Steele walks through deriving mathematical 
-inequalities as if you were having a casual chat with him using a whiteboard. I've been working through through the problems in detail and they are a great challenge! I'll blog more about this as I finish the book in the August 2019 roundup.
+amazing in that Prof. Steele walks through deriving mathematical inequalities
+as if you were having a casual chat with him using a whiteboard. I've been
+working through through the problems in detail and they are a great challenge!
+I'll blog more about this as I finish the book in the August 2019 roundup.
 
-<aside>
-**Note:** the text contains full solutions making it ideal for self-study (but I refuse to peek for now)
-</aside>
+<aside> **Note:** the text contains full solutions making it ideal for
+self-study (but I refuse to peek for now) </aside>
 
 ### Fiction
 
 - Read Celeste Ng's [Everything I Never Told You](https://www.celesteng.com/everything-i-never-told-you){target="_blank"}. Very nicely
-written debut novel by Ng, though quite dark and brooding in tone. Would
-not recommend as a pick me up but certainly would for a nice American-Asian character study set in the 1970s.
+written debut novel by Ng, though quite dark and brooding in tone. Would not
+recommend as a pick me up but certainly would for a nice American-Asian
+character study set in the 1970s.
 
 ## Interesting Papers
 
 - Particularly enjoyed reading this paper on the mathematical description of the carbon cycle
-[@rothman14_earth_carbon_cycle]. Really useful to get a good
-idea of the simple but powerful use of simple stochastic
-differential equations used to model climate change processes at various *global scales*.
+[@rothman14_earth_carbon_cycle]. Really useful to get a good idea of the simple
+but powerful use of simple stochastic differential equations used to model
+climate change processes at various *global scales*.
 
 ## Personal Blogging
 
-Besides this post `r emo::ji("smile")` the main things I got up to
-on the personal blogging front were:
+Besides this post `r emo::ji("smile")` the main things I got up to on the
+personal blogging front were:
 
 - Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"} on the fun setup process with the [RStudio distill package](https://rstudio.github.io/distill/blog.html){target="_blank"} and
-also [Netlify](https://netlify.com){target="_blank"} and [Google Domains](https://domains.google){target="_blank"}
+also [Netlify](https://netlify.com){target="_blank"} and [Google
+Domains](https://domains.google){target="_blank"}
 - Wrote a [fun blogpost](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/){target="_blank"} on solving a couple of quick text-based tasks
-using the `tidyverse` including [generating Oxford Comma triples](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-1-generating-oxford-comma-triples){target="_blank"} and also [Generating numbered BibTeX entries](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-2-generating-numbered-bibtex-entries){target="_blank"}
+using the `tidyverse` including [generating Oxford Comma
+triples](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-1-generating-oxford-comma-triples){target="_blank"}
+and also [Generating numbered BibTeX
+entries](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-2-generating-numbered-bibtex-entries){target="_blank"}
 
 ## Concluding Thoughts
 
-Overall July 2019 was a somewhat productive summer month.
-Though things are never quite as productive as I like them
-to be in graduate school, but always got to keep trying. 
+Overall July 2019 was a somewhat productive summer month. Though things are
+never quite as productive as I like them to be in graduate school, but always
+got to keep trying.
 
-I liked documenting this personal 'July 2019 roundup'.
-Normally I'm not the type to share much about my personal
-life, but I thought documenting what I get up to gives me
-more stake in the respective activities and forces me to
-commit to them enthusiastically. I also like sharing cool
-stuff that I come across with friends, so dual benefit.
+I liked documenting this personal 'July 2019 roundup'. Normally I'm not the
+type to share much about my personal life, but I thought documenting what I get
+up to gives me more stake in the respective activities and forces me to commit
+to them enthusiastically. I also like sharing cool stuff that I come across
+with friends, so dual benefit.
 
-I think I'll keep these monthly roundups going for a while.
-Let's see how this experiment goes when semester starts
-`r emo::ji("smile")`.
+I think I'll keep these monthly roundups going for a while. Let's see how this
+experiment goes when semester starts `r emo::ji("smile")`.

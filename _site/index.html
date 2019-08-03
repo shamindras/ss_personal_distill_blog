@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
+  <link rel="alternate" type="application/rss+xml" href="https://www.shamindras.com/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -22,6 +23,7 @@
   <title>Shamindra Shrotriya: Blog Posts</title>
   
   
+  <link rel="icon" type="image/png" href="data/images/about-profile-circular-scaled-100.png"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -40,7 +42,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2019-07-10-welcome-to-shamindras-blog","2019-07-30-shrotriya2019july19roundup","2019-07-21-shrotriya2019reprtitanic","2019-07-15-shrotriya2019tidyfunpt1","2019-07-11-setting-up-a-distill-blog-with-netlify"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1261,6 +1263,13 @@
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145015693-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-145015693-1');
+  </script>
   <!--/radix_placeholder_site_in_header-->
 
 
@@ -1279,6 +1288,9 @@
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
+<a class="logo" href="https://www.shamindras.com/">
+<img src="data/images/about-profile-circular-scaled-100.png"/>
+</a>
 <a href="index.html" class="title">Shamindra Shrotriya</a>
 <a href="about.html">About Me</a>
 <a href="index.xml">
@@ -1613,31 +1625,30 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption">Blog Posts</h1>
-<a href="posts/2019-07-10-welcome-to-shamindras-blog/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["personal"]}</script>
-<div class="metadata">
-<div class="publishedDate">July 10, 2019</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-50.png"/>
-</div>
-<div class="description">
-<h2>Welcome to Shamindra’s Site</h2>
-<p>Detailing interesting things in the life of a PhD statistics
-student at CMU</p>
-</div>
-</a>
 <a href="posts/2019-07-30-shrotriya2019july19roundup/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["personal","roundup","rstats","math"]}</script>
 <div class="metadata">
 <div class="publishedDate">July 31, 2019</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019.png"/>
+<img data-src="posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png"/>
 </div>
 <div class="description">
 <h2>Shamindra's July 2019 Roundup</h2>
 <p>A quick roundup of any interesting July 2019 activities</p>
+</div>
+</a>
+<a href="posts/2019-07-31-shrotriya2019distillpt2/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["distill"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 31, 2019</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_01.png"/>
+</div>
+<div class="description">
+<h2>Upgrading Distill Blog Settings</h2>
+<p>The second part of a series on how I upgraded this `Distill` themed blog</p>
 </div>
 </a>
 <a href="posts/2019-07-21-shrotriya2019reprtitanic/" class="post-preview">
@@ -1681,6 +1692,20 @@ the `Tidyverse`</p>
 <p>First part of a series on how I setup this `Distill` themed blog with `Netlify`</p>
 </div>
 </a>
+<a href="posts/2019-07-10-welcome-to-shamindras-blog/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 10, 2019</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-50.png"/>
+</div>
+<div class="description">
+<h2>Welcome to Shamindra’s Site</h2>
+<p>Detailing interesting things in the life of a PhD statistics
+student at CMU</p>
+</div>
+</a>
 </div>
 <div class="posts-sidebar">
 <div class="sidebar-section categories">
@@ -1688,7 +1713,7 @@ the `Tidyverse`</p>
 <ul>
 <li>
 <a href="#distill">distill</a>
-<span class="category-count">(1)</span>
+<span class="category-count">(2)</span>
 </li>
 <li>
 <a href="#math">math</a>
@@ -1742,7 +1767,10 @@ the `Tidyverse`</p>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/shamindras/ss_personal_distill_blog/issues/new">create an issue</a> on the source repository.</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

@@ -11,32 +11,34 @@ knitr::opts_chunk$set(echo = FALSE)
 <center>
 ```{r main-src-poster, echo=FALSE}
 IMAGES_PATH <- here::here("data", "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH, "about-profile-circular-scaled-75.png")))
+knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
+                                                       "about-profile-circular-scaled-75.png")))
 ```
 </center>
 
-Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of Statistics and Data Science](http://www.stat.cmu.edu/){target="_blank"} at the
-wonderful [Carnegie Mellon University](https://www.cmu.edu/){target="_blank"}. I’ve decided to start 
-blogging to document my learning and development in statistics as a 
-graduate student.
+Hi there! I’m **Shamindra Shrotriya**, a graduate student in the [Department of
+Statistics and Data Science](http://www.stat.cmu.edu/){target="_blank"} at the
+wonderful [Carnegie Mellon University](https://www.cmu.edu/){target="_blank"}.
+I’ve decided to start blogging to document my learning and development in
+statistics as a graduate student.
 
-I’d like it to be a fun place to document interesting things I like to 
-read about in the statistics and machine learning space (statistical theory/methodology research, rstats, python etc) as well as anything else I am generally into e.g. books, sports.
+I’d like it to be a fun place to document interesting things I like to read
+about in the statistics and machine learning space (statistical
+theory/methodology research, rstats, python etc) as well as anything else I am
+generally into e.g. books, sports.
 
-Feel free to pull up a chair, leave a comment, and join me 
-so that we can explore together `r emo::ji("100")`.
+Feel free to pull up a chair, leave a comment, and join me so that we can
+explore together `r emo::ji("100")`.
 
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Add icon library --> <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Add font awesome icons -->
-<p style="text-align: center;">
+<!-- Add font awesome icons --> <p style="text-align: center;">
     <a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a>
-    <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin" style="font-size:46px;"></a>
+    <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin-square" style="font-size:46px;"></a>
     <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>
 </p>
 
 ## Acknowledgments {.appendix}
 
-I'd like to thank Salil Shrotriya for taking the
-profile pic.
+I'd like to thank Salil Shrotriya for taking the profile pic.
