@@ -27,9 +27,10 @@ IMAGES_PATH <- here::here("_posts",
 ## Step 0: Introduction
 
 This is a meta blogpost to describe how I setup this personal academic blog. It
-is based on the relatively new [distill](https://rstudio.github.io/distill/){target="_blank"}
-package by the [RStudio](h//www.rstudio.com/){target="_blank"} team. The main tools used I used
-to create this blog are:
+is based on the relatively new
+[distill](https://rstudio.github.io/distill/){target="_blank"} package by the
+[RStudio](h//www.rstudio.com/){target="_blank"} team. The main tools used I
+used to create this blog are:
 
 - My personal [Github account](https://github.com/shamindras){target="_blank"}
 - The [RStudio editor](https://www.rstudio.com/products/rstudio/){target="_blank"}
@@ -42,12 +43,14 @@ domain bought from [Google Domains](https://domains.google/){target="_blank"}
 The details of *how* I used the tools used are all noted below in a
 step-by-step manner.
 
-Importantly, I should note that the RStudio `distill` team has already
-created an [excellent distill blog creation tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I thoroughly used
-and highly recommend to new users. I wrote this meta blogpost in my own words
-so that I can personally remember the details going forward. I also added more
-details on deployment with Google Domains and Netlify that would hopefully be
-useful to new `R` users waiting to deploy a similar `distill` blog.
+Importantly, I should note that the RStudio `distill` team has already created
+an [excellent distill blog creation
+tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
+thoroughly used and highly recommend to new users. I wrote this meta blogpost
+in my own words so that I can personally remember the details going forward. I
+also added more details on deployment with Google Domains and Netlify that
+would hopefully be useful to new `R` users waiting to deploy a similar
+`distill` blog.
 
 <aside> Admittedly this blogpost is verbose, but hopefully the details help
 users new to the `distill` blogging package. </aside>
@@ -156,10 +159,10 @@ distill::create_blog(dir = here::here(),
 ```
 
 Note that we set `gh_pages = TRUE` to ensure that we can host this blog on
-[github pages](https://pages.github.com/){target="_blank"} down the line if needed.  You can
-omit this if you don't want the option to have *github pages* as your host in
-the future. I will be using `Netlify` to host my blog (see below), but it is
-good to have an additional host option in the future.
+[github pages](https://pages.github.com/){target="_blank"} down the line if
+needed.  You can omit this if you don't want the option to have *github pages*
+as your host in the future. I will be using `Netlify` to host my blog (see
+below), but it is good to have an additional host option in the future.
 
 My local `distill` blog directory now looked like this:
 
@@ -349,17 +352,18 @@ Although the blog was our blog contents are in a public online place i.e.
 [Google Domains](https://domains.google/#/) and bought `www.shamindras.com` for
 about $15/yr.
 
-There are free alternatives e.g.  [Github Pages](https://pages.github.com/){target="_blank"},
-but I wanted to have ownership on my page and found the annual fee to be
-reasonable with Google Domains.
+There are free alternatives e.g.  [Github
+Pages](https://pages.github.com/){target="_blank"}, but I wanted to have
+ownership on my page and found the annual fee to be reasonable with Google
+Domains.
 
 ## Step 8: Deploy your website with Netlify
 
 Now that the domain name is bought, I just needed to deploy the newly created
 blog contents on the registered domain name. Enter
-[netlify](https://www.netlify.com/){target="_blank"}! This is a free (and awesome) deployment
-service. I created a personal account following the intructions on Netlify
-website.
+[netlify](https://www.netlify.com/){target="_blank"}! This is a free (and
+awesome) deployment service. I created a personal account following the
+intructions on Netlify website.
 
 I then logged in to Netlify and clicked on the green `New site from Git` button
 to get started. In the following menu I clicked the `Github Continuous

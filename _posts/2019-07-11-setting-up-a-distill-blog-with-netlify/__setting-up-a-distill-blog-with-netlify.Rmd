@@ -1,7 +1,9 @@
 ---
 title: "Setting up a Distill Blog with Netlify"
 description: |
-  First part of a series on how I setup this `Distill` theme blog
+  First part of a series on how I setup this `Distill` themed blog with `Netlify`
+categories:
+  - distill
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
@@ -24,29 +26,31 @@ IMAGES_PATH <- here::here("_posts",
 
 ## Step 0: Introduction
 
-This is a meta blogpost to describe how I setup this personal academic blog.
-It is based on the relatively new [distill](https://rstudio.github.io/distill/)
-package by the [RStudio](h//www.rstudio.com/) team. The main tools used I used
-to create this blog are:
+This is a meta blogpost to describe how I setup this personal academic blog. It
+is based on the relatively new
+[distill](https://rstudio.github.io/distill/){target="_blank"} package by the
+[RStudio](h//www.rstudio.com/){target="_blank"} team. The main tools used I
+used to create this blog are:
 
-- My personal [Github account](https://github.com/shamindras)
-- The [RStudio editor](https://www.rstudio.com/products/rstudio/)
-- The `R` packages [`here`](https://github.com/r-lib/here) and
-[`distill`](https://github.com/rstudio/distill)
-- My macbook pro (2017 edition) and the [iterm2](https://www.iterm2.com/) editor
-- My personal [netlify account](https://app.netlify.com) and also my personal
-domain bought from [Google Domains](https://domains.google/)
+- My personal [Github account](https://github.com/shamindras){target="_blank"}
+- The [RStudio editor](https://www.rstudio.com/products/rstudio/){target="_blank"}
+- The `R` packages [`distill`](https://github.com/rstudio/distill){target="_blank"} and
+[`here`](https://github.com/r-lib/here){target="_blank"}
+- My macbook pro (2017 edition) and the [iterm2](https://www.iterm2.com/){target="_blank"} terminal
+- My personal [netlify account](https://app.netlify.com){target="_blank"} and also my personal
+domain bought from [Google Domains](https://domains.google/){target="_blank"}
 
 The details of *how* I used the tools used are all noted below in a
 step-by-step manner.
 
-*Importantly*, I should note that the RStudio `distill` team has already
-created a [nice distill blog creation
-tutorial](https://rstudio.github.io/distill/blog.html) which I thoroughly used
-and highly recommend to new users. I wrote this meta blogpost in my own words
-so that I can personally remember the details going forward. I also added more
-details on deployment with Google Domains and Netlify that would hopefully be
-useful to new `R` users waiting to deploy a similar `distill` blog.
+Importantly, I should note that the RStudio `distill` team has already created
+an [excellent distill blog creation
+tutorial](https://rstudio.github.io/distill/blog.html){target="_blank"} which I
+thoroughly used and highly recommend to new users. I wrote this meta blogpost
+in my own words so that I can personally remember the details going forward. I
+also added more details on deployment with Google Domains and Netlify that
+would hopefully be useful to new `R` users waiting to deploy a similar
+`distill` blog.
 
 <aside> Admittedly this blogpost is verbose, but hopefully the details help
 users new to the `distill` blogging package. </aside>
@@ -59,30 +63,35 @@ personal `github` account and create a new repository. I called mine
 included an `.gitignore` for `R` since that will the blogging language of
 choice here `r emo::ji("smile")`. This is shown in the screenshot below.
 
-```{r step_01_01_screenshot, out.width="150%"}
+<center>
+```{r step-01-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "01_01_create_github_distill_repo.png"))
 ```
+</center>
 
 <aside> Options for creating the Github repo for the `distill` blog </aside>
 
-Once created the repo will appear in `github` as seen in the following screenshot
+Once created the repo will appear in `github` as seen in the following
+screenshot
 
-```{r step_01_02_screenshot, out.width="150%"}
+<center>
+```{r step-01-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "01_02_newly_created_distill_repo.png"))
 ```
+</center>
 
 <aside> Newly created Github repo for the `distill` blog </aside>
 
 ## Step 2: Clone the repo locally
 
-With the `github` repo created, I switched locally on my mac to `iterm2` terminal
-and cloned the repo locally using the following command:
+With the `github` repo created, I switched locally on my mac to `iterm2`
+terminal and cloned the repo locally using the following command:
 
-```{bash step_02_01, eval=FALSE, echo=TRUE}
+```{bash step-02-01, eval=FALSE, echo=TRUE}
 git clone git@github.com:shamindras/ss_personal_distill_blog.git
 ```
 
@@ -100,7 +109,7 @@ Receiving objects: 100% (4/4), done.
 Now I simply changed into the newly cloned blog directory using the following
 command:
 
-```{bash step_02_02, eval=FALSE, echo=TRUE}
+```{bash step-02-02, eval=FALSE, echo=TRUE, cache=TRUE}
 cd ss_personal_distill_blog
 ```
 
@@ -123,7 +132,7 @@ In order to start creating the blog contents I opened up an instance of
 `RStudio` from within my new directory on my macbook via the following terminal
 command:
 
-```{bash step_03_01, eval=FALSE, echo=TRUE}
+```{bash step-03-01, eval=FALSE, echo=TRUE}
 open -a /Applications/RStudio.app .
 ```
 
@@ -133,7 +142,7 @@ opens in this newly created blog directory </aside>
 With `RStudio` opened we can now run the following `R` commands in just the
 `console` to create the install the required and `distill` blog setup packages:
 
-```{r step_03_02, eval=FALSE, echo=TRUE}
+```{r step-03-02, eval=FALSE, echo=TRUE}
 req_pckgs <- c("distill", "here")
 install.packages(pkgs = req_pckgs)
 library(here)
@@ -143,17 +152,17 @@ library(distill)
 Now we can create our blog using the following 2 commands from the freshly
 installed `distill` package using the following command run in the `console`
 
-```{r step_03_03, eval=FALSE, echo=TRUE}
+```{r step-03-03, eval=FALSE, echo=TRUE, cache=TRUE}
 distill::create_blog(dir = here::here(),
                      title = "Shamindra's Shrotriya's blog",
                      gh_pages = TRUE)
 ```
 
 Note that we set `gh_pages = TRUE` to ensure that we can host this blog on
-[github pages](https://pages.github.com/) down the line if needed.  You can
-omit this if you don't want the option to have *github pages* as your host in
-the future. I will be using `Netlify` to host my blog (see below), but it is
-good to have an additional host option in the future.
+[github pages](https://pages.github.com/){target="_blank"} down the line if
+needed.  You can omit this if you don't want the option to have *github pages*
+as your host in the future. I will be using `Netlify` to host my blog (see
+below), but it is good to have an additional host option in the future.
 
 My local `distill` blog directory now looked like this:
 
@@ -202,7 +211,7 @@ altogether and recreated it with the date prefix as I prefer as detailed below.
 To delete the default welcome directory, I just ran the following code at my
 terminal:
 
-```{bash step_04_01, eval=FALSE, echo=TRUE}
+```{bash step-04-01, eval=FALSE, echo=TRUE}
 rm -rf _posts/welcome
 ```
 
@@ -212,7 +221,7 @@ rm -rf _posts/welcome
 With the default welcome blogpost deleted, I created my own custom welcome
 blogpost as follows:
 
-```{r step_04_02, eval=FALSE, echo=TRUE}
+```{r step-04-02, eval=FALSE, echo=TRUE, cache=TRUE}
 distill::create_post(title = "Welcome to Shamindra’s Blog",
                      author = "Shamindra Shrotriya",
                      date_prefix = TRUE)
@@ -277,7 +286,7 @@ output: distill::distill_article
 ```
 
 <aside> My `_site.yml` file can be found
-[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml)
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml){target="_blank"}
 for reference. </aside>
 
 I updated the `About.Rmd` file as required and knit it.  This is a default
@@ -285,7 +294,7 @@ I updated the `About.Rmd` file as required and knit it.  This is a default
 background on the site purpose and of course about the author.
 
 <aside> My `About.Rmd` file can be found
-[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd)
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd){target="_blank"}
 for reference. </aside>
 
 No need to update the default `distill` `Index.Rmd` file that is automatically
@@ -297,24 +306,26 @@ who stumble onto the `github` page) and saved it. No need to knit anything here
 as it is a simple `markdown file`.
 
 <aside> My `README.md` can be found
-[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md)
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md){target="_blank"}
 for reference. </aside>
 
 Now in `Rstudio` I just knit the `welcome.Rmd` post and also ran the following
 command in the `console`
 
-```{r step_05_01, eval=FALSE, echo=TRUE}
+```{r step-05-01, eval=FALSE, echo=TRUE}
 rmarkdown::render_site(input = here::here())
 ```
 
 The locally created `distill` blog was now created and rendered and looked like
 this in the `RStudio` viewer pane:
 
-```{r step_05_02_screenshot}
+<center>
+```{r step-05-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "05_01_newlyr_created_distill_blog.png"))
 ```
+</center>
 
 Pretty cool - I now had a working local version of our blog in `RStudio`.
 
@@ -325,7 +336,7 @@ blog online! A first step is to `commit` and `push` them to our `github` repo.
 I did this in my local directory in the terminal as follows: in git at my
 terminal as follows:
 
-```{bash step_06_01, eval=FALSE, echo=TRUE}
+```{bash step-06-01, eval=FALSE, echo=TRUE}
 git add -A # Add all new changes
 git commit -m "ENH: Created welcome post with date prefix, deleted default post"
 git push origin master
@@ -341,23 +352,24 @@ Although the blog was our blog contents are in a public online place i.e.
 [Google Domains](https://domains.google/#/) and bought `www.shamindras.com` for
 about $15/yr.
 
-There are free alternatives e.g.  [Github Pages](https://pages.github.com/),
-but I wanted to have ownership on my page and found the annual fee to be
-reasonable with Google Domains.
+There are free alternatives e.g.  [Github
+Pages](https://pages.github.com/){target="_blank"}, but I wanted to have
+ownership on my page and found the annual fee to be reasonable with Google
+Domains.
 
-## Step 8: Deploy your website
+## Step 8: Deploy your website with Netlify
 
 Now that the domain name is bought, I just needed to deploy the newly created
 blog contents on the registered domain name. Enter
-[netlify](https://www.netlify.com/)! This is a free (and awesome) deployment
-service. I created a personal account following the intructions on Netlify
-website.
+[netlify](https://www.netlify.com/){target="_blank"}! This is a free (and
+awesome) deployment service. I created a personal account following the
+intructions on Netlify website.
 
 I then logged in to Netlify and clicked on the green `New site from Git` button
 to get started. In the following menu I clicked the `Github Continuous
 Deployment` icon:
 
-```{r step_08_01_screenshot, out.width="150%"}
+```{r step-08-01-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_01_netlify_github_continuous_deployment.png"))
@@ -369,16 +381,18 @@ app on GitHub** link at the bottom and gave Netlify permissions to access this
 site. This is so Netlify can automatically sync with the github repo and deploy
 changes going forward as I make them directly to my `github` blog repo.
 
-```{r step_08_02_screenshot, out.width="150%"}
+<center>
+```{r step-08-02-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_02_netlify_give_personal_blog_access.png"))
 ```
+</center>
 
 I clicked on my site that appears and then ensured that I selected to ensure
 that the **Branch to Deploy** option is set to `master`.
 
-```{r step_08_03_screenshot, out.width="150%"}
+```{r step-08-03-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_03_netlify_deploy_master_branch_blog.png"))
@@ -390,11 +404,13 @@ repo](https://github.com/shamindras/ss_personal_distill_blog) </aside>
 
 I then clicked **Deploy Site** and then saw the following deployment settings:
 
-```{r step_08_04_screenshot, out.width="150%"}
+<center>
+```{r step-08-04-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_04_netlify_deployment_settings.png"))
 ```
+</center>
 
 I clicked thee **Site Settings** button. Looks like my site name on `Netlify`
 is `goofy-babbage-7f05c8`. Cute, though I'll personalize by clicking the
@@ -405,11 +421,13 @@ I clicked the **Build and Deploy** button next and after clicking the **Edit
 Settings** button modified the **Publish directory** to be `_site` as shown
 below:
 
-```{r step_08_05_screenshot, out.width="150%"}
+<center>
+```{r step-08-05-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_05_netlify_continous_deployment_settings.png"))
 ```
+</center>
 
 This is where all our blogposts in our `github` repo will be rendered to `html`
 by `distill` once we `knit` them. Netlify will just pick them up from here
@@ -418,20 +436,24 @@ everytime you refresh them and deploy our website accordingly
 Next I need to manage the domain i.e. tell Netlify to deploy my site on the
 custom domain I just purchased from Google Domains.
 
-```{r step_08_06_screenshot, out.width="150%"}
+<center>
+```{r step-08-06-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_06_netlify_adding_custom_domain.png"))
 ```
+</center>
 
 After clicking verify we have the following domains now set, with
 `www.shamindras.com` being the primary domain.
 
-```{r step_08_07_screenshot, out.width="150%"}
+<center>
+```{r step-08-07-screenshot, fig.cap="Getting Started with Disqus", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
                             fs::path(IMAGES_PATH,
                                      "08_07_netlify_checking_custom_domains.png"))
 ```
+</center>
 
 Netlify also tells me that the truncated url `shamindras.com` will also get
 routed to the blog. So I don't event need to write the `www.` going forward.
@@ -451,7 +473,7 @@ add. The most important being more blogposts and personal content. However it
 would also be nice to have the following features:
 
 - Documenting a general `distill` blogging workflow
-- Setting up [Disqus](https://disqus.com/) to enable user comments on blogposts
+- Setting up [Disqus](https://disqus.com/){target="_blank"} to enable user comments on blogposts
 - How to setup **Blog Gallery** for featured posts
 - How to setup an **email subscription** service for this blog
 - How to setup **Google Analytics** service for basic user activity tracking
