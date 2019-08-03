@@ -7,6 +7,11 @@
     <description>Shamindra Shrotriya's personal blog/ site. Some fun posts
 on math, statistics and the PhD student life.
 </description>
+    <image>
+      <title>Shamindra Shrotriya</title>
+      <url>https://www.shamindras.com/data/images/about-profile-circular-scaled-100.png</url>
+      <link>https://www.shamindras.com/</link>
+    </image>
     <generator>Distill</generator>
     <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
     <item>
@@ -17,6 +22,15 @@ on math, statistics and the PhD student life.
       <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" width="3360" height="1718"/>
+    </item>
+    <item>
+      <title>Upgrading Distill Blog Settings</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</link>
+      <description>The second part of a series on how I upgraded this `Distill` themed blog</description>
+      <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</guid>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_01.png" medium="image" type="image/png" width="1012" height="481"/>
     </item>
     <item>
       <title>Reproducibility Challenge: Titanic Suvivors Plot</title>

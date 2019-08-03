@@ -24,6 +24,7 @@
 <meta property="description" itemprop="description" content="First part of a series on how I setup this `Distill` themed blog with `Netlify`"/>
 
 <link rel="canonical" href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/"/>
+<link rel="icon" type="image/png" href="../../data/images/about-profile-circular-scaled-100.png"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2019-07-11"/>
@@ -67,7 +68,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/01_01_create_github_distill_repo.png","images/01_02_newly_created_distill_repo.png","images/05_01_newlyr_created_distill_blog.png","images/08_01_netlify_github_continuous_deployment.png","images/08_02_netlify_give_personal_blog_access.png","images/08_03_netlify_deploy_master_branch_blog.png","images/08_04_netlify_deployment_settings.png","images/08_05_netlify_continous_deployment_settings.png","images/08_06_netlify_adding_custom_domain.png","images/08_07_netlify_checking_custom_domains.png","images/old_backup/01_01_create_github_distill_repo_mac_render.png","images/old_backup/01_02_newly_created_distill_repo_macrender.png","images/old_backup/05_01_newlyr_created_distill_blog_old.png","images/old_backup/08_05_netlify_continous_deployment_settings_old.png","setting-up-a-distill-blog-with-netlify_files/bowser-1.9.3/bowser.min.js","setting-up-a-distill-blog-with-netlify_files/distill-2.2.21/template.v2.js","setting-up-a-distill-blog-with-netlify_files/jquery-1.11.3/jquery.min.js","setting-up-a-distill-blog-with-netlify_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/01_01_create_github_distill_repo.png","images/01_02_newly_created_distill_repo.png","images/05_01_newlyr_created_distill_blog.png","images/08_01_netlify_github_continuous_deployment.png","images/08_02_netlify_give_personal_blog_access.png","images/08_03_netlify_deploy_master_branch_blog.png","images/08_04_netlify_deployment_settings.png","images/08_05_netlify_continous_deployment_settings.png","images/08_06_netlify_adding_custom_domain.png","images/08_07_netlify_checking_custom_domains.png","setting-up-a-distill-blog-with-netlify_files/bowser-1.9.3/bowser.min.js","setting-up-a-distill-blog-with-netlify_files/distill-2.2.21/template.v2.js","setting-up-a-distill-blog-with-netlify_files/jquery-1.11.3/jquery.min.js","setting-up-a-distill-blog-with-netlify_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 
@@ -1287,6 +1288,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145015693-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-145015693-1');
+</script>
 <!--/radix_placeholder_site_in_header-->
 
 
@@ -1306,7 +1314,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo" href="https://www.shamindras.com/">
-<img src="../../data/images/about-profile-circular-scaled-50.png"/>
+<img src="../../data/images/about-profile-circular-scaled-100.png"/>
 </a>
 <a href="../../index.html" class="title">Shamindra Shrotriya</a>
 <a href="../../about.html">About Me</a>
@@ -1325,7 +1333,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Setting up a Distill Blog with Netlify</h1>
-<p>First part of a series on how I setup this <code>Distill</code> themed blog with <code>Netlify</code></p>
+<p><p>First part of a series on how I setup this <code>Distill</code> themed blog with <code>Netlify</code></p></p>
 </div>
 
 <div class="d-byline">
@@ -1346,38 +1354,52 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#step-5-customize-your-blog-layout">Step 5: Customize your blog layout</a></li>
 <li><a href="#step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</a></li>
 <li><a href="#step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</a></li>
-<li><a href="#step-8-deploy-your-website">Step 8: Deploy your website</a></li>
+<li><a href="#step-8-deploy-your-website-with-netlify">Step 8: Deploy your website with Netlify</a></li>
 <li><a href="#step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</a></li>
 <li><a href="#step-10-future-additions-and-extras">Step 10: Future additions and extras</a></li>
 </ul>
 </nav>
 <hr class="d-toc-separator"/>
 <h2 id="step-0-introduction">Step 0: Introduction</h2>
-<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/">distill</a> package by the <a href="h//www.rstudio.com/">RStudio</a> team. The main tools used I used to create this blog are:</p>
+<p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
 <ul>
-<li>My personal <a href="https://github.com/shamindras">Github account</a></li>
-<li>The <a href="https://www.rstudio.com/products/rstudio/">RStudio editor</a></li>
-<li>The <code>R</code> packages <a href="https://github.com/r-lib/here"><code>here</code></a> and <a href="https://github.com/rstudio/distill"><code>distill</code></a></li>
-<li>My macbook pro (2017 edition) and the <a href="https://www.iterm2.com/">iterm2</a> editor</li>
-<li>My personal <a href="https://app.netlify.com">netlify account</a> and also my personal domain bought from <a href="https://domains.google/">Google Domains</a></li>
+<li>My personal <a href="https://github.com/shamindras" target="_blank">Github account</a></li>
+<li>The <a href="https://www.rstudio.com/products/rstudio/" target="_blank">RStudio editor</a></li>
+<li>The <code>R</code> packages <a href="https://github.com/rstudio/distill" target="_blank"><code>distill</code></a> and <a href="https://github.com/r-lib/here" target="_blank"><code>here</code></a></li>
+<li>My macbook pro (2017 edition) and the <a href="https://www.iterm2.com/" target="_blank">iterm2</a> terminal</li>
+<li>My personal <a href="https://app.netlify.com" target="_blank">netlify account</a> and also my personal domain bought from <a href="https://domains.google/" target="_blank">Google Domains</a></li>
 </ul>
 <p>The details of <em>how</em> I used the tools used are all noted below in a step-by-step manner.</p>
-<p><em>Importantly</em>, I should note that the RStudio <code>distill</code> team has already created a <a href="https://rstudio.github.io/distill/blog.html">nice distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users. I wrote this meta blogpost in my own words so that I can personally remember the details going forward. I also added more details on deployment with Google Domains and Netlify that would hopefully be useful to new <code>R</code> users waiting to deploy a similar <code>distill</code> blog.</p>
+<p>Importantly, I should note that the RStudio <code>distill</code> team has already created an <a href="https://rstudio.github.io/distill/blog.html" target="_blank">excellent distill blog creation tutorial</a> which I thoroughly used and highly recommend to new users. I wrote this meta blogpost in my own words so that I can personally remember the details going forward. I also added more details on deployment with Google Domains and Netlify that would hopefully be useful to new <code>R</code> users waiting to deploy a similar <code>distill</code> blog.</p>
 <aside>
 Admittedly this blogpost is verbose, but hopefully the details help users new to the <code>distill</code> blogging package.
 </aside>
 <h2 id="step-1-create-new-distill-blog-repo">Step 1: Create new distill blog repo</h2>
 <p>I opted to manage my blog versioning using Git/Github. I started by going to my personal <code>github</code> account and create a new repository. I called mine <code>ss_personal_distill_blog</code> and also initialized it with a <code>README.md</code> and included an <code>.gitignore</code> for <code>R</code> since that will the blogging language of choice here 😄. This is shown in the screenshot below.</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/01_01_create_github_distill_repo.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-01-01-screenshot"></span>
+<img src="images/01_01_create_github_distill_repo.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 1: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <aside>
 Options for creating the Github repo for the <code>distill</code> blog
 </aside>
 <p>Once created the repo will appear in <code>github</code> as seen in the following screenshot</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/01_02_newly_created_distill_repo.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-01-02-screenshot"></span>
+<img src="images/01_02_newly_created_distill_repo.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 2: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <aside>
 Newly created Github repo for the <code>distill</code> blog
 </aside>
@@ -1431,7 +1453,7 @@ distill::create_blog(dir = here::here(),
                      title = &quot;Shamindra&#39;s Shrotriya&#39;s blog&quot;,
                      gh_pages = TRUE)</code></pre>
 </div>
-<p>Note that we set <code>gh_pages = TRUE</code> to ensure that we can host this blog on <a href="https://pages.github.com/">github pages</a> down the line if needed. You can omit this if you don’t want the option to have <em>github pages</em> as your host in the future. I will be using <code>Netlify</code> to host my blog (see below), but it is good to have an additional host option in the future.</p>
+<p>Note that we set <code>gh_pages = TRUE</code> to ensure that we can host this blog on <a href="https://pages.github.com/" target="_blank">github pages</a> down the line if needed. You can omit this if you don’t want the option to have <em>github pages</em> as your host in the future. I will be using <code>Netlify</code> to host my blog (see below), but it is good to have an additional host option in the future.</p>
 <p>My local <code>distill</code> blog directory now looked like this:</p>
 <pre class="markup"><code>
 .
@@ -1505,16 +1527,16 @@ collections:
 base_url: https://www.shamindras.com/
 output: distill::distill_article</code></pre>
 <aside>
-My <code>_site.yml</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a> for reference.
+My <code>_site.yml</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml" target="_blank">here</a> for reference.
 </aside>
 <p>I updated the <code>About.Rmd</code> file as required and knit it. This is a default <code>Rmd</code> that <code>distill</code> conveniently creates this file to give readers some background on the site purpose and of course about the author.</p>
 <aside>
-My <code>About.Rmd</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd">here</a> for reference.
+My <code>About.Rmd</code> file can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/about.Rmd" target="_blank">here</a> for reference.
 </aside>
 <p>No need to update the default <code>distill</code> <code>Index.Rmd</code> file that is automatically created. I simply opened it and <code>knit</code> it manually in <code>RStudio</code> to update the site contents.</p>
 <p>I also updated the <code>README.md</code> to add some useful information (for any users who stumble onto the <code>github</code> page) and saved it. No need to knit anything here as it is a simple <code>markdown file</code>.</p>
 <aside>
-My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md">here</a> for reference.
+My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/README.md" target="_blank">here</a> for reference.
 </aside>
 <p>Now in <code>Rstudio</code> I just knit the <code>welcome.Rmd</code> post and also ran the following command in the <code>console</code></p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1522,9 +1544,16 @@ My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss
 rmarkdown::render_site(input = here::here())</code></pre>
 </div>
 <p>The locally created <code>distill</code> blog was now created and rendered and looked like this in the <code>RStudio</code> viewer pane:</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/05_01_newlyr_created_distill_blog.png" width="1660" /></p>
+<div class="figure"><span id="fig:step-05-02-screenshot"></span>
+<img src="images/05_01_newlyr_created_distill_blog.png" alt="Getting Started with Disqus" width="1660" class=external />
+<p class="caption">
+Figure 3: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>Pretty cool - I now had a working local version of our blog in <code>RStudio</code>.</p>
 <h2 id="step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</h2>
 <p>Note that all our changes are so far in our local git repo. We need to get this blog online! A first step is to <code>commit</code> and <code>push</code> them to our <code>github</code> repo. I did this in my local directory in the terminal as follows: in git at my terminal as follows:</p>
@@ -1537,50 +1566,95 @@ git push origin master</code></pre>
 <p>And the changes are now reflected in the <code>github</code> <code>master</code> branch!</p>
 <h2 id="step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</h2>
 <p>Although the blog was our blog contents are in a public online place i.e. <code>github</code>, I just needed to link it to a service that deploys websites from <code>github</code>. But first I needed to go buy a domain name for my blog. I went to <a href="https://domains.google/#/">Google Domains</a> and bought <code>www.shamindras.com</code> for about $15/yr.</p>
-<p>There are free alternatives e.g. <a href="https://pages.github.com/">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
-<h2 id="step-8-deploy-your-website">Step 8: Deploy your website</h2>
-<p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.</p>
+<p>There are free alternatives e.g. <a href="https://pages.github.com/" target="_blank">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
+<h2 id="step-8-deploy-your-website-with-netlify">Step 8: Deploy your website with Netlify</h2>
+<p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/" target="_blank">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.</p>
 <p>I then logged in to Netlify and clicked on the green <code>New site from Git</code> button to get started. In the following menu I clicked the <code>Github Continuous Deployment</code> icon:</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_01_netlify_github_continuous_deployment.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-01-screenshot"></span>
+<img src="images/08_01_netlify_github_continuous_deployment.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 4: Getting Started with Disqus
+</p>
 </div>
-<p>I then manually searched for my blog repo i.e. <code>ss_personal_distill_blog</code>. Initially this did not appear, so I clicked the green <strong>Configure the Netlify app on GitHub</strong> link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my <code>github</code> blog repo.</p>
+</div>
+<p>I then manually searched for my blog repo i.e. <code>ss_personal_distill_blog</code>. Initially this did not appear, so I clicked the green <strong>Configure the Netlify app on GitHub</strong> link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my <code>github</code> blog repo.</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_02_netlify_give_personal_blog_access.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-02-screenshot"></span>
+<img src="images/08_02_netlify_give_personal_blog_access.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 5: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>I clicked on my site that appears and then ensured that I selected to ensure that the <strong>Branch to Deploy</strong> option is set to <code>master</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_03_netlify_deploy_master_branch_blog.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-03-screenshot"></span>
+<img src="images/08_03_netlify_deploy_master_branch_blog.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 6: Getting Started with Disqus
+</p>
+</div>
 </div>
 <aside>
 This simply means that netlify will only build the site based on what happens in my <code>master</code> branch in my <a href="https://github.com/shamindras/ss_personal_distill_blog">github repo</a>
 </aside>
 <p>I then clicked <strong>Deploy Site</strong> and then saw the following deployment settings:</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_04_netlify_deployment_settings.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-04-screenshot"></span>
+<img src="images/08_04_netlify_deployment_settings.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 7: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>I clicked thee <strong>Site Settings</strong> button. Looks like my site name on <code>Netlify</code> is <code>goofy-babbage-7f05c8</code>. Cute, though I’ll personalize by clicking the <strong>Change Site Name</strong> button. I changed it to <code>ss-personal-distill-blog</code> for my easy reference.</p>
 <p>I clicked the <strong>Build and Deploy</strong> button next and after clicking the <strong>Edit Settings</strong> button modified the <strong>Publish directory</strong> to be <code>_site</code> as shown below:</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_05_netlify_continous_deployment_settings.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-05-screenshot"></span>
+<img src="images/08_05_netlify_continous_deployment_settings.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 8: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>This is where all our blogposts in our <code>github</code> repo will be rendered to <code>html</code> by <code>distill</code> once we <code>knit</code> them. Netlify will just pick them up from here everytime you refresh them and deploy our website accordingly</p>
 <p>Next I need to manage the domain i.e. tell Netlify to deploy my site on the custom domain I just purchased from Google Domains.</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_06_netlify_adding_custom_domain.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-06-screenshot"></span>
+<img src="images/08_06_netlify_adding_custom_domain.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 9: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>After clicking verify we have the following domains now set, with <code>www.shamindras.com</code> being the primary domain.</p>
+<center>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="images/08_07_netlify_checking_custom_domains.png" width="150%" /></p>
+<div class="figure"><span id="fig:step-08-07-screenshot"></span>
+<img src="images/08_07_netlify_checking_custom_domains.png" alt="Getting Started with Disqus" width="150%" class=external />
+<p class="caption">
+Figure 10: Getting Started with Disqus
+</p>
 </div>
+</div>
+</center>
 <p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t event need to write the <code>www.</code> going forward. Thanks Netlify 🙇.</p>
 <h2 id="step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</h2>
-<p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at &lt;www.shamindras.com&gt;. So effectively Netlify and github were talking to each other 🕊.</p>
+<p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at &lt;www.shamindras.com&gt;. So effectively Netlify and github were talking to each other ✌️.</p>
 <h2 id="step-10-future-additions-and-extras">Step 10: Future additions and extras</h2>
 <p>Now that the blog/site is created there are a number of features I’d like to add. The most important being more blogposts and personal content. However it would also be nice to have the following features:</p>
 <ul>
 <li>Documenting a general <code>distill</code> blogging workflow</li>
-<li>Setting up <a href="https://disqus.com/">Disqus</a> to enable user comments on blogposts</li>
+<li>Setting up <a href="https://disqus.com/" target="_blank">Disqus</a> to enable user comments on blogposts</li>
 <li>How to setup <strong>Blog Gallery</strong> for featured posts</li>
 <li>How to setup an <strong>email subscription</strong> service for this blog</li>
 <li>How to setup <strong>Google Analytics</strong> service for basic user activity tracking</li>
@@ -1590,6 +1664,11 @@ This simply means that netlify will only build the site based on what happens in
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-07-11-setting-up-a-distill-blog-with-netlify/">Comment on this article</span>
+    </span>
     <span class="article-sharing">
       Share: &nbsp;
       <a href="https://twitter.com/share?text=Setting%20up%20a%20Distill%20Blog%20with%20Netlify&amp;url=https%3A%2F%2Fwww.shamindras.com%2Fposts%2F2019-07-11-setting-up-a-distill-blog-with-netlify%2F">
@@ -1606,6 +1685,20 @@ This simply means that netlify will only build the site based on what happens in
       </a>
     </span>
   </p>
+  <script id="dsq-count-scr" src="https://shamindras-distill.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script>
+var disqus_config = function () {
+  this.page.url = 'https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/';
+  this.page.identifier = 'posts/2019-07-11-setting-up-a-distill-blog-with-netlify/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://shamindras-distill.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
 </div>
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1618,6 +1711,8 @@ This simply means that netlify will only build the site based on what happens in
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
+  <h3 id="updates-and-corrections">Corrections</h3>
+  <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/shamindras/ss_personal_distill_blog/issues/new">create an issue</a> on the source repository.</p>
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
   <pre class="citation-appendix short">Shrotriya (2019, July 11). Shamindra Shrotriya: Setting up a Distill Blog with Netlify. Retrieved from https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/</pre>
