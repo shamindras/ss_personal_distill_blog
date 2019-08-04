@@ -1,0 +1,5 @@
+## Acknowledgments {.appendix}
+
+I'd like to thank Salil Shrotriya for creating the preview image for this post.
+The hex sticker `png` files were sourced from
+[here](https://github.com/rstudio/hex-stickers)

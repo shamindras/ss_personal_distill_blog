@@ -46,7 +46,7 @@ survivorship of the Titanic</description>
       <title>Tidyverse Fun - Part 1</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</link>
-      <description>First part in a series of doing useful tasks with 
+      <description>First part in a series of doing useful tasks with
 the `Tidyverse`</description>
       <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
@@ -55,21 +55,21 @@ the `Tidyverse`</description>
     <item>
       <title>Setting up a Distill Blog with Netlify</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
-      <link>https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify</link>
+      <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</link>
       <description>First part of a series on how I setup this `Distill` themed blog with `Netlify`</description>
-      <guid>https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify</guid>
+      <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</guid>
       <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" width="707" height="387"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" width="707" height="387"/>
     </item>
     <item>
       <title>Welcome to Shamindra’s Site</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
-      <link>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</link>
+      <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</link>
       <description>Detailing interesting things in the life of a PhD statistics
 student at CMU</description>
-      <guid>https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog</guid>
+      <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</guid>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-10-welcome-to-shamindras-blog/images/about-profile-circular-scaled-50.png" medium="image" type="image/png" width="373" height="373"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-50.png" medium="image" type="image/png" width="373" height="373"/>
     </item>
   </channel>
 </rss>

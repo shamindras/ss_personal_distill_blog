@@ -1014,45 +1014,45 @@ library(tidyverse)
 library(janitor)
 library(plotly)</code></pre>
 </div>
-<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient 😎.</p>
+<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient <code>r emo::ji(&quot;sunglasses&quot;)</code>.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>janitor::clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 # Basic cleaning of names and filtering out non-zero counts
-t1 &lt;- datasets::Titanic %&gt;% 
-        as_tibble() %&gt;% 
-        janitor::clean_names(dat = .) %&gt;% 
-        dplyr::filter(.data = ., n != 0) %&gt;% 
+t1 &lt;- datasets::Titanic %&gt;%
+        as_tibble() %&gt;%
+        janitor::clean_names(dat = .) %&gt;%
+        dplyr::filter(.data = ., n != 0) %&gt;%
         dplyr::mutate(.data = .,
                       new_sex = ifelse(age == &quot;Child&quot;, age, sex),
-                      n_sgnd = ifelse(survived == &quot;No&quot;, -1*n, n)) %&gt;% 
+                      n_sgnd = ifelse(survived == &quot;No&quot;, -1*n, n)) %&gt;%
         dplyr::select(class, new_sex, survived, n_sgnd)
 
 # Passenger (non-crew) level aggregation
-t2 &lt;- t1 %&gt;% 
-        dplyr::filter(class != &quot;Crew&quot;) %&gt;% 
-        dplyr::mutate(class = &quot;Pass.&quot;) %&gt;% 
+t2 &lt;- t1 %&gt;%
+        dplyr::filter(class != &quot;Crew&quot;) %&gt;%
+        dplyr::mutate(class = &quot;Pass.&quot;) %&gt;%
         dplyr::group_by(class, new_sex, survived) %&gt;%
-        dplyr::summarize(n_sgnd = sum(n_sgnd))        
+        dplyr::summarize(n_sgnd = sum(n_sgnd))
 
 # Crew (non-passenger) level aggregation
-t3 &lt;- t1 %&gt;% 
-        dplyr::mutate(class = &quot;Pass.\nCrew&quot;) %&gt;% 
+t3 &lt;- t1 %&gt;%
+        dplyr::mutate(class = &quot;Pass.\nCrew&quot;) %&gt;%
         dplyr::group_by(class, new_sex, survived) %&gt;%
-        dplyr::summarize(n_sgnd = sum(n_sgnd))        
+        dplyr::summarize(n_sgnd = sum(n_sgnd))
 
 # Combined cleaned plotting dataset
-ttnc_cln &lt;- t1 %&gt;% 
-              dplyr::bind_rows(t2) %&gt;% 
-              dplyr::bind_rows(t3) %&gt;% 
+ttnc_cln &lt;- t1 %&gt;%
+              dplyr::bind_rows(t2) %&gt;%
+              dplyr::bind_rows(t3) %&gt;%
               dplyr::mutate(.data = .,
                             class = as.factor(class),
                             new_sex = as.factor(new_sex),
                             survived = as.factor(survived))
 
 # Display first 8 rows in a nice centered table
-ttnc_cln %&gt;% 
-  dplyr::slice(.data = ., 1:8) %&gt;% 
+ttnc_cln %&gt;%
+  dplyr::slice(.data = ., 1:8) %&gt;%
   knitr::kable(x = ., align = &#39;c&#39;)</code></pre>
 <table>
 <thead>
@@ -1121,18 +1121,18 @@ ttnc_cln %&gt;%
 <p>The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let’s do it!</p>
 <div class="layout-chunk" data-layout="l-page">
 <pre class="r"><code>
-out_plot &lt;- ttnc_cln %&gt;%               
-              ggplot2::ggplot(data = ., 
+out_plot &lt;- ttnc_cln %&gt;%
+              ggplot2::ggplot(data = .,
                               aes(x = new_sex, y = n_sgnd, fill = survived)) +
               ggplot2::geom_bar(stat = &quot;identity&quot;) +
-              ggplot2::facet_wrap(~ class, ncol = 1, 
+              ggplot2::facet_wrap(~ class, ncol = 1,
                                   strip.position = &quot;right&quot;,
                                   scales = &quot;free_y&quot;) +
               ggplot2::coord_flip() +
               scale_fill_manual(values=c(&quot;#3C4144&quot;, &quot;#D2D3D1&quot;)) +
               ggplot2::theme_bw() +
               ggplot2::theme(panel.background = element_rect(fill = &quot;#969898&quot;),
-                             panel.grid.major = element_blank(), 
+                             panel.grid.major = element_blank(),
                              panel.grid.minor = element_blank(),
                              axis.title.x = element_blank(),
                              axis.title.y = element_blank(),
@@ -1142,9 +1142,9 @@ out_plot &lt;- ttnc_cln %&gt;%
               ggplot2::labs(title = &#39;The LOSS of the &quot;TITANIC&quot;&#39;,
                             subtitle = glue::glue(&quot;The Results Analyzed and Shown&quot;,
                                                   &#39;in a special &quot;Sphere&quot; Diagram&#39;,
-                                                  .sep = &quot; &quot;), 
+                                                  .sep = &quot; &quot;),
                             caption = glue::glue(&quot;Note: The Black color indicates&quot;,
-                                                 &quot;Passengers and Crew NOT SAVED.&quot;, 
+                                                 &quot;Passengers and Crew NOT SAVED.&quot;,
                                                  &quot;The White color indicates SAVED.&quot;,
                                                   .sep = &quot; &quot;))
 

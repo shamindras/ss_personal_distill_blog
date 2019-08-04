@@ -23,9 +23,9 @@ I’ve decided to start blogging to document my learning and development in
 statistics as a graduate student.
 
 I’d like it to be a fun place to document interesting things I like to read
-about in the statistics and machine learning space (statistical
-theory/methodology research, rstats, python etc) as well as anything else I am
-generally into e.g. books, sports.
+about in the statistics and machine learning space (**statistical
+theory/methodology**, **research**, **rstats**, **python** etc) as well as
+anything else I am generally into e.g. **books**, **sports**.
 
 Feel free to pull up a chair, leave a comment, and join me so that we can
 explore together `r emo::ji("100")`.
