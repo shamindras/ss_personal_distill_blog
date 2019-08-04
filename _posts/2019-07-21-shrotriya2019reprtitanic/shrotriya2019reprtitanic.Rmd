@@ -197,8 +197,5 @@ ecosystem we have at our fingertips. Will do a similar reproducibility
 challenge again for sure `r emo::ji("victory")`. Please leave a comment below
 if you have any feedback on this post
 
-## Acknowledgments {.appendix}
-
-I'd like to thank Salil Shrotriya for creating the preview image for this post.
-The hex sticker `png` files were sourced from
-[here](https://github.com/rstudio/hex-stickers)
+```{r, child="../../data/rmds/acknowledgment_preview_tidyfun_salil.Rmd"}
+```

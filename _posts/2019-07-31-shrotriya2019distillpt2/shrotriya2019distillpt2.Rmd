@@ -314,6 +314,4 @@ but do stay tuned!
 
 As it can be seen it is quite easy to customize `distill` for commonly required
 features. Really great work by the RStudio team in making such customizations
-so user-friendly.
-
-Could have added the following e.g. subscriptions (see site),
+so user-friendly `r emo::ji("thumbsup")`.

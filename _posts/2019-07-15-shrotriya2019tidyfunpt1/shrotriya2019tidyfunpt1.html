@@ -21,7 +21,7 @@
   <!--radix_placeholder_meta_tags-->
   <title>Tidyverse Fun - Part 1</title>
   
-  <meta property="description" itemprop="description" content="First part in a series of doing useful tasks with &#10;the `Tidyverse`"/>
+  <meta property="description" itemprop="description" content="First part in a series of doing useful tasks with&#10;the `Tidyverse`"/>
   
   
   <!--  https://schema.org/Article -->
@@ -32,13 +32,13 @@
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Tidyverse Fun - Part 1"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="First part in a series of doing useful tasks with &#10;the `Tidyverse`"/>
+  <meta property="og:description" content="First part in a series of doing useful tasks with&#10;the `Tidyverse`"/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Tidyverse Fun - Part 1"/>
-  <meta property="twitter:description" content="First part in a series of doing useful tasks with &#10;the `Tidyverse`"/>
+  <meta property="twitter:description" content="First part in a series of doing useful tasks with&#10;the `Tidyverse`"/>
   
   <!--/radix_placeholder_meta_tags-->
   
@@ -46,7 +46,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","description","author","date","preview","slug","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Tidyverse Fun - Part 1"]},{"type":"character","attributes":{},"value":["tidyverse","rstats"]},{"type":"character","attributes":{},"value":["First part in a series of doing useful tasks with \nthe `Tidyverse`\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-15-2019"]},{"type":"character","attributes":{},"value":["images/logo-01.jpg"]},{"type":"character","attributes":{},"value":["shrotriya2019tidyfunpt1"]},{"type":"character","attributes":{},"value":["../../refs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","author","date","preview","slug","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Tidyverse Fun - Part 1"]},{"type":"character","attributes":{},"value":["First part in a series of doing useful tasks with\nthe `Tidyverse`\n"]},{"type":"character","attributes":{},"value":["tidyverse","rstats"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-15-2019"]},{"type":"character","attributes":{},"value":["images/logo-01.jpg"]},{"type":"character","attributes":{},"value":["shrotriya2019tidyfunpt1"]},{"type":"character","attributes":{},"value":["../../refs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -944,7 +944,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Tidyverse Fun - Part 1","description":"First part in a series of doing useful tasks with \nthe `Tidyverse`","authors":[{"author":"Shamindra Shrotriya","authorURL":"https://www.shamindras.com/","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-07-15T00:00:00.000-04:00","citationText":"Shrotriya, 2019"}
+{"title":"Tidyverse Fun - Part 1","description":"First part in a series of doing useful tasks with\nthe `Tidyverse`","authors":[{"author":"Shamindra Shrotriya","authorURL":"https://www.shamindras.com/","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2019-07-15T00:00:00.000-04:00","citationText":"Shrotriya, 2019"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1018,20 +1018,20 @@ This generates a <em>Cartesian product</em> of all the 3 word triples
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 # Generate the unique word-triples
-all_perms &lt;- tidyr::crossing(word1 = WORD_VALS, 
-                             word2 = WORD_VALS, 
-                             word3 = WORD_VALS) %&gt;% 
-                dplyr::mutate(.data = ., 
-                              is_unq_perm = purrr::pmap_lgl(.l = ., 
-                                                            is_unq_perm)) %&gt;% 
-                dplyr::filter(.data = ., is_unq_perm) %&gt;% 
+all_perms &lt;- tidyr::crossing(word1 = WORD_VALS,
+                             word2 = WORD_VALS,
+                             word3 = WORD_VALS) %&gt;%
+                dplyr::mutate(.data = .,
+                              is_unq_perm = purrr::pmap_lgl(.l = .,
+                                                            is_unq_perm)) %&gt;%
+                dplyr::filter(.data = ., is_unq_perm) %&gt;%
                 dplyr::select(-is_unq_perm)
 
 # Display output in a nice centered table
-all_perms %&gt;% 
+all_perms %&gt;%
   knitr::kable(x = ., align = &#39;c&#39;,
-               col.names = c(&quot;Word 1&quot;, 
-                             &quot;Word 2&quot;, 
+               col.names = c(&quot;Word 1&quot;,
+                             &quot;Word 2&quot;,
                              &quot;Word 3&quot;))</code></pre>
 <table>
 <thead>
@@ -1079,22 +1079,22 @@ all_perms %&gt;%
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 exprs &lt;- all_perms %&gt;%
-          dplyr::mutate(non_oxford_comma = 
-                          glue::glue_data(.x = ., 
-                          &quot;{word1}, {word2} and {word3}&quot;), 
-                        oxford_comma = 
-                          glue::glue_data(.x = ., 
-                          &quot;{word1}, {word2}, and {word3}&quot;)) %&gt;% 
+          dplyr::mutate(non_oxford_comma =
+                          glue::glue_data(.x = .,
+                          &quot;{word1}, {word2} and {word3}&quot;),
+                        oxford_comma =
+                          glue::glue_data(.x = .,
+                          &quot;{word1}, {word2}, and {word3}&quot;)) %&gt;%
           dplyr::select(non_oxford_comma, oxford_comma)</code></pre>
 </div>
 <p>We can display the side-by-side output of the Non-Oxford Comma vs. Oxford comma for the <span class="math inline">\(6\)</span> generated triples as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 # Display output in a nice centered table
-exprs %&gt;% 
-  knitr::kable(x = ., 
-               align = &#39;c&#39;, 
-               col.names = c(&quot;Non-Oxford Comma&quot;, 
+exprs %&gt;%
+  knitr::kable(x = .,
+               align = &#39;c&#39;,
+               col.names = c(&quot;Non-Oxford Comma&quot;,
                              &quot;Oxford Comma&quot;))</code></pre>
 <table>
 <thead>
@@ -1152,9 +1152,9 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 # Generate BibTeX entry for a single lecture number
 get_lec_bibtex &lt;- function(lec_num){
   # Get the 2 character padded lecture number i.e. 1 -&gt; &quot;01&quot;
-  lec_num_pad &lt;- stringr::str_pad(string = lec_num, width = 2, 
+  lec_num_pad &lt;- stringr::str_pad(string = lec_num, width = 2,
                                   side = &quot;left&quot;, pad = &quot;0&quot;)
-  
+
   # Construct the BibTeX entry
   out_bbtex_str &lt;- glue::glue(
     &quot;@misc{doe2019_lec&lt;lec_num&gt;,
@@ -1163,7 +1163,7 @@ get_lec_bibtex &lt;- function(lec_num){
     month  = {March},
     year   = {2018},
     url    = {https://www.hpg/~doe/st10A/lecs/lec&lt;lec_num_pad&gt;.pdf}}&quot;,
-    .open = &quot;&lt;&quot;, 
+    .open = &quot;&lt;&quot;,
     .close = &quot;&gt;&quot;)
 
   base::return(out_bbtex_str)
@@ -1195,8 +1195,8 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 lec_nums &lt;- c(1, 30)
-lec_nums %&gt;% 
-  purrr::map_chr(.x = ., .f = ~get_lec_bibtex(lec_num = .x)) %&gt;% 
+lec_nums %&gt;%
+  purrr::map_chr(.x = ., .f = ~get_lec_bibtex(lec_num = .x)) %&gt;%
   cat(., sep = &quot;\n\n&quot;)</code></pre>
 <pre><code>
 @misc{doe2019_lec1,
