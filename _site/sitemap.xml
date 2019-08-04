@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://www.shamindras.com/about.html</loc>
-    <lastmod>2019-08-03T23:51:36-04:00</lastmod>
+    <lastmod>2019-08-04T00:06:52-04:00</lastmod>
   </url>
   <url>
     <loc>https://www.shamindras.com/</loc>
@@ -11,6 +11,10 @@
   <url>
     <loc>https://www.shamindras.com/README.html</loc>
     <lastmod>2019-08-03T15:15:35-04:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.shamindras.com/posts/2019-08-04-shrotriya2019august19roundup/</loc>
+    <lastmod>2019-08-04T18:12:10-04:00</lastmod>
   </url>
   <url>
     <loc>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/</loc>

@@ -1,0 +1,34 @@
+---
+title: "Shamindra's August 2019 Roundup"
+description: |
+    A quick roundup of any interesting August 2019 activities
+categories:
+  - personal
+  - roundup
+  - rstats
+  - math
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 08-04-2019
+#preview: images/preview-july-2019-02.png
+slug: shrotriya2019august19roundup
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(bookdown)
+```
+
+## Introduction
+
+This is a new feature I'm going to experiment with, namely documenting anything
+interesting I come across (articles, lectures, books, papers
+                                              etc.) and any activities I get up to. This is more for my personal
+benefit but may also help others. Let's see how this experiment goes!

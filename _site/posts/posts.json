@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2019-08-04-shrotriya2019august19roundup/",
+    "title": "Shamindra's August 2019 Roundup",
+    "description": "A quick roundup of any interesting August 2019 activities",
+    "author": [
+      {
+        "name": "Shamindra Shrotriya",
+        "url": "https://www.shamindras.com/"
+      }
+    ],
+    "date": "2019-08-04",
+    "categories": [
+      "personal",
+      "roundup",
+      "rstats",
+      "math"
+    ],
+    "preview": {},
+    "last_modified": "2019-08-04T18:12:10-04:00"
+  },
+  {
     "path": "posts/2019-07-30-shrotriya2019july19roundup/",
     "title": "Shamindra's July 2019 Roundup",
     "description": "A quick roundup of any interesting July 2019 activities",
