@@ -28,7 +28,167 @@ library(bookdown)
 
 ## Introduction
 
-This is a new feature I'm going to experiment with, namely documenting anything
-interesting I come across (articles, lectures, books, papers
-                                              etc.) and any activities I get up to. This is more for my personal
-benefit but may also help others. Let's see how this experiment goes!
+Welcome to the August 2019 roundup! Similar to last time I'm going to
+experiment with, namely documenting anything interesting I come across
+(articles, lectures, books, papers etc.) and any activities I get up to. This
+is more for my personal benefit but may also help others.
+
+## Interesting Articles
+
+- Came across this [exhaustive `BibTex` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib){target="_blank"}
+which will be a really handy reference going forward for $\LaTeX$ documents
+
+## Interesting Books
+
+### Non-fiction
+
+-
+
+### Fiction
+
+- Continued reading this fantastic book [@granville2019primesuspects_book] called the *Art of Mathematical inequalities* by [Prof. Michael Steele](http://www-stat.wharton.upenn.edu/~steele/){target="_blank"}.
+
+<details>
+  <summary>Toggle answer</summary>
+
+  - [google.com](https://www.google.com)
+
+</details>
+
+## Interesting Interviews
+
+- Really enjoyed [this interview](http://www.careeryoga.life/440ebcdf?fbclid=IwAR2BWeyMdhTg2fbdHp5U-D9gCy2oqLZBk2ljRBMhjtyAEtSgqBCt7kMlSFk) with Prof. Noga Alon a leading mathematician specializing in combinatorics, graph theory etc.
+Fantastic insights into the life of a (leading) theoretical researcher and
+certainly someone for me to look up to and learn from. I enjoyed the fact that
+it was so brief but dense as I normally don't have much time for podcasts. I
+may check out a few more scientific based interviews from this [Career Yoga
+podcast](http://www.careeryoga.life/) going forward.
+
+<aside> **Note:** This interview was co-conducted Ms. Narkis Alon, the daughter
+of Prof. Alon which led to a really personal dynamic! </aside>
+
+<details>
+  <summary>Key Takeaways</summary>
+
+  - This 20min interview is really part of a podcast on careers, and
+  the focus here being the lessons/insights learned from a very
+  successful career in theoretical mathematical research
+  from Prof. Alon
+  - Prof. Alon appears to be extremely organized in all aspects of life,
+  including packing for trips. Was asked specifically not to prepare
+  for this interview `r emo::ji("smile")`
+  - I've paraphrased my summaries below, any transcription errors are mine. Please listen to the original interview.
+  - Question: What does it mean to be a mathematician?
+
+  > To mostly think about mathematical problems, there are many mathematical problems that have rich history, many are interesting in
+  their own sense. It means to ask the right questions, think about
+  interesting questions and tell the difference between what is
+  beautiful and what is not beautiful
+
+  - Question: What does your day look like?
+
+    > Many procedural things - teaching, meeting graduate students,
+    reading mathematical papers.
+
+    > Part of the time I'm just thinking! Sometimes with other people
+    over chalkboard/whiteboard, looking at a piece of paper on the
+    table i.e. trying to do some computations that are relevant, thinking of relationships to the problem. Finding problems that are
+    similar enough.
+
+  - Question: It is so difficult to grasp the idea of just thinking!
+  Most of the careers are based on the idea of responding to things.
+  Often when visiting you in Princeton it seems you are in a room
+  staring in the air, in another room people another mathematician is
+  staring in the air, it seems like you are not doing anything!
+
+  > Right, and indeed in much of time you are not doing anything.
+  __Most of the time you are failing and you need to get used to to it__
+  Part of the satisfaction is this process is to think about something
+  for a very long time without having an idea. Sometimes you solve
+  something related
+
+  - Question: Do you sometimes try to initiate situations that will
+  inspire you to solve problems
+
+  > You go to conferences, talk to people, read papers etc. Many
+  times you just need to be in a different state of mind e.g. if you
+  forget someones name, just thinking about it does not always make
+  you remember, just need to try something else at times. This may
+  explain why you see people staring in the air! Sometimes you can
+  go and take walks.
+
+  - Question: When did you know you wanted to be a mathematician?
+
+  > As a child, before I was 10 years old I knew I was interested in
+  mathematical puzzles. I was good at it and interested in mathematics
+  but didn't really know what it involved. I always liked that it is __objective__. I was able to explain a solution to an adult at a party
+  on the puzzle of the Eurovision song contest. The power of convincing
+  someone is really powerful.
+
+  - Question: Was the long list of awards you aimed for?
+
+  > No, it's nice to get such prizes but never done this with the
+  intent. In every field it is important, but the glory is very
+  limited. This is nice but you don't do things with this aim in
+  mind
+
+  - Question: In one of your discoveries, did you ever feel "this
+  was something I was dreaming on and I accomplished that"
+
+  > I had a few things where I was very happy. Because I had thought
+  about it for a long time and found something new. Don't think
+  I had a specific time where I sat back and said this is the best
+  discovery of their life. One should always think that the best
+  discoveries are ahead of them.
+
+  - Question: What do mathematicians do after leaving research?
+
+  > Some scientists go into scientific management. Some go into
+  industry, but this is rare. As long as what I do is what I find
+  interesting and challenging, and what I do is not as good as my
+  best results I would still keep doing this.
+
+  - Question: Does being a grandfather and becoming older change
+  your priorities and motivation?
+
+  > Yes, in general you realize you want to spend time with family,
+  children, and grandchildren. I don't think it comes __instead__ of
+  science. I hope to keep doing good work and spend time with family.
+
+</details>
+
+## Interesting Papers
+
+- Particularly enjoyed reading this paper on the mathematical description of the carbon cycle
+[@rothman14_earth_carbon_cycle]. Really useful to get a good idea of the simple
+but powerful use of simple stochastic differential equations used to model
+climate change processes at various *global scales*.
+
+## Personal Blogging
+
+Besides this post `r emo::ji("smile")` the main things I got up to on the
+personal blogging front were:
+
+- Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"} on the fun setup process with the [RStudio distill package](https://rstudio.github.io/distill/blog.html){target="_blank"} and
+also [Netlify](https://netlify.com){target="_blank"} and [Google
+Domains](https://domains.google){target="_blank"}
+- Wrote a [fun blogpost](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/){target="_blank"} on solving a couple of quick text-based tasks
+using the `tidyverse` including [generating Oxford Comma
+triples](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-1-generating-oxford-comma-triples){target="_blank"}
+and also [Generating numbered BibTeX
+entries](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-2-generating-numbered-bibtex-entries){target="_blank"}
+
+## Concluding Thoughts
+
+Overall July 2019 was a somewhat productive summer month. Though things are
+never quite as productive as I like them to be in graduate school, but always
+got to keep trying.
+
+I liked documenting this personal 'July 2019 roundup'. Normally I'm not the
+type to share much about my personal life, but I thought documenting what I get
+up to gives me more stake in the respective activities and forces me to commit
+to them enthusiastically. I also like sharing cool stuff that I come across
+with friends, so dual benefit.
+
+I think I'll keep these monthly roundups going for a while. Let's see how this
+experiment goes when semester starts `r emo::ji("smile")`.
