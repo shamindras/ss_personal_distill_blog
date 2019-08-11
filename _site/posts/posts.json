@@ -17,7 +17,7 @@
       "math"
     ],
     "preview": "posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
-    "last_modified": "2019-08-03T15:15:35-04:00",
+    "last_modified": "2019-08-10T22:25:17-04:00",
     "preview_width": 3360,
     "preview_height": 1718
   },
@@ -35,10 +35,10 @@
     "categories": [
       "distill"
     ],
-    "preview": "posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_01.png",
-    "last_modified": "2019-08-03T23:33:45-04:00",
-    "preview_width": 1012,
-    "preview_height": 481
+    "preview": "posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
+    "last_modified": "2019-08-06T23:02:39-04:00",
+    "preview_width": 706,
+    "preview_height": 568
   },
   {
     "path": "posts/2019-07-21-shrotriya2019reprtitanic/",
@@ -57,7 +57,7 @@
       "reproducibility"
     ],
     "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-08-03T23:50:28-04:00"
+    "last_modified": "2019-08-10T22:18:30-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -75,7 +75,7 @@
       "rstats"
     ],
     "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-08-03T23:49:45-04:00"
+    "last_modified": "2019-08-10T22:18:03-04:00"
   },
   {
     "path": "posts/2019-07-11-shrotriya2019distillpt1/",
@@ -92,7 +92,7 @@
       "distill"
     ],
     "preview": "posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-08-03T23:40:24-04:00",
+    "last_modified": "2019-08-10T21:59:47-04:00",
     "preview_width": 707,
     "preview_height": 387
   },
@@ -110,9 +110,7 @@
     "categories": [
       "personal"
     ],
-    "preview": "posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-50.png",
-    "last_modified": "2019-08-03T23:51:24-04:00",
-    "preview_width": 373,
-    "preview_height": 373
+    "preview": "posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg",
+    "last_modified": "2019-08-10T21:46:59-04:00"
   }
 ]

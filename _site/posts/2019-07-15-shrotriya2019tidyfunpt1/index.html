@@ -1331,7 +1331,7 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Tidyverse Fun - Part 1</h1>
-<p>First part in a series of doing useful tasks with the <code>Tidyverse</code></p>
+<p><p>First part in a series of doing useful tasks with the <code>Tidyverse</code></p></p>
 </div>
 
 <div class="d-byline">
@@ -1356,8 +1356,8 @@ gtag('config', 'UA-145015693-1');
 </div>
 <h2 id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
 <h3 id="the-central-problem">The central problem</h3>
-<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <em>Oxford Comma</em> <span class="citation" data-cites="wiki_serial_comma">(Wikipedia <a href="#ref-wiki_serial_comma">2019</a>)</span> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s general lack of ambiguity in phrases compared to not using it.</p>
-<p>We will use the Oxford comma on the famous <em>ambiguous</em> phrase (here used without the Oxford Comma before ‘shoots’):</p>
+<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <em>Oxford Comma</em> <span class="citation" data-cites="wiki_serial_comma">(Wikipedia <a href="#ref-wiki_serial_comma" role="doc-biblioref">2019</a>)</span> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
+<p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>
 <blockquote>
 <p>Eats, shoots and leaves</p>
 </blockquote>
@@ -1365,7 +1365,7 @@ gtag('config', 'UA-145015693-1');
 <blockquote>
 <p>Eats, shoots, and leaves</p>
 </blockquote>
-<p><strong>Goal:</strong> A fun experiment would be to generate <em>all permutations</em> of this phrase with and without the Oxford Comma.</p>
+<p><strong>Goal:</strong> A fun experiment would be to generate <em>all permutations</em> of this phrase with and without the Oxford Comma using <code>R</code> and specifically the <code>tidyverse</code> packages.</p>
 <h3 id="generating-all-word-triple-permutations-the-tidy-way">Generating all word-triple permutations the <code>tidy</code> way</h3>
 <p>Let’s load our required packages</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1374,12 +1374,12 @@ library(magrittr)
 library(tidyverse)
 library(glue)</code></pre>
 </div>
+<p>Let’s also define our unique global word values used to construct the required phrases:</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
-# Define our unique GLOBAL word values
 WORD_VALS &lt;- c(&quot;eats&quot;, &quot;shoots&quot;, &quot;leaves&quot;)</code></pre>
 </div>
-<p>Generate all unique 3-word permutations without replacement from the three unique words. We’ll create a helper function to check that a vector of words is unique.</p>
+<p>Generate all unique 3-word permutations <em>without replacement</em> from the three unique words. We’ll create a helper function to check that a vector of words is unique.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
 is_unq_perm &lt;- function(word1, word2, word3){
@@ -1387,9 +1387,9 @@ is_unq_perm &lt;- function(word1, word2, word3){
     base::return(length(words_vec) - length(unique(words_vec)) == 0)
 }</code></pre>
 </div>
-<p>Here we simply generated every possible 3 word triple with replacement using the <code>tidyr::crossing</code> function. We simply filter these <span class="math inline">\(3^3 = 27\)</span> triples for unique triples using the <code>is_unq_perm</code> function applied row-by-row using <code>purrr::pmap_lgl</code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
+<p>We can now simply generate every possible triple <em>with replacement</em> using the <code>tidyr::crossing</code> function. We proceed to <em>filter</em> these <span class="math inline">\(3^3 = 27\)</span> triples for unique triples using our <code>is_unq_perm</code> helper function applied <em>row-by-row</em> using <code>purrr::pmap_lgl</code>. The <code>_lgl</code> simply returns a <code>TRUE/FALSE</code> logical value as intended by the applied function.</p>
 <aside>
-This generates a <em>Cartesian product</em> of all the 3 word triples
+<strong>Note:</strong> The <code>tidyr::crossing</code> generates a <em>Cartesian product</em> of all the 3 word triples, very handy
 </aside>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1507,7 +1507,7 @@ exprs %&gt;%
 </tbody>
 </table>
 </div>
-<p>So there you have it. Have fun generating your own version of Oxford Comma triples to engage in civil discussion with your fellow grammar focused friends 😄.</p>
+<p>So there you have it. Have fun generating your own version of Oxford Comma triples to engage in civil discussions with your fellow grammar focused friends 😄.</p>
 <h2 id="task-2-generating-numbered-bibtex-entries">Task 2: Generating numbered BibTeX entries</h2>
 <h3 id="the-central-problem-1">The central problem</h3>
 <p>In this case I needed to generate several BibTeX entries of the form:</p>
@@ -1519,7 +1519,8 @@ month         = {March},
 year          = {2018},
 url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 }</code></pre>
-<p>Specifically 30 such sequential entries to create for lectures <code>1-30</code>. Rather than do this manually, I realized that this would be fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code>.</p>
+<p>As it can be seen the lectures are numbered sequentially and change in the main BibTeX <code>id</code>, the <code>title</code>, and the <code>url</code> field.</p>
+<p>Specifically I needed to construct 30 such sequential entries for lectures <code>1-30</code>. Rather than do this manually, I realized that this would be fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code>.</p>
 <p><strong>Goal:</strong> Create 30 such BibTeX entries and print to the console to directly-copy paste to my BibTeX file.</p>
 <h3 id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes a lecture number (integer) as an input and then outputs a single BibTeX entry for that lecture.</p>
@@ -1547,7 +1548,7 @@ get_lec_bibtex &lt;- function(lec_num){
 </div>
 <p>Note that by default <code>glue</code> allows you to substitute input text in between <code>{</code> and <code>}</code> markers. However BibTeX entries <em>already have</em> literal default <code>{}</code> tags that we need to include in our function output. Rather than escaping them the <code>glue</code> package conveniently allows us to change the default opening and closing markers 💯! We simply set these to be angle brackets <code>&lt; &gt;</code> using the <code>.open</code> and <code>.close</code> options above.</p>
 <aside>
-Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with
+<strong>Note:</strong> Luckily we don’t have <em>literal</em> angle brackets in our BibTeX output to deal with here
 </aside>
 <p>Let’s just test this out quickly:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1564,7 +1565,7 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
 <aside>
-<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>&quot;01&quot;</code>
+<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
 </aside>
 <h3 id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
@@ -1592,11 +1593,11 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 <p>Yay - this works as expected! We can now paste into BibTeX as required.</p>
 <p>Note that we only created it for lectures 1 and 30 for easy scrolling. But for all lectures we can just replace <code>c(1, 30)</code> with <code>1:30</code> in the above code.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and post in the comments any feedback you have 👍.</p>
+<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and post in the comments any questions/feedback you may have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
 <h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
-<div id="refs" class="references">
+<div id="refs" class="references" role="doc-bibliography">
 <div id="ref-wiki_serial_comma">
 <p>Wikipedia. 2019. “Serial Comma - Wikipedia, the Free Encyclopedia.” <a href="https://en.wikipedia.org/wiki/Serial_comma">https://en.wikipedia.org/wiki/Serial_comma</a>.</p>
 </div>

@@ -10,7 +10,7 @@ author:
     url: https://www.shamindras.com/
 slug: shrotriya2019welcome
 date: 07-10-2019
-preview: images/about-profile-circular-scaled-50.png
+preview: images/about-profile-circular-scaled-hex.jpg
 output:
   distill::distill_article:
     self_contained: false
@@ -31,32 +31,26 @@ statistics as a graduate student.
 
 I’d like it to be a fun place to document interesting things I like to read
 about in the statistics and machine learning space (**statistical
-theory/methodology**, **research**, **rstats**, **python** etc) as well as
-anything else I am generally into e.g. books, sports.
+theory/methodology**, **research**, **rstats**, **python** ...) as well as
+anything else I am generally into e.g. **books**, **sports** etc.
 
 Feel free to pull up a chair, leave a comment, and join me so that we can
-explore together `r emo::ji("100")`.
+explore together.
 
 ## Credits
 
 The credit to starting this blog goes to the following people. I hope to not
 disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 
-- [Yihui Xie](https://yihui.name/){target="_blank"}, [JJ Allaire](https://github.com/jjallaire){target="_blank"} and [Rich Iannone](https://twitter.com/riannone){target="_blank"} - for co-developing the fantastic `radix` package which upon which this blog/ site is based
+- [Yihui Xie](https://yihui.name/){target="_blank"}, [JJ Allaire](https://github.com/jjallaire){target="_blank"} and [Rich Iannone](https://twitter.com/riannone){target="_blank"} - for co-developing the fantastic `distill` package which upon which this blog/ site is based
 - [Rachel Thomas](http://www.fast.ai/) for posting this [fantastic blog post](http://www.fast.ai/2017/04/06/alternatives/){target="_blank"} encouraging people like me to (finally!) create a blog
 - **My parents** for encouraging to communicate my passion for statistics.
 I secretly think that this is their way of minimizing my passionate rants about
-the bootstrap in our regular Skype chats. That will still continue though `r
-emo::ji("smile")`
+the bootstrap in our regular Skype chats (the rants will still continue
+though...).
 
-<!-- Add icon library --> <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Add font awesome icons --> <p style="text-align: center;">
-    <a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a>
-    <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin-square" style="font-size:46px;"></a>
-    <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>
-</p>
+```{r, child="../../data/rmds/favicons_shamindra_shrotriya.Rmd"}
+```
 
 ```{r, child="../../data/rmds/acknowledgment_profile_salil.Rmd"}
 ```

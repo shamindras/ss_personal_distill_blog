@@ -9,7 +9,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 slug: shrotriya2019distillpt2
-preview: images/step_01_disqus_01.png
+preview: images/step_01_disqus_02.png
 output:
   distill::distill_article:
     self_contained: false

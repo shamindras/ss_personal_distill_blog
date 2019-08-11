@@ -39,11 +39,11 @@ knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
 Based on a fun conversation with my statistics cohort over dinner we got to
 discussing the famous *Oxford Comma* [@wiki_serial_comma] (or *Serial Comma*
 depending on your persuasion). I've never really adopted the use but my friends
-made a compelling argument on it's general lack of ambiguity in phrases
-compared to not using it.
+made a compelling argument on it's apparent general lack of ambiguity when
+applied appropriately.
 
-We will use the Oxford comma on the famous *ambiguous* phrase (here used
-without the Oxford Comma before 'shoots'):
+We will use the Oxford comma on the famously *ambiguous* phrase (here used
+without the Oxford Comma before _leaves_):
 
 > Eats, shoots and leaves
 
@@ -52,7 +52,8 @@ After adding in the Oxford Comma this would become:
 > Eats, shoots, and leaves
 
 **Goal:** A fun experiment would be to generate *all permutations* of this
-phrase with and without the Oxford Comma.
+phrase with and without the Oxford Comma using `R` and specifically the
+`tidyverse` packages.
 
 ### Generating all word-triple permutations the `tidy` way
 
@@ -64,12 +65,14 @@ library(tidyverse)
 library(glue)
 ```
 
+Let's also define our unique global word values used to construct the required
+phrases:
+
 ```{r setup_oxc_01_02, echo=TRUE, cache=TRUE}
-# Define our unique GLOBAL word values
 WORD_VALS <- c("eats", "shoots", "leaves")
 ```
 
-Generate all unique 3-word permutations without replacement from the three
+Generate all unique 3-word permutations _without replacement_ from the three
 unique words. We'll create a helper function to check that a vector of words is
 unique.
 
@@ -80,13 +83,14 @@ is_unq_perm <- function(word1, word2, word3){
 }
 ```
 
-Here we simply generated every possible 3 word triple with replacement using
-the `tidyr::crossing` function. We simply filter these $3^3 = 27$ triples for
-unique triples using the `is_unq_perm` function applied row-by-row using
-`purrr::pmap_lgl`. The `_lgl` simply returns a `TRUE/FALSE` logical value as
-intended by the applied function.
+We can now simply generate every possible triple _with replacement_ using the
+`tidyr::crossing` function.  We proceed to _filter_ these $3^3 = 27$ triples
+for unique triples using our `is_unq_perm` helper function applied _row-by-row_
+using `purrr::pmap_lgl`. The `_lgl` simply returns a `TRUE/FALSE` logical value
+as intended by the applied function.
 
-<aside> This generates a *Cartesian product* of all the 3 word triples </aside>
+<aside> __Note:__ The `tidyr::crossing` generates a *Cartesian product* of all
+the 3 word triples, very handy</aside>
 
 ```{r setup_oxc_01_04, echo=TRUE, cache=TRUE}
 # Generate the unique word-triples
@@ -135,7 +139,7 @@ exprs %>%
 ```
 
 So there you have it. Have fun generating your own version of Oxford Comma
-triples to engage in civil discussion with your fellow grammar focused friends
+triples to engage in civil discussions with your fellow grammar focused friends
 `r emo::ji("smile")`.
 
 ## Task 2: Generating numbered BibTeX entries
@@ -154,9 +158,13 @@ url           = {https://statschool/~doe/stats10A/Lectures/Lecture01.pdf},
 }
 ```
 
-Specifically 30 such sequential entries to create for lectures `1-30`. Rather
-than do this manually, I realized that this would be fun scripting exercise
-with using the `tidyverse` packages `glue`, `purrr`, and `stringr`.
+As it can be seen the lectures are numbered sequentially and change in the main
+BibTeX `id`, the `title`, and the `url` field.
+
+Specifically I needed to construct 30 such sequential entries for lectures
+`1-30`. Rather than do this manually, I realized that this would be fun
+scripting exercise with using the `tidyverse` packages `glue`, `purrr`, and
+`stringr`.
 
 **Goal:** Create 30 such BibTeX entries and print to the console to
 directly-copy paste to my BibTeX file.
@@ -195,8 +203,8 @@ the `glue` package conveniently allows us to change the default opening and
 closing markers `r emo::ji("hundred")`! We simply set these to be angle
 brackets `< >` using the `.open` and `.close` options above.
 
-<aside> Luckily we don't have *literal* angle brackets in our BibTeX output to
-deal with </aside>
+<aside> __Note:__ Luckily we don't have _literal_ angle brackets in our BibTeX
+output to deal with here</aside>
 
 Let's just test this out quickly:
 
@@ -232,10 +240,11 @@ all lectures we can just replace `c(1, 30)` with `1:30` in the above code.
 This post was for me to document and serve as a guide to automating a couple of
 fun text-based tasks that I came across in my work (and social life!). Using
 the `tidy` framework can be a fun way to solve these tasks (but certainly not
-the only way in `R`).  Have fun playing around with the above and post in the
-comments any feedback you have `r emo::ji("thumbsup")`.
+the only way in `R`). Have fun playing around with the above and please post in
+the comments any questions/feedback you may have `r emo::ji("thumbsup")`.
 
 Stay tuned for more blogposts solving more such tasks.
+
 
 ```{r, child="../../data/rmds/acknowledgment_preview_tidyfun_salil.Rmd"}
 ```
