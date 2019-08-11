@@ -194,8 +194,8 @@ for non-survivors vs. survivors
 - **Summary:** Overall this was a really fun challenge and I learned
 a lot about old-school data visualization using the glorius modern `tidyverse`
 ecosystem we have at our fingertips. Will do a similar reproducibility
-challenge again for sure `r emo::ji("victory")`. Please leave a comment below
-if you have any feedback on this post
-
+challenge again for sure `r emo::ji("victory")`.  Have fun playing around with
+the above and please post in the comments any questions/feedback you may have
+`r emo::ji("thumbsup")`.
 ```{r, child="../../data/rmds/acknowledgment_preview_tidyfun_salil.Rmd"}
 ```

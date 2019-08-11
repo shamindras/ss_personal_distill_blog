@@ -48,11 +48,11 @@ features of editing `Rmd` documents.
 
 - Continued reading this fantastic book [@steele2004cauchyscwarzmaster_book] called the *Art of Mathematical inequalities* by [Prof. Michael Steele](http://www-stat.wharton.upenn.edu/~steele/){target="_blank"}. This book is simply
 amazing in that Prof. Steele walks through deriving mathematical inequalities
-as if you were having a casual chat with him using a whiteboard. I've been
+as if you were having a casual chat together using a whiteboard. I've been
 working through through the problems in detail and they are a great challenge!
 I'll blog more about this as I finish the book in the August 2019 roundup.
 
-<aside> **Note:** the text contains full solutions making it ideal for
+<aside> __Note:__ the text contains full solutions making it ideal for
 self-study (but I refuse to peek for now) </aside>
 
 ### Fiction
@@ -89,7 +89,7 @@ Overall July 2019 was a somewhat productive summer month. Though things are
 never quite as productive as I like them to be in graduate school, but always
 got to keep trying.
 
-I liked documenting this personal 'July 2019 roundup'. Normally I'm not the
+I liked documenting this personal __July 2019 roundup__. Normally I'm not the
 type to share much about my personal life, but I thought documenting what I get
 up to gives me more stake in the respective activities and forces me to commit
 to them enthusiastically. I also like sharing cool stuff that I come across
@@ -97,3 +97,6 @@ with friends, so dual benefit.
 
 I think I'll keep these monthly roundups going for a while. Let's see how this
 experiment goes when semester starts `r emo::ji("smile")`.
+
+Please post in the comments any questions/feedback you may have or anything
+interesting resources you came across in July 2019 `r emo::ji("thumbsup")`.

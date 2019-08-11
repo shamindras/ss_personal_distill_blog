@@ -1331,7 +1331,7 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Reproducibility Challenge: Titanic Suvivors Plot</h1>
-<p>Using the <code>Tidyverse</code> to reproduce a plot on the survivorship of the Titanic</p>
+<p><p>Using the <code>Tidyverse</code> to reproduce a plot on the survivorship of the Titanic</p></p>
 </div>
 
 <div class="d-byline">
@@ -1354,7 +1354,7 @@ gtag('config', 'UA-145015693-1');
 </nav>
 <hr class="d-toc-separator"/>
 <h2 id="background">Background</h2>
-<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder <a href="#ref-friendly2019titanicviz">2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
+<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder <a href="#ref-friendly2019titanicviz" role="doc-biblioref">2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:main-src-cover"></span>
@@ -1390,7 +1390,7 @@ library(tidyverse)
 library(janitor)
 library(plotly)</code></pre>
 </div>
-<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient <code>r emo::ji(&quot;sunglasses&quot;)</code>.</p>
+<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient <code>r emo::ji("sunglasses")</code>.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>janitor::clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre class="r"><code>
@@ -1491,7 +1491,7 @@ ttnc_cln %&gt;%
 </tbody>
 </table>
 </div>
-<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e. <span class="math inline">\(1^{st}\)</span> Class, <span class="math inline">\(2^{nd}\)</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
+<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e. <span class="math inline">\(1^{st}\)</span> Class, <span class="math inline">\(2^{nd}\)</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
 <p>Next step - plotting!</p>
 <h2 id="plotting-the-data">Plotting the Data</h2>
 <p>The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let’s do it!</p>
@@ -1532,11 +1532,11 @@ out_plot</code></pre>
 <li>Overall looks like the plot was able to be reproduced to a decent level of accuracy</li>
 <li>To get the colors to be close to the plot, I simply opened the <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">article online</a> and used the <a href="http://colorzilla.com/chrome/">Colorzilla for Chrome</a> addin to select the color manually. This is a really nice tool to use for reproducing colors viewed through a browser</li>
 <li>I don’t quite like that the non-survivors here are shown on a negative scale, but this was the quick hack I could perform to get bars flipped for non-survivors vs. survivors</li>
-<li><strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorius modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Please leave a comment below if you have any feedback on this post</li>
+<li><strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorius modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and post in the comments any questions/feedback you may have 👍.</li>
 </ul>
 <h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
-<div id="refs" class="references">
+<div id="refs" class="references" role="doc-bibliography">
 <div id="ref-friendly2019titanicviz">
 <p>Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. “Visualising the Titanic Disaster.” <em>Significance</em> 16 (1): 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2019.01229.x">https://doi.org/10.1111/j.1740-9713.2019.01229.x</a>.</p>
 </div>

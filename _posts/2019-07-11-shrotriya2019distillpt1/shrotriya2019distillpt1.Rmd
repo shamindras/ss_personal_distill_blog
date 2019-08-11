@@ -20,7 +20,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 IMAGES_PATH <- here::here("_posts",
-                          "2019-07-11-setting-up-a-distill-blog-with-netlify",
+                          "2019-07-11-shrotriya2019distillpt1",
                           "images")
 ```
 
@@ -36,7 +36,7 @@ used to create this blog are:
 - The [RStudio editor](https://www.rstudio.com/products/rstudio/){target="_blank"}
 - The `R` packages [`distill`](https://github.com/rstudio/distill){target="_blank"} and
 [`here`](https://github.com/r-lib/here){target="_blank"}
-- My macbook pro (2017 edition) and the [iterm2](https://www.iterm2.com/){target="_blank"} terminal
+- A macbook pro (2017 edition) and the [iterm2](https://www.iterm2.com/){target="_blank"} terminal
 - My personal [netlify account](https://app.netlify.com){target="_blank"} and also my personal
 domain bought from [Google Domains](https://domains.google/){target="_blank"}
 
@@ -66,8 +66,7 @@ choice here `r emo::ji("smile")`. This is shown in the screenshot below.
 <center>
 ```{r step-01-01-screenshot, fig.cap="Setting up the Site Github repo", echo=FALSE, out.extra="class=external", out.width="150%", cache=TRUE}
 knitr::include_graphics(path =
-                            fs::path(IMAGES_PATH,
-                                     "01_01_create_github_distill_repo.png"))
+                            fs::path(IMAGES_PATH,                                     "01_01_create_github_distill_repo.png"))
 ```
 </center>
 
@@ -106,14 +105,20 @@ remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.
 ```
 
-Now I simply changed into the newly cloned blog directory using the following
-command:
+Now I simply changed into the newly cloned blog directory by running the
+following terminal command:
 
 ```{bash step-02-02, eval=FALSE, echo=TRUE, cache=TRUE}
 cd ss_personal_distill_blog
 ```
 
-Using the `tree` command resulted in the following directory structure so far:
+I then ran the following terminal command:
+
+```{bash step-02-03, eval=FALSE, echo=TRUE, cache=TRUE}
+tree
+```
+
+This resulted in the following directory structure so far:
 
 ```markup
 .
@@ -164,7 +169,8 @@ needed.  You can omit this if you don't want the option to have *github pages*
 as your host in the future. I will be using `Netlify` to host my blog (see
 below), but it is good to have an additional host option in the future.
 
-My local `distill` blog directory now looked like this:
+My local `distill` blog directory now looked like this (again after running the
+`tree` command in the terminal):
 
 ```markup
 .
@@ -204,9 +210,10 @@ directory:
 
 One thing that slightly bothered me is that the default **welcome** blogpost
 has no **date** prefix in the directory. This would be nice to have in order to
-sort all future blogposts chronologically. Although I can could've changed this
-manually. For simplicity I opted to delete the default welcome directory
-altogether and recreated it with the date prefix as I prefer as detailed below.
+sort all future blogposts chronologically. I could've modified this default
+welcome blogpost `Rmd` and directory to include the date prefix manually. For
+simplicity I opted to delete the default welcome directory altogether and
+recreated it with the date prefix as I prefer as detailed below.
 
 To delete the default welcome directory, I just ran the following code at my
 terminal:
@@ -251,7 +258,7 @@ Now I had locally created my first personalized content, a simple welcome post
 `r emo::ji("sunglasses")`.
 
 <aside> My welcome blog entry can be found
-[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd)
+[here](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-10-shrotriya2019welcome/shrotriya2019welcome.Rmd)
 for reference. </aside>
 
 ## Step 5: Customize your blog layout
@@ -484,4 +491,6 @@ blog posts
 ## Concluding Thoughts
 
 If you managed to read this far, then I sincerely thank you. I hope to make
-even better technical and personal blogposts going forward.
+even better technical and personal blogposts going forward. Please feel free to
+leave a friendly comment below for any questions you may have or any feedback
+for future blogposts.
