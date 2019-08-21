@@ -10,7 +10,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-15-2019
-preview: images/logo-01.jpg
+preview: https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg
 slug: shrotriya2019tidyfunpt1
 bibliography: ../../refs.bib
 output:

@@ -8,7 +8,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-11-2019
-preview: images/08_06_netlify_adding_custom_domain.png
+preview: https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png
 slug: shrotriya2019distillpt1
 output:
   distill::distill_article:

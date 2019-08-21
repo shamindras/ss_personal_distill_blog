@@ -16,10 +16,8 @@
       "rstats",
       "math"
     ],
-    "preview": "posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
-    "last_modified": "2019-08-10T22:25:17-04:00",
-    "preview_width": 3360,
-    "preview_height": 1718
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
+    "last_modified": "2019-08-21T19:37:15-04:00"
   },
   {
     "path": "posts/2019-07-31-shrotriya2019distillpt2/",
@@ -35,10 +33,8 @@
     "categories": [
       "distill"
     ],
-    "preview": "posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
-    "last_modified": "2019-08-06T23:02:39-04:00",
-    "preview_width": 706,
-    "preview_height": 568
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
+    "last_modified": "2019-08-21T19:41:59-04:00"
   },
   {
     "path": "posts/2019-07-21-shrotriya2019reprtitanic/",
@@ -56,8 +52,8 @@
       "rstats",
       "reproducibility"
     ],
-    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-08-10T22:18:30-04:00"
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
+    "last_modified": "2019-08-21T19:44:12-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -74,8 +70,8 @@
       "tidyverse",
       "rstats"
     ],
-    "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-08-10T22:18:03-04:00"
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
+    "last_modified": "2019-08-21T19:38:00-04:00"
   },
   {
     "path": "posts/2019-07-11-shrotriya2019distillpt1/",
@@ -91,10 +87,8 @@
     "categories": [
       "distill"
     ],
-    "preview": "posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-08-10T21:59:47-04:00",
-    "preview_width": 707,
-    "preview_height": 387
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
+    "last_modified": "2019-08-21T19:41:11-04:00"
   },
   {
     "path": "posts/2019-07-10-shrotriya2019welcome/",
@@ -110,7 +104,7 @@
     "categories": [
       "personal"
     ],
-    "preview": "posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg",
-    "last_modified": "2019-08-10T21:46:59-04:00"
+    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/data/images/about-profile-circular-scaled-hex.jpg",
+    "last_modified": "2019-08-21T19:40:20-04:00"
   }
 ]
