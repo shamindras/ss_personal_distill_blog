@@ -15,7 +15,7 @@
       "rstats"
     ],
     "preview": "posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg",
-    "last_modified": "2019-08-21T22:02:47-04:00"
+    "last_modified": "2019-08-21T22:10:17-04:00"
   },
   {
     "path": "posts/2019-07-30-shrotriya2019july19roundup/",
@@ -35,7 +35,7 @@
       "math"
     ],
     "preview": "posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
-    "last_modified": "2019-08-21T19:54:41-04:00",
+    "last_modified": "2019-08-21T22:04:43-04:00",
     "preview_width": 3360,
     "preview_height": 1718
   },
@@ -54,7 +54,7 @@
       "distill"
     ],
     "preview": "posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
-    "last_modified": "2019-08-21T19:55:09-04:00",
+    "last_modified": "2019-08-21T22:04:43-04:00",
     "preview_width": 706,
     "preview_height": 568
   },
@@ -75,7 +75,7 @@
       "reproducibility"
     ],
     "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-08-21T19:52:45-04:00"
+    "last_modified": "2019-08-21T22:04:43-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -93,7 +93,7 @@
       "rstats"
     ],
     "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-08-21T19:53:26-04:00"
+    "last_modified": "2019-08-21T22:04:43-04:00"
   },
   {
     "path": "posts/2019-07-11-shrotriya2019distillpt1/",
@@ -110,7 +110,7 @@
       "distill"
     ],
     "preview": "posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-08-21T19:53:45-04:00",
+    "last_modified": "2019-08-21T22:04:43-04:00",
     "preview_width": 707,
     "preview_height": 387
   },
@@ -129,6 +129,6 @@
       "personal"
     ],
     "preview": "posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg",
-    "last_modified": "2019-08-21T19:54:09-04:00"
+    "last_modified": "2019-08-21T22:04:43-04:00"
   }
 ]

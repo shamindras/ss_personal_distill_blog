@@ -30,8 +30,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### The central problem
 
-In a custom In this case I needed to generate several $\LaTeX$ `newcommand`
-entries of the form:
+In a custom $\LaTeX$ macro file I needed to generate several sequential
+$\LaTeX$ `newcommand` entries of the form:
 
 ```markup
 \newcommand{\bfa}{\mathbf{a}}
@@ -39,13 +39,13 @@ entries of the form:
 ```
 
 Where using `$\bfa$` produces $\mathbf{a}$ and using `$\bfA$` produces
-$\mathbf{A}$ i.e the uppercase equivalent.
+$\mathbf{A}$ i.e the lowecase/uppercase `mathbf` commands respectively.
 
 Specifically I needed to construct 52 such combined sequential entries for both
-lowercase/uppercase versions of these `newcommand` $\LaTeX$ macros. Rather than
-do this manually, I realized that this would be fun scripting exercise with
-using the `tidyverse` packages `glue`, `purrr`, and `stringr` similar to this
-similar [previous post
+lowercase/uppercase letter versions of these `newcommand` $\LaTeX$ macros.
+Rather than do this manually, I realized that this would be another fun
+scripting exercise with using the `tidyverse` packages `glue`, `purrr`, and
+`stringr` similar to this similar [previous post
 here](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/).
 
 **Goal:** Create 52 such lowercase/uppercase `newcommand` entries and print to
@@ -58,8 +58,8 @@ First step is to write a function that takes as an input the following:
 - a single letter (case-sensitive) e.g. `"a"`
 - the macro shortcut command prefix you prefer e.g `"bf"`
 (for **b**old **f**ont in case you were wondering!)
-- the $\LaTeX$ command that we are creating a macro shortcut for
-i.e. `"mathbf"`
+- the specific $\LaTeX$ command that we are creating a macro shortcut for
+i.e. `"mathbf"` in this case
 
 The function then outputs a single `newcommand` entry for that lecture i.e
 `\newcommand{\bfa}{\mathbf{a}}` in this case. Let's do it!
@@ -116,4 +116,4 @@ c(letters, LETTERS) %>%
 
 
 Hope you have fun using this to quickly generate your $\LaTeX$ `newcommand`
-macros `r emo::ji("smile")`.
+macros `r emo::ji("victory")`.
