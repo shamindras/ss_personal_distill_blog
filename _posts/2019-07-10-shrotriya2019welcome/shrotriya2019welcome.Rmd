@@ -10,7 +10,8 @@ author:
     url: https://www.shamindras.com/
 slug: shrotriya2019welcome
 date: 07-10-2019
-preview: https://github.com/shamindras/ss_personal_distill_blog/raw/master/data/images/about-profile-circular-scaled-hex.jpg
+base_url: https://www.shamindras.com/
+preview: images/about-profile-circular-scaled-hex.jpg
 output:
   distill::distill_article:
     self_contained: false

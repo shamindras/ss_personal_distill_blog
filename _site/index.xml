@@ -13,7 +13,18 @@ on math, statistics and the PhD student life.
       <link>https://www.shamindras.com/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Tidyverse Fun - Part 2</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</link>
+      <description>Second part in a series of doing useful tasks with
+the `Tidyverse`. This time auto-generating sequential
+LaTeX `newcommand` macros</description>
+      <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</guid>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Shamindra's July 2019 Roundup</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
@@ -21,7 +32,7 @@ on math, statistics and the PhD student life.
       <description>A quick roundup of any interesting July 2019 activities</description>
       <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" width="3360" height="1718"/>
     </item>
     <item>
       <title>Upgrading Distill Blog Settings</title>
@@ -30,7 +41,7 @@ on math, statistics and the PhD student life.
       <description>The second part of a series on how I upgraded this `Distill` themed blog</description>
       <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png" width="706" height="568"/>
     </item>
     <item>
       <title>Reproducibility Challenge: Titanic Suvivors Plot</title>
@@ -40,7 +51,7 @@ on math, statistics and the PhD student life.
 survivorship of the Titanic</description>
       <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Tidyverse Fun - Part 1</title>
@@ -50,7 +61,7 @@ survivorship of the Titanic</description>
 the `Tidyverse`</description>
       <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Setting up a Distill Blog with Netlify</title>
@@ -59,7 +70,7 @@ the `Tidyverse`</description>
       <description>First part of a series on how I setup this `Distill` themed blog with `Netlify`</description>
       <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</guid>
       <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" width="707" height="387"/>
     </item>
     <item>
       <title>Welcome to Shamindra’s Site</title>
@@ -69,7 +80,7 @@ the `Tidyverse`</description>
 student at CMU</description>
       <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</guid>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://github.com/shamindras/ss_personal_distill_blog/raw/master/data/images/about-profile-circular-scaled-hex.jpg" medium="image" type="image/jpeg"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

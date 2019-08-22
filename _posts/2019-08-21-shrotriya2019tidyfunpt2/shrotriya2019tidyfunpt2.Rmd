@@ -1,0 +1,119 @@
+---
+title: "Tidyverse Fun - Part 2"
+description: |
+  Second part in a series of doing useful tasks with
+  the `Tidyverse`. This time auto-generating sequential
+  LaTeX `newcommand` macros
+categories:
+  - tidyverse
+  - rstats
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 08-24-2019
+base_url: https://www.shamindras.com/
+preview: images/logo-01.jpg
+slug: shrotriya2019tidyfunpt2
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup_01_01, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Task: Generating LaTeX newcommand macros
+
+### The central problem
+
+In a custom In this case I needed to generate several $\LaTeX$ `newcommand`
+entries of the form:
+
+```markup
+\newcommand{\bfa}{\mathbf{a}}
+\newcommand{\bfA}{\mathbf{A}}
+```
+
+Where using `$\bfa$` produces $\mathbf{a}$ and using `$\bfA$` produces
+$\mathbf{A}$ i.e the uppercase equivalent.
+
+Specifically I needed to construct 52 such combined sequential entries for both
+lowercase/uppercase versions of these `newcommand` $\LaTeX$ macros. Rather than
+do this manually, I realized that this would be fun scripting exercise with
+using the `tidyverse` packages `glue`, `purrr`, and `stringr` similar to this
+similar [previous post
+here](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/).
+
+**Goal:** Create 52 such lowercase/uppercase `newcommand` entries and print to
+the console to directly-copy paste to my $\LaTeX$ macros file.
+
+### The `tidy` approach
+
+First step is to write a function that takes as an input the following:
+
+- a single letter (case-sensitive) e.g. `"a"`
+- the macro shortcut command prefix you prefer e.g `"bf"`
+(for **b**old **f**ont in case you were wondering!)
+- the $\LaTeX$ command that we are creating a macro shortcut for
+i.e. `"mathbf"`
+
+The function then outputs a single `newcommand` entry for that lecture i.e
+`\newcommand{\bfa}{\mathbf{a}}` in this case. Let's do it!
+
+```{r latx_01_01, eval=TRUE, echo=TRUE}
+# Load required libraries
+library(tidyverse)
+library(glue)
+
+# Create LaTeX macro newcommand
+get_lec_newcmd <- function(inp_letr, mac_type, mac_ref){
+    out_str <- glue::glue('\\newcommand{\\<mac_type><inp_letr>}{\\<mac_ref>{<inp_letr>}}',
+                          .open = "<", .close = ">")
+    base::return(out_str)
+}
+```
+
+Let's just test this out quickly:
+
+```{r latx_01_02, eval=TRUE, echo=TRUE}
+c("a", "A") %>%
+    purrr::map_chr(.x = ., .f = ~get_lec_newcmd(inp_letr = .x,
+                                                mac_type = "bf",
+                                                mac_ref = "mathbf")) %>%
+    cat(., sep = "\n")
+```
+
+Great - looks like it is working as required!
+
+Note that we can easily generate other $\LaTeX$ macros like follows
+
+```{r latx_01_03, eval=TRUE, echo=TRUE}
+c("a", "A") %>%
+    purrr::map_chr(.x = ., .f = ~get_lec_newcmd(inp_letr = .x,
+                                                mac_type = "mc",
+                                                mac_ref = "mathcal")) %>%
+    cat(., sep = "\n")
+```
+
+Which generates the corresponding `mathcal` macros for $\mathcal{a}$ and
+$\mathcal{A}$ respectively.
+
+So finally we can generate all 52 letter macros at time by simply replacing
+`c("a", "A")` with `c(letters, LETTERS)` which uses the input
+lowercase/uppercase `letters`/`LETTERS` vectors in base `R`:
+
+```{r latx_01_04, results='asis', echo=FALSE}
+c(letters, LETTERS) %>%
+    purrr::map_chr(.x = ., .f = ~get_lec_newcmd(inp_letr = .x,
+                                                mac_type = "bf",
+                                                mac_ref = "mathbf")) %>%
+    details::details(summary = 'Full newcommand Demo Output')
+```
+
+
+Hope you have fun using this to quickly generate your $\LaTeX$ `newcommand`
+macros `r emo::ji("smile")`.

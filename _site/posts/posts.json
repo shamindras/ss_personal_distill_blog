@@ -1,5 +1,23 @@
 [
   {
+    "path": "posts/2019-08-21-shrotriya2019tidyfunpt2/",
+    "title": "Tidyverse Fun - Part 2",
+    "description": "Second part in a series of doing useful tasks with\nthe `Tidyverse`. This time auto-generating sequential\nLaTeX `newcommand` macros",
+    "author": [
+      {
+        "name": "Shamindra Shrotriya",
+        "url": "https://www.shamindras.com/"
+      }
+    ],
+    "date": "2019-08-24",
+    "categories": [
+      "tidyverse",
+      "rstats"
+    ],
+    "preview": "posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg",
+    "last_modified": "2019-08-21T22:02:47-04:00"
+  },
+  {
     "path": "posts/2019-07-30-shrotriya2019july19roundup/",
     "title": "Shamindra's July 2019 Roundup",
     "description": "A quick roundup of any interesting July 2019 activities",
@@ -16,8 +34,10 @@
       "rstats",
       "math"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
-    "last_modified": "2019-08-21T19:37:15-04:00"
+    "preview": "posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png",
+    "last_modified": "2019-08-21T19:54:41-04:00",
+    "preview_width": 3360,
+    "preview_height": 1718
   },
   {
     "path": "posts/2019-07-31-shrotriya2019distillpt2/",
@@ -33,8 +53,10 @@
     "categories": [
       "distill"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
-    "last_modified": "2019-08-21T19:41:59-04:00"
+    "preview": "posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png",
+    "last_modified": "2019-08-21T19:55:09-04:00",
+    "preview_width": 706,
+    "preview_height": 568
   },
   {
     "path": "posts/2019-07-21-shrotriya2019reprtitanic/",
@@ -52,8 +74,8 @@
       "rstats",
       "reproducibility"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-08-21T19:44:12-04:00"
+    "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
+    "last_modified": "2019-08-21T19:52:45-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
@@ -70,8 +92,8 @@
       "tidyverse",
       "rstats"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-08-21T19:38:00-04:00"
+    "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
+    "last_modified": "2019-08-21T19:53:26-04:00"
   },
   {
     "path": "posts/2019-07-11-shrotriya2019distillpt1/",
@@ -87,8 +109,10 @@
     "categories": [
       "distill"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/_posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
-    "last_modified": "2019-08-21T19:41:11-04:00"
+    "preview": "posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png",
+    "last_modified": "2019-08-21T19:53:45-04:00",
+    "preview_width": 707,
+    "preview_height": 387
   },
   {
     "path": "posts/2019-07-10-shrotriya2019welcome/",
@@ -104,7 +128,7 @@
     "categories": [
       "personal"
     ],
-    "preview": "https://github.com/shamindras/ss_personal_distill_blog/raw/master/data/images/about-profile-circular-scaled-hex.jpg",
-    "last_modified": "2019-08-21T19:40:20-04:00"
+    "preview": "posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg",
+    "last_modified": "2019-08-21T19:54:09-04:00"
   }
 ]
