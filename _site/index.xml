@@ -13,7 +13,18 @@ on math, statistics and the PhD student life.
       <link>https://www.shamindras.com/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 31 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Tidyverse Fun - Part 2</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</link>
+      <description>Second part in a series of doing useful tasks with
+the `Tidyverse`. This time auto-generating sequential
+LaTeX `newcommand` macros</description>
+      <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</guid>
+      <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Shamindra's July 2019 Roundup</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>

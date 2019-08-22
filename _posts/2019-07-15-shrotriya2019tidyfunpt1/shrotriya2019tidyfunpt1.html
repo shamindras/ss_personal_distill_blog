@@ -33,12 +33,14 @@
   <meta property="og:title" content="Tidyverse Fun - Part 1"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="First part in a series of doing useful tasks with&#10;the `Tidyverse`"/>
+  <meta property="og:image" content="https://www.shamindras.com/images/logo-01.jpg"/>
   <meta property="og:locale" content="en_US"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
-  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:card" content="summary_large_image"/>
   <meta property="twitter:title" content="Tidyverse Fun - Part 1"/>
   <meta property="twitter:description" content="First part in a series of doing useful tasks with&#10;the `Tidyverse`"/>
+  <meta property="twitter:image" content="https://www.shamindras.com/images/logo-01.jpg"/>
   
   <!--/radix_placeholder_meta_tags-->
   
@@ -46,7 +48,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","author","date","preview","slug","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Tidyverse Fun - Part 1"]},{"type":"character","attributes":{},"value":["First part in a series of doing useful tasks with\nthe `Tidyverse`\n"]},{"type":"character","attributes":{},"value":["tidyverse","rstats"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-15-2019"]},{"type":"character","attributes":{},"value":["images/logo-01.jpg"]},{"type":"character","attributes":{},"value":["shrotriya2019tidyfunpt1"]},{"type":"character","attributes":{},"value":["../../refs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","author","date","base_url","preview","slug","bibliography","output"]}},"value":[{"type":"character","attributes":{},"value":["Tidyverse Fun - Part 1"]},{"type":"character","attributes":{},"value":["First part in a series of doing useful tasks with\nthe `Tidyverse`\n"]},{"type":"character","attributes":{},"value":["tidyverse","rstats"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-15-2019"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]},{"type":"character","attributes":{},"value":["images/logo-01.jpg"]},{"type":"character","attributes":{},"value":["shrotriya2019tidyfunpt1"]},{"type":"character","attributes":{},"value":["../../refs.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -955,7 +957,7 @@
 
 <div class="d-title">
 <h1>Tidyverse Fun - Part 1</h1>
-<p><p>First part in a series of doing useful tasks with the <code>Tidyverse</code></p></p>
+<p>First part in a series of doing useful tasks with the <code>Tidyverse</code></p>
 </div>
 
 <div class="d-byline">
@@ -980,7 +982,7 @@
 </div>
 <h2 id="task-1-generating-oxford-comma-triples">Task 1: Generating Oxford Comma Triples</h2>
 <h3 id="the-central-problem">The central problem</h3>
-<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <em>Oxford Comma</em> <span class="citation" data-cites="wiki_serial_comma">(Wikipedia <a href="#ref-wiki_serial_comma" role="doc-biblioref">2019</a>)</span> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
+<p>Based on a fun conversation with my statistics cohort over dinner we got to discussing the famous <em>Oxford Comma</em> <span class="citation" data-cites="wiki_serial_comma">(Wikipedia <a href="#ref-wiki_serial_comma">2019</a>)</span> (or <em>Serial Comma</em> depending on your persuasion). I’ve never really adopted the use but my friends made a compelling argument on it’s apparent general lack of ambiguity when applied appropriately.</p>
 <p>We will use the Oxford comma on the famously <em>ambiguous</em> phrase (here used without the Oxford Comma before <em>leaves</em>):</p>
 <blockquote>
 <p>Eats, shoots and leaves</p>
@@ -1189,7 +1191,7 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec01.pdf}}</code></pre>
 </div>
 <p>Great - looks like it is working as required with the correct string padding in the lecture number in the pdf filename!</p>
 <aside>
-<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>"01"</code>
+<strong>Note:</strong> We used the <code>stringr</code> <code>str_pad</code> to convert <code>1</code> to <code>&quot;01&quot;</code>
 </aside>
 <h3 id="apply-to-all-lectures-using-purrr">Apply to all lectures using <code>purrr</code></h3>
 <p>Let’s finish this by creating all the entries using <code>purrr</code>:</p>
@@ -1217,11 +1219,11 @@ url    = {https://www.hpg/~doe/st10A/lecs/lec30.pdf}}</code></pre>
 <p>Yay - this works as expected! We can now paste into BibTeX as required.</p>
 <p>Note that we only created it for lectures 1 and 30 for easy scrolling. But for all lectures we can just replace <code>c(1, 30)</code> with <code>1:30</code> in the above code.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and post in the comments any questions/feedback you may have 👍.</p>
+<p>This post was for me to document and serve as a guide to automating a couple of fun text-based tasks that I came across in my work (and social life!). Using the <code>tidy</code> framework can be a fun way to solve these tasks (but certainly not the only way in <code>R</code>). Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</p>
 <p>Stay tuned for more blogposts solving more such tasks.</p>
 <h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
-<div id="refs" class="references" role="doc-bibliography">
+<div id="refs" class="references">
 <div id="ref-wiki_serial_comma">
 <p>Wikipedia. 2019. “Serial Comma - Wikipedia, the Free Encyclopedia.” <a href="https://en.wikipedia.org/wiki/Serial_comma">https://en.wikipedia.org/wiki/Serial_comma</a>.</p>
 </div>

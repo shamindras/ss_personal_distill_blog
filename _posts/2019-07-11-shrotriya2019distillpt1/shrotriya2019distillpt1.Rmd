@@ -8,6 +8,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-11-2019
+base_url: https://www.shamindras.com/
 preview: images/08_06_netlify_adding_custom_domain.png
 slug: shrotriya2019distillpt1
 output:

@@ -10,6 +10,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 07-15-2019
+base_url: https://www.shamindras.com/
 preview: images/logo-01.jpg
 slug: shrotriya2019tidyfunpt1
 bibliography: ../../refs.bib
@@ -22,14 +23,6 @@ output:
 
 ```{r setup_01_01, include=FALSE, cache=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r prev_img, preview=TRUE, results='hide', echo=FALSE}
-IMAGES_PATH <- here::here("_posts",
-                          "2019-07-25-shrotriya2019tidyfunpt1",
-                          "images")
-knitr::include_graphics(path = fs::path_join(parts = c(IMAGES_PATH,
-                                                       "tidyverse.png")))
 ```
 
 ## Task 1: Generating Oxford Comma Triples
