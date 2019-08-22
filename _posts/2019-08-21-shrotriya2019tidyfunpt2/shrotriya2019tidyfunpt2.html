@@ -975,19 +975,19 @@
 <hr class="d-toc-separator"/>
 <h2 id="task-generating-latex-newcommand-macros">Task: Generating LaTeX newcommand macros</h2>
 <h3 id="the-central-problem">The central problem</h3>
-<p>In a custom In this case I needed to generate several <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> entries of the form:</p>
+<p>In a custom <span class="math inline">\(\LaTeX\)</span> macro file I needed to generate several sequential <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> entries of the form:</p>
 <pre class="markup"><code>
 \newcommand{\bfa}{\mathbf{a}}
 \newcommand{\bfA}{\mathbf{A}}</code></pre>
-<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the uppercase equivalent.</p>
-<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
+<p>Where using <code>$\bfa$</code> produces <span class="math inline">\(\mathbf{a}\)</span> and using <code>$\bfA$</code> produces <span class="math inline">\(\mathbf{A}\)</span> i.e the lowecase/uppercase <code>mathbf</code> commands respectively.</p>
+<p>Specifically I needed to construct 52 such combined sequential entries for both lowercase/uppercase letter versions of these <code>newcommand</code> <span class="math inline">\(\LaTeX\)</span> macros. Rather than do this manually, I realized that this would be another fun scripting exercise with using the <code>tidyverse</code> packages <code>glue</code>, <code>purrr</code>, and <code>stringr</code> similar to this similar <a href="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/">previous post here</a>.</p>
 <p><strong>Goal:</strong> Create 52 such lowercase/uppercase <code>newcommand</code> entries and print to the console to directly-copy paste to my <span class="math inline">\(\LaTeX\)</span> macros file.</p>
 <h3 id="the-tidy-approach">The <code>tidy</code> approach</h3>
 <p>First step is to write a function that takes as an input the following:</p>
 <ul>
 <li>a single letter (case-sensitive) e.g. <code>&quot;a&quot;</code></li>
 <li>the macro shortcut command prefix you prefer e.g <code>&quot;bf&quot;</code> (for <strong>b</strong>old <strong>f</strong>ont in case you were wondering!)</li>
-<li>the <span class="math inline">\(\LaTeX\)</span> command that we are creating a macro shortcut for i.e. <code>&quot;mathbf&quot;</code></li>
+<li>the specific <span class="math inline">\(\LaTeX\)</span> command that we are creating a macro shortcut for i.e. <code>&quot;mathbf&quot;</code> in this case</li>
 </ul>
 <p>The function then outputs a single <code>newcommand</code> entry for that lecture i.e <code>\newcommand{\bfa}{\mathbf{a}}</code> in this case. Let’s do it!</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1089,7 +1089,7 @@ c(&quot;a&quot;, &quot;A&quot;) %&gt;%
 </details>
 <p><br></p>
 </div>
-<p>Hope you have fun using this to quickly generate your <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> macros 😄.</p>
+<p>Hope you have fun using this to quickly generate your <span class="math inline">\(\LaTeX\)</span> <code>newcommand</code> macros ✌️.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
