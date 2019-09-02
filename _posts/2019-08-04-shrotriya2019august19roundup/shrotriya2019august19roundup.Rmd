@@ -10,8 +10,8 @@ categories:
 author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
-date: 08-04-2019
-#preview: images/preview-july-2019-02.png
+date: 08-31-2019
+preview: images/preview-august-2019-01.png
 slug: shrotriya2019august19roundup
 bibliography: ../../refs.bib
 output:
@@ -28,30 +28,53 @@ library(bookdown)
 
 ## Introduction
 
-Welcome to the August 2019 roundup! Similar to last time I'm going to
-experiment with, namely documenting anything interesting I come across
-(articles, lectures, books, papers etc.) and any activities I get up to. This
-is more for my personal benefit but may also help others.
+Welcome to the August 2019 roundup! Similar to [last
+time](https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/){target="_blank"}
+I'm going to experiment with, namely documenting anything interesting I come
+across (articles, lectures, books, papers etc.) and any activities I get up to.
+This is more for my personal benefit but may also help others.
 
 ## Interesting Articles
 
-- Came across this [exhaustive `BibTex` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib){target="_blank"}
+- Came across this [exhaustive `BibTeX` example file](http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib){target="_blank"}
 which will be a really handy reference going forward for $\LaTeX$ documents
+  - The document is written by the Oren Patashnik, the co-creator of BibTeX (`r emo::ji("wow")`) and the co-author of the great book
+  [@grahamknuthpatashnik1994concrete_book]
 
 ## Interesting Books
 
-### Non-fiction
-
--
-
 ### Fiction
 
-- Continued reading this fantastic book [@granville2019primesuspects_book] called the *Art of Mathematical inequalities* by [Prof. Michael Steele](http://www-stat.wharton.upenn.edu/~steele/){target="_blank"}.
+- Started reading this fantastic book [@granville2019primesuspects_book] called the *Prime Suspects* by __Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)__. Here is a [youtube trailer for the book](https://www.youtube.com/watch?v=82c2HDp-ntg&feature=youtu.be){target="_blank"} to get you excited!
+
+<aside>
+```{r main-src-cover, echo=FALSE, fig.cap='Prime Suspects cover', out.extra="class=external"}
+IMAGES_PATH <- here::here("_posts",
+                          "2019-08-04-shrotriya2019august19roundup",
+                          "images")
+knitr::include_graphics(path =
+                          fs::path_join(parts = c(IMAGES_PATH,
+                                                  "prime-suspects-book.png")))
+```
+</aside>
 
 <details>
-  <summary>Toggle answer</summary>
+  <summary>Key Takeaways</summary>
 
-  - [google.com](https://www.google.com)
+  - This is essentially an introduction to analytic number
+  theory disguised as a fast-moving graphic novel murder mystery
+  - For any mathematics fans (who isn't though?) there are lots
+  of funny easter eggs to be found in the frame backgrounds
+  - This a very unique exposition on number theory, a subject in
+  which I  have negligible knowledge (like most subjects)
+  - The pedagogy is gentle and yet exciting emphasizing not
+  just mathematics but the importance of communication
+  of mathematical ideas to the wider public i.e. a meta novel
+  if you like
+  - I hope to see more books in this mathematical graphic novel
+  genre. The last one I read (and know of) is Logicomix [@doxiadis2009logicomix_book] which
+  I highly recommend as well for anyone wishing to venture into
+  the mysteries of infinity!
 
 </details>
 
@@ -157,38 +180,19 @@ of Prof. Alon which led to a really personal dynamic! </aside>
 
 </details>
 
-## Interesting Papers
-
-- Particularly enjoyed reading this paper on the mathematical description of the carbon cycle
-[@rothman14_earth_carbon_cycle]. Really useful to get a good idea of the simple
-but powerful use of simple stochastic differential equations used to model
-climate change processes at various *global scales*.
-
 ## Personal Blogging
 
 Besides this post `r emo::ji("smile")` the main things I got up to on the
 personal blogging front were:
 
-- Setting up this very blog, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/){target="_blank"} on the fun setup process with the [RStudio distill package](https://rstudio.github.io/distill/blog.html){target="_blank"} and
-also [Netlify](https://netlify.com){target="_blank"} and [Google
-Domains](https://domains.google){target="_blank"}
-- Wrote a [fun blogpost](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/){target="_blank"} on solving a couple of quick text-based tasks
-using the `tidyverse` including [generating Oxford Comma
-triples](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-1-generating-oxford-comma-triples){target="_blank"}
-and also [Generating numbered BibTeX
-entries](https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/#task-2-generating-numbered-bibtex-entries){target="_blank"}
+- Updating the distill blog settings, with a [detailed step-by-step guide](https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/){target="_blank"}
+- Wrote another [fun blogpost](https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/){target="_blank"} on using the `tidyverse` to reproduce a plot on the survivorship of the Titanic. Always so cool to
+be able to reproduce such famous plots using modern tools.
 
 ## Concluding Thoughts
 
-Overall July 2019 was a somewhat productive summer month. Though things are
-never quite as productive as I like them to be in graduate school, but always
-got to keep trying.
+Overall August 2019 was the end of summer and the start of a new year of
+graduate school - yay!
 
-I liked documenting this personal 'July 2019 roundup'. Normally I'm not the
-type to share much about my personal life, but I thought documenting what I get
-up to gives me more stake in the respective activities and forces me to commit
-to them enthusiastically. I also like sharing cool stuff that I come across
-with friends, so dual benefit.
-
-I think I'll keep these monthly roundups going for a while. Let's see how this
-experiment goes when semester starts `r emo::ji("smile")`.
+Please feel free to leave a comment if you found any useful articles, lectures,
+books, papers etc which I may find interesting.
