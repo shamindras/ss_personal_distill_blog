@@ -67,7 +67,9 @@ survivorship of the Titanic</description>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</link>
       <description>First part in a series of doing useful tasks with
-the `Tidyverse`</description>
+the `Tidyverse`. This time generating Oxford Comma
+triples and generating sequentially numbered BibTeX
+entries</description>
       <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>

@@ -17,7 +17,7 @@
       "math"
     ],
     "preview": "posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png",
-    "last_modified": "2019-09-01T23:01:01-04:00",
+    "last_modified": "2019-09-01T23:05:04-04:00",
     "preview_width": 3348,
     "preview_height": 1678
   },
@@ -102,7 +102,7 @@
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",
     "title": "Tidyverse Fun - Part 1",
-    "description": "First part in a series of doing useful tasks with\nthe `Tidyverse`",
+    "description": "First part in a series of doing useful tasks with\nthe `Tidyverse`. This time generating Oxford Comma\ntriples and generating sequentially numbered BibTeX\nentries",
     "author": [
       {
         "name": "Shamindra Shrotriya",
@@ -115,7 +115,7 @@
       "rstats"
     ],
     "preview": "posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg",
-    "last_modified": "2019-09-01T22:50:48-04:00"
+    "last_modified": "2019-09-02T09:09:42-04:00"
   },
   {
     "path": "posts/2019-07-11-shrotriya2019distillpt1/",

@@ -2,7 +2,9 @@
 title: "Tidyverse Fun - Part 1"
 description: |
   First part in a series of doing useful tasks with
-  the `Tidyverse`
+  the `Tidyverse`. This time generating Oxford Comma
+  triples and generating sequentially numbered BibTeX
+  entries
 categories:
   - tidyverse
   - rstats
@@ -135,7 +137,7 @@ So there you have it. Have fun generating your own version of Oxford Comma
 triples to engage in civil discussions with your fellow grammar focused friends
 `r emo::ji("smile")`.
 
-## Task 2: Generating numbered BibTeX entries
+## Task 2: Generating Sequentially Numbered BibTeX Entries
 
 ### The central problem
 
