@@ -1,5 +1,5 @@
 ---
-title: "Reproducibility Challenge: Titanic Suvivors Plot"
+title: "Reproducibility Challenge: Titanic Survivors Plot"
 description: |
     Using the `Tidyverse` to reproduce a plot on the
     survivorship of the Titanic
