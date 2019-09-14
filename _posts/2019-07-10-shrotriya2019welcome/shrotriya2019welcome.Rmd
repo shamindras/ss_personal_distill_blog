@@ -38,6 +38,8 @@ anything else I am generally into e.g. **books**, **sports** etc.
 Feel free to pull up a chair, leave a comment, and join me so that we can
 explore together.
 
+My CV can be found [here](pdfs/CV.pdf){target="_blank"}.
+
 ## Credits
 
 The credit to starting this blog goes to the following people. I hope to not
@@ -49,8 +51,6 @@ disappoint and create some useful content here `r emo::ji("vulcan_salute")`.
 I secretly think that this is their way of minimizing my passionate rants about
 the bootstrap in our regular Skype chats (the rants will still continue
 though...).
-
-My CV can be found [here](pdfs/CV.pdf).
 
 ```{r, child="../../data/rmds/favicons_shamindra_shrotriya.Rmd"}
 ```
