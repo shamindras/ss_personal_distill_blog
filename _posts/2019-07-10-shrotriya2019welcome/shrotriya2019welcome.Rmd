@@ -50,6 +50,8 @@ I secretly think that this is their way of minimizing my passionate rants about
 the bootstrap in our regular Skype chats (the rants will still continue
 though...).
 
+My CV can be found [here](pdfs/CV.pdf).
+
 ```{r, child="../../data/rmds/favicons_shamindra_shrotriya.Rmd"}
 ```
 
