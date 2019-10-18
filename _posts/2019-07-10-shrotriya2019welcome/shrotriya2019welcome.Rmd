@@ -52,8 +52,8 @@ I secretly think that this is their way of minimizing my passionate rants about
 the bootstrap in our regular Skype chats (the rants will still continue
 though...).
 
-```{r, child="../../data/rmds/favicons_shamindra_shrotriya.Rmd"}
+```{r, child=here::here("data", "rmds", "favicons_shamindra_shrotriya.Rmd")}
 ```
 
-```{r, child="../../data/rmds/acknowledgment_profile_salil.Rmd"}
+```{r, child=here::here("data", "rmds", "acknowledgment_profile_salil.Rmd")}
 ```

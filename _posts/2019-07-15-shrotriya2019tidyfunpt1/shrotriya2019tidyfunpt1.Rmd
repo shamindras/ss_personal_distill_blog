@@ -240,6 +240,4 @@ the comments any questions/feedback you may have `r emo::ji("thumbsup")`.
 
 Stay tuned for more blogposts solving more such tasks.
 
-
-```{r, child="../../data/rmds/acknowledgment_preview_tidyfun_salil.Rmd"}
-```
+```{r, child=here::here("data", "rmds", "acknowledgment_preview_tidyfun_salil.Rmd")}
