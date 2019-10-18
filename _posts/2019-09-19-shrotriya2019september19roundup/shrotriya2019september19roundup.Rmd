@@ -1,0 +1,178 @@
+---
+title: "Shamindra's September 2019 Roundup"
+description: |
+    A quick roundup of any interesting September 2019 activities
+categories:
+  - personal
+  - roundup
+  - rstats
+  - math
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 09-30-2019
+preview: images/preview-august-2019-01.png
+slug: shrotriya2019september19roundup
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(bookdown)
+```
+
+## Introduction
+
+Welcome to the September 2019 roundup! Similar to [last
+                                                time](https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/){target="_blank"}
+I'm going to experiment with, namely documenting anything interesting I come
+across (articles, lectures, books, papers etc.) and any activities I get up to.
+This is more for my personal benefit but may also help others.
+
+## Interesting Articles
+
+- Came across this [amazing guide to reading an R help file](https://socviz.co/appendix.html#a-little-more-about-r){target="_blank"}. Experienced `R` users can use this fantastic pedagogical tool by [Kieran Healy](https://twitter.com/kjhealy){target="_blank"} to teach new `R` users
+on how to read internal `R` help documentation.
+- Came across this [fascinating article on how calorie burning being a chess grandmaster is](https://www.espn.com/espn/story/_/id/27593253/why-grandmasters-magnus-carlsen-fabiano-caruana-lose-weight-playing-chess){target="_blank"} by 
+[Aishwarya Kumar](https://twitter.com/kumaraishwarya){target="_blank"}
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - Article notes that chess grandmasters can burn as much as 6000 calories
+    individually during an intense day of sedentary chess playing!
+    - Initial focus is on Fabiano Caruana, an American grandmaster in chess, and
+    current world No. 2. Caruana has to maintain a very strict diet and exercise
+    routine, particularly during tournaments
+    - Primary reasons for the calorie loss are heavy mental stress of the tournament, constantly thinking of chess, thus leaving limited time to think about and consume food
+    
+    - Interesting quote:
+    
+    > ...India's first grandmaster, Viswanathan Anand, does two hours of cardio each night to tire himself out so he doesn't dream about chess
+    
+    - Magnus Carlsen, reigning No. 1, for example consulted a professional
+    nutritionist who recommended that he stop drinking orange juice (to avoid 
+    sugar spikes) and replace it with a less sugary regular/chocolate milk
+    blend
+    
+    - Carlsen has also optimized _sitting_. This is quite amazing and something to
+    think about personally as someone who spends many hours daily in front of a
+    screen
+    
+    - Carlsen has also undertaken _load management_ (minimizing competitions
+    participated) to increase the amount of recuperation time between 
+    tournaments
+    
+    - In short, there are a lot of parallels to the research life which I 
+    undertake, and a lot of useful tips to optimize energy and time spent doing
+    what I enjoy for longer
+    
+    </details>
+
+- This is a really insightful interview with [Hadley Wickham](https://qz.com/1661487/hadley-wickham-on-the-future-of-r-python-and-the-tidyverse/){target="_blank"}, a recent [COPSS award winner](http://bulletin.imstat.org/2019/09/copss-presidents-award-hadley-wickham/){target="_blank"}, on the future of the `R` programming language:
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - Wickham notes that `R` vs `Python` language wars are not constructive in
+    moving data science and other fields forward. 
+    
+    - I agree wholeheartedly on this and firmly believe in using the best tools 
+    for the statistical job at hand. What should matter are more critical
+    aspects like code readability, usability, and reproducibility in light of 
+    the given task
+    
+    - Interestingly Wickham notes:
+    
+    > A pattern that I see is that the data science team in a company uses R and the data engineering team uses Python
+    
+    - Wickham also has focused on bridging divides within the `R` community
+    itself, namely in developing the `dtplyr` package to convert `dplyr` code
+    to the alternative `data.table` package syntax. This is a promising direction
+    ahead where `tidyverse` and `data.table` users can collaborate much more
+    easily
+    - There is also a focus on encouraging diversity in `R` usage and actively
+    developing communities. He asks:
+    
+    > Can we take the R-Ladies model and help other groups that are currently underserved?
+    
+    - Overall it is good that Wickham was recognized recently with the famous
+    COPSS medal in statistics and that the community is embracing software
+    development and design as a key aspect of our profession. It seems that the
+    future is bright for statistics!
+    
+    </details>
+
+- This is a [nice blogpost on making modular `Rmarkdown` files ](https://martinctc.github.io/blog/first-world-problems-very-long-rmarkdown-documents/){target="_blank"}. In fact this modular `Rmd` approach is now used in [my blog for common footer files](https://github.com/shamindras/ss_personal_distill_blog/blob/master/_posts/2019-07-15-shrotriya2019tidyfunpt1/shrotriya2019tidyfunpt1.Rmd#L244){target="_blank"}. Did not realize how nicely the `here` package works with references in `Rmd` chunks.
+
+## Interesting Presentations
+- This thoughtful 
+[presentation on Design at Quora](https://www.youtube.com/watch?v=rWaoNNAuhBI){target="_blank"} by
+[Rebecca Cox](https://twitter.com/artypapers?lang=en){target="_blank"} 
+(VP of design at Quora). I've summarized what I feel are the key points from 
+this important presentation below.
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - Cox notes that it is a "great time to be a designer" because design
+    has proven again and again to be a clear competitive advantage in tech
+    - She notes her awareness of Quora's apparent minimalist design interface
+    i.e. dark, red, and text heavy
+    - Cox asks - what is Design? Some say it is the visual style, for some the
+    user interaction, and for others "it begins and ends with the logo"
+    - For Cox, her definition is abstract, and summarized as:
+    
+    > The set of decisions about a product
+    
+    - Not just an interface, logo etc. Designing is about making product
+    decisions
+    - Benefits of this broad _decision-driven_ definition for Quora are:
+      - A clear relationship between the product and the interface i.e. why
+      should a dropdown even exist?
+      - Concentrates attention on where it matters most i.e. company goals
+      - Enables a role within Quora that balances authority and responsibility
+      i.e. Designers should do more than "apply a coat of paint to a feature
+      at the end"
+      
+    - To Cox:
+    
+    > Great design is all the work you don't ask people who use your products
+    to do
+    
+    - There are a lot of deep direct applications to my statistics research
+    i.e. ensure all theoretical and empirical tools are seamlessly able to be
+    conveyed to end users in science, industry, or academia.
+    
+    - I will be coming back to this over time periodically and reflect if 
+    I have undertaken this definition of design and applied it in my work and
+    daily life
+    
+    </details>
+    
+- This is a [really inspiring presentation](https://resources.rstudio.com/rstudio-conf-2019/r-at-the-aclu-joining-tables-to-to-reunite-families?utm_content=buffer4211f&utm_medium=social&utm_source=twitter&utm_campaign=buffer){target="_blank"} on how data science is used at the ACLU specifically in the recent border immigration policies [by Brooke Watson Madubuonwu](https://twitter.com/brookLYNevery1){target="_blank"}.
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - Utilizing `tidyverse` to sort through messy data linkage issues 
+    in a consistent framework is well thought out by the team with useful 
+    packaged functions created for use by the wider ACLU team
+    - Here both statistics and law are used to tackle a major humanitarian 
+    issue i.e. child border separation. This is deeply inspiring and the kind 
+    of applied work that I would like to contribute to meaningfully in the future
+    - I particularly appreciated the general data source skepticism showed by 
+    the ACLU team. As a statistician it is important to not only explore data
+    but be very skeptical of the source quality i.e. competing legal bodies may
+    not provide the ACLU unbiased data!
+    
+    </details>
+
+## Teaching
+- I'm a TA for the [amazing graduate statiscal computing course at CMU](https://36-750.github.io){target="_blank"}. This is an intensive (but very
+rewarding) programming course designed by CMU statistics professors [Alex Reinhart](https://www.refsmmat.com/){target="_blank"} and 
+[Chris Genovese](http://www.stat.cmu.edu/~genovese/?p=research){target="_blank"}. I
+highly recommend checking out this course website as a general programming 
+reference in daily work/research. I know that I certainly will be 
+`r emo::ji("smile")`.

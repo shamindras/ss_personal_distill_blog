@@ -117,3 +117,5 @@ c(letters, LETTERS) %>%
 
 Hope you have fun using this to quickly generate your $\LaTeX$ `newcommand`
 macros `r emo::ji("victory")`.
+
+```{r, child=here::here("data", "rmds", "acknowledgment_preview_tidyfun_salil.Rmd")}

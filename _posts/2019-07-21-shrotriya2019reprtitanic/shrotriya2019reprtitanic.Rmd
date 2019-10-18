@@ -198,5 +198,5 @@ ecosystem we have at our fingertips. Will do a similar reproducibility
 challenge again for sure `r emo::ji("victory")`.  Have fun playing around with
 the above and please post in the comments any questions/feedback you may have
 `r emo::ji("thumbsup")`.
-```{r, child="../../data/rmds/acknowledgment_preview_tidyfun_salil.Rmd"}
-```
+
+```{r, child=here::here("data", "rmds", "acknowledgment_preview_tidyfun_salil.Rmd")}
