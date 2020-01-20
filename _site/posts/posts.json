@@ -16,10 +16,10 @@
       "rstats",
       "math"
     ],
-    "preview": "posts/2019-10-18-shrotriya2019october19roundup/images/preview-august-2019-01.png",
-    "last_modified": "2019-10-18T17:55:38-04:00",
-    "preview_width": 3348,
-    "preview_height": 1678
+    "preview": "posts/2019-10-18-shrotriya2019october19roundup/images/preview-october-2020-01.png",
+    "last_modified": "2020-01-20T12:31:53-05:00",
+    "preview_width": 3350,
+    "preview_height": 1980
   },
   {
     "path": "posts/2019-09-19-shrotriya2019september19roundup/",
@@ -39,7 +39,7 @@
       "math"
     ],
     "preview": "posts/2019-09-19-shrotriya2019september19roundup/images/preview-august-2019-01.png",
-    "last_modified": "2019-10-18T17:36:41-04:00",
+    "last_modified": "2019-10-18T17:50:37-04:00",
     "preview_width": 3348,
     "preview_height": 1678
   },
@@ -81,7 +81,7 @@
       "rstats"
     ],
     "preview": "posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg",
-    "last_modified": "2019-09-20T18:24:58-04:00"
+    "last_modified": "2019-10-18T17:50:37-04:00"
   },
   {
     "path": "posts/2019-07-30-shrotriya2019july19roundup/",
@@ -141,7 +141,7 @@
       "reproducibility"
     ],
     "preview": "posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg",
-    "last_modified": "2019-09-20T18:25:39-04:00"
+    "last_modified": "2019-10-18T17:50:37-04:00"
   },
   {
     "path": "posts/2019-07-15-shrotriya2019tidyfunpt1/",

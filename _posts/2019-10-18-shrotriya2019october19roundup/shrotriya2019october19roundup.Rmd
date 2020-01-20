@@ -11,7 +11,7 @@ author:
   - name: Shamindra Shrotriya
     url: https://www.shamindras.com/
 date: 10-30-2019
-preview: images/preview-august-2019-01.png
+preview: images/preview-october-2020-01.png
 slug: shrotriya2019october19roundup
 bibliography: ../../refs.bib
 output:
@@ -28,7 +28,7 @@ library(bookdown)
 
 ## Introduction
 
-Welcome to the September 2019 roundup! Similar to [last
+Welcome to the October 2019 roundup! Similar to [last
                                                 time](https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/){target="_blank"}
 I'm going to experiment with, namely documenting anything interesting I come
 across (articles, lectures, books, papers etc.) and any activities I get up to.
