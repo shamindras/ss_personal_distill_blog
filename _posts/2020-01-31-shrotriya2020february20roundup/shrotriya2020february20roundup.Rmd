@@ -1,0 +1,48 @@
+---
+title: "Shamindra's February 2020 Roundup"
+description: |
+  A quick roundup of any interesting February 2020 activities
+categories:
+  - personal
+  - roundup
+  - rstats
+  - math
+author:
+  - name: Shamindra Shrotriya
+    url: https://www.shamindras.com/
+date: 02-29-2020
+preview: images/preview-february-2020-01.png
+slug: shrotriya2020february20roundup
+bibliography: ../../refs.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(bookdown)
+```
+
+## Introduction
+
+Welcome to the February 2020 roundup! Similar to 
+[last time](https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/){target="_blank"}
+I'm going to experiment with documenting anything interesting I come
+across (articles, lectures, books, papers etc.) and any activities I get up to.
+This is more for my personal benefit but may also help others.
+
+## Interesting Articles
+
+- Came across this refreshing article titled [Artificial Intelligence — The Revolution Hasn’t Happened Yet](https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7){target="_blank"} by [Prof. Mike Jordan](https://people.eecs.berkeley.edu/~jordan/){target="_blank"} 
+of UC Berkeley.
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - This the latest post from the [ACLU Tech & Analytics blog](https://medium.com/aclu-tech-analytics){target="_blank"}. This post explains
+    the key focus of the ACLU analytics team on having clean data pipelines and
+    using testing and assertions to facilitate this process
+    
+    </details>
