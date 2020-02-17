@@ -18,7 +18,7 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-    toc_depth: 2
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
@@ -36,6 +36,18 @@ This is more for my personal benefit but may also help others.
 
 ## Interesting Articles
 
+### Series on US 2020 Census
+
+- Enjoyed article titled [Coming To Our Census: How Social Statistics Underpin Our Democracy (And Republic)](https://hdsr.mitpress.mit.edu/pub/1g1cbvkv/){target="_blank"} by 
+[Teresa A. Sullivan](https://people.eecs.berkeley.edu/~jordan/){target="_blank"} 
+of University of Michigan.
+
+    <details> <summary>Key Takeaways</summary>
+    
+    - 
+    
+    </details>    
+    
 - Came across this refreshing article titled [Artificial Intelligence — The Revolution Hasn’t Happened Yet](https://medium.com/@mijordan3/artificial-intelligence-the-revolution-hasnt-happened-yet-5e1d5812e1e7){target="_blank"} by [Prof. Mike Jordan](https://people.eecs.berkeley.edu/~jordan/){target="_blank"} 
 of UC Berkeley.
 
