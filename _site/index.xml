@@ -19,6 +19,10 @@ on math, statistics and the PhD student life.
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup</link>
       <description>A quick roundup of any interesting January 2020 activities</description>
+      <category>personal</category>
+      <category>roundup</category>
+      <category>rstats</category>
+      <category>math</category>
       <guid>https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup</guid>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2020-01-27-shrotriya2020january20roundup/images/preview-january-2020-01.png" medium="image" type="image/png" width="3350" height="1971"/>
@@ -28,6 +32,10 @@ on math, statistics and the PhD student life.
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup</link>
       <description>A quick roundup of any interesting September 2019 activities</description>
+      <category>personal</category>
+      <category>roundup</category>
+      <category>rstats</category>
+      <category>math</category>
       <guid>https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup</guid>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-09-19-shrotriya2019september19roundup/images/preview-september-2019-01.png" medium="image" type="image/png" width="3350" height="1980"/>
@@ -37,6 +45,10 @@ on math, statistics and the PhD student life.
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup</link>
       <description>A quick roundup of any interesting August 2019 activities</description>
+      <category>personal</category>
+      <category>roundup</category>
+      <category>rstats</category>
+      <category>math</category>
       <guid>https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup</guid>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png" medium="image" type="image/png" width="3348" height="1678"/>
@@ -48,6 +60,8 @@ on math, statistics and the PhD student life.
       <description>Second part in a series of doing useful tasks with
 the `Tidyverse`. This time auto-generating sequential
 LaTeX `newcommand` macros</description>
+      <category>tidyverse</category>
+      <category>rstats</category>
       <guid>https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2</guid>
       <pubDate>Sat, 24 Aug 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -57,6 +71,10 @@ LaTeX `newcommand` macros</description>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</link>
       <description>A quick roundup of any interesting July 2019 activities</description>
+      <category>personal</category>
+      <category>roundup</category>
+      <category>rstats</category>
+      <category>math</category>
       <guid>https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png" medium="image" type="image/png" width="3360" height="1718"/>
@@ -66,6 +84,7 @@ LaTeX `newcommand` macros</description>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</link>
       <description>The second part of a series on how I upgraded this `Distill` themed blog</description>
+      <category>distill</category>
       <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png" width="706" height="568"/>
@@ -76,6 +95,9 @@ LaTeX `newcommand` macros</description>
       <link>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</link>
       <description>Using the `Tidyverse` to reproduce a plot on the
 survivorship of the Titanic</description>
+      <category>tidyverse</category>
+      <category>rstats</category>
+      <category>reproducibility</category>
       <guid>https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic</guid>
       <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -88,6 +110,8 @@ survivorship of the Titanic</description>
 the `Tidyverse`. This time generating Oxford Comma
 triples and generating sequentially numbered BibTeX
 entries</description>
+      <category>tidyverse</category>
+      <category>rstats</category>
       <guid>https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1</guid>
       <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg" medium="image" type="image/jpeg"/>
@@ -97,6 +121,7 @@ entries</description>
       <dc:creator>Shamindra Shrotriya</dc:creator>
       <link>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</link>
       <description>First part of a series on how I setup this `Distill` themed blog with `Netlify`</description>
+      <category>distill</category>
       <guid>https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1</guid>
       <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png" medium="image" type="image/png" width="707" height="387"/>
@@ -107,6 +132,7 @@ entries</description>
       <link>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</link>
       <description>Detailing interesting things in the life of a PhD statistics
 student at CMU</description>
+      <category>personal</category>
       <guid>https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome</guid>
       <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
       <media:content url="https://www.shamindras.com/posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg" medium="image" type="image/jpeg"/>
