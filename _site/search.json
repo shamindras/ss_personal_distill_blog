@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About Me",
+      "description": "A brief bio and welcome to my site",
+      "author": [],
+      "contents": "\n\n\n\n\n\nHi there! I’m Shamindra Shrotriya, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.\nI’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (statistical theory/methodology, research, rstats, python …) as well as anything else I am generally into e.g. books, sports etc.\nFeel free to pull up a chair, leave a comment, and join me so that we can explore together.\nMy CV can be found here.\n\n\n\n\n  \n\n\nAcknowledgments\nI’d like to thank Salil Shrotriya for taking the profile pic.\n\n\n\n",
+      "last_modified": "2020-12-28T23:28:38-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Blog Posts",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2020-12-28T23:28:41-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

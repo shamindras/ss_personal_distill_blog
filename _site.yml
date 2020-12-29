@@ -7,6 +7,7 @@ output_dir: "_site"
 favicon: data/images/about-profile-circular-scaled-100.png
 base_url: https://www.shamindras.com/
 repository_url: https://github.com/shamindras/ss_personal_distill_blog
+theme: theme.css
 navbar:
   logo:
     image: data/images/about-profile-circular-scaled-100.png
