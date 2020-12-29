@@ -13,12 +13,12 @@ author:
 date: 09-30-2019
 preview: images/preview-september-2019-01.png
 slug: shrotriya2019september19roundup
-bibliography: ../../refs.bib
 output:
   distill::distill_article:
     self_contained: false
     toc: true
     toc_depth: 2
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}

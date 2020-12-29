@@ -18,6 +18,72 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Shamindra Shrotriya: Setting up a Distill Blog with Netlify</title>
 
@@ -63,12 +129,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","author","date","base_url","preview","slug","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Setting up a Distill Blog with Netlify"]},{"type":"character","attributes":{},"value":["First part of a series on how I setup this `Distill` themed blog with `Netlify`"]},{"type":"character","attributes":{},"value":["distill"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-11-2019"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]},{"type":"character","attributes":{},"value":["images/08_06_netlify_adding_custom_domain.png"]},{"type":"character","attributes":{},"value":["shrotriya2019distillpt1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","author","date","base_url","preview","slug","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Setting up a Distill Blog with Netlify"]},{"type":"character","attributes":{},"value":["First part of a series on how I setup this `Distill` themed blog with `Netlify`"]},{"type":"character","attributes":{},"value":["distill"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["07-11-2019"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]},{"type":"character","attributes":{},"value":["images/08_06_netlify_adding_custom_domain.png"]},{"type":"character","attributes":{},"value":["shrotriya2019distillpt1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-11-shrotriya2019distillpt1/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/01_01_create_github_distill_repo.png","images/01_02_newly_created_distill_repo.png","images/05_01_newlyr_created_distill_blog.png","images/08_01_netlify_github_continuous_deployment.png","images/08_02_netlify_give_personal_blog_access.png","images/08_03_netlify_deploy_master_branch_blog.png","images/08_04_netlify_deployment_settings.png","images/08_05_netlify_continous_deployment_settings.png","images/08_06_netlify_adding_custom_domain.png","images/08_07_netlify_checking_custom_domains.png","shrotriya2019distillpt1_files/bowser-1.9.3/bowser.min.js","shrotriya2019distillpt1_files/distill-2.2.21/template.v2.js","shrotriya2019distillpt1_files/jquery-1.11.3/jquery.min.js","shrotriya2019distillpt1_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/01_01_create_github_distill_repo.png","images/01_02_newly_created_distill_repo.png","images/05_01_newlyr_created_distill_blog.png","images/08_01_netlify_github_continuous_deployment.png","images/08_02_netlify_give_personal_blog_access.png","images/08_03_netlify_deploy_master_branch_blog.png","images/08_04_netlify_deployment_settings.png","images/08_05_netlify_continous_deployment_settings.png","images/08_06_netlify_adding_custom_domain.png","images/08_07_netlify_checking_custom_domains.png","shrotriya2019distillpt1_files/anchor-4.2.2/anchor.min.js","shrotriya2019distillpt1_files/bowser-1.9.3/bowser.min.js","shrotriya2019distillpt1_files/distill-2.2.21/template.v2.js","shrotriya2019distillpt1_files/header-attrs-2.5/header-attrs.js","shrotriya2019distillpt1_files/jquery-1.11.3/jquery.min.js","shrotriya2019distillpt1_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2275,7 +2341,9 @@ d-appendix d-footnote-list a.footnote-backlink {
 	color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.5/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2327,7 +2395,12 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Setting up a Distill Blog with Netlify</h1>
-<p>First part of a series on how I setup this <code>Distill</code> themed blog with <code>Netlify</code></p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:distill" class="dt-tag">distill</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>First part of a series on how I setup this <code>Distill</code> themed blog with <code>Netlify</code></p></p>
 </div>
 
 <div class="d-byline">
@@ -2337,8 +2410,9 @@ gtag('config', 'UA-145015693-1');
 </div>
 
 <div class="d-article">
-<h3 class="d-toc-header">Table of Contents</h3>
-<nav class="d-toc" id="TOC">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
 <li><a href="#step-0-introduction">Step 0: Introduction</a></li>
 <li><a href="#step-1-create-new-distill-blog-repo">Step 1: Create new distill blog repo</a></li>
@@ -2354,7 +2428,7 @@ gtag('config', 'UA-145015693-1');
 <li><a href="#concluding-thoughts">Concluding Thoughts</a></li>
 </ul>
 </nav>
-<hr class="d-toc-separator"/>
+</div>
 <h2 id="step-0-introduction">Step 0: Introduction</h2>
 <p>This is a meta blogpost to describe how I setup this personal academic blog. It is based on the relatively new <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team. The main tools used I used to create this blog are:</p>
 <ul>
@@ -2401,12 +2475,10 @@ Newly created Github repo for the <code>distill</code> blog
 <h2 id="step-2-clone-the-repo-locally">Step 2: Clone the repo locally</h2>
 <p>With the <code>github</code> repo created, I switched locally on my mac to <code>iterm2</code> terminal and cloned the repo locally using the following command:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-git clone git@github.com:shamindras/ss_personal_distill_blog.git</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone git@github.com:shamindras/ss_personal_distill_blog.git</span></code></pre></div>
 </div>
 <p>And the cloning quickly finished with the following output</p>
-<pre class="markup"><code>
-Cloning into &#39;ss_personal_distill_blog&#39;...
+<pre class="markup"><code>Cloning into &#39;ss_personal_distill_blog&#39;...
 remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (4/4), done.
@@ -2414,17 +2486,14 @@ remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.</code></pre>
 <p>Now I simply changed into the newly cloned blog directory by running the following terminal command:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-cd ss_personal_distill_blog</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>I then ran the following terminal command:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-tree</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span></span></code></pre></div>
 </div>
 <p>This resulted in the following directory structure so far:</p>
-<pre class="markup"><code>
-.
+<pre class="markup"><code>.
 ├── .git
 ├── .gitignore
 └── README.md</code></pre>
@@ -2432,31 +2501,33 @@ tree</code></pre>
 <h2 id="step-3-create-the-distill-blog-files">Step 3: Create the distill blog files</h2>
 <p>In order to start creating the blog contents I opened up an instance of <code>RStudio</code> from within my new directory on my macbook via the following terminal command:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-open -a /Applications/RStudio.app .</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">open</span> -a /Applications/RStudio.app .</span></code></pre></div>
 </div>
 <aside>
 <strong>Note:</strong> The <code>.</code> at the end of the command ensures that <code>RStudio</code> opens in this newly created blog directory
 </aside>
 <p>With <code>RStudio</code> opened we can now run the following <code>R</code> commands in just the <code>console</code> to create the install the required and <code>distill</code> blog setup packages:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-req_pckgs &lt;- c(&quot;distill&quot;, &quot;here&quot;)
-install.packages(pkgs = req_pckgs)
-library(here)
-library(distill)</code></pre>
+<div class="sourceCode">
+<pre><code><span class='va'>req_pckgs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"distill"</span>, <span class='st'>"here"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span>pkgs <span class='op'>=</span> <span class='va'>req_pckgs</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://here.r-lib.org/'>here</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/distill'>distill</a></span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <p>Now we can create our blog using the following 2 commands from the freshly installed <code>distill</code> package using the following command run in the <code>console</code></p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-distill::create_blog(dir = here::here(),
-                     title = &quot;Shamindra&#39;s Shrotriya&#39;s blog&quot;,
-                     gh_pages = TRUE)</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'>distill</span><span class='fu'>::</span><span class='fu'><a href='https://pkgs.rstudio.com/distill//reference/create_website.html'>create_blog</a></span><span class='op'>(</span>dir <span class='op'>=</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='op'>)</span>,
+                     title <span class='op'>=</span> <span class='st'>"Shamindra's Shrotriya's blog"</span>,
+                     gh_pages <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <p>Note that we set <code>gh_pages = TRUE</code> to ensure that we can host this blog on <a href="https://pages.github.com/" target="_blank">github pages</a> down the line if needed. You can omit this if you don’t want the option to have <em>github pages</em> as your host in the future. I will be using <code>Netlify</code> to host my blog (see below), but it is good to have an additional host option in the future.</p>
 <p>My local <code>distill</code> blog directory now looked like this (again after running the <code>tree</code> command in the terminal):</p>
-<pre class="markup"><code>
-.
+<pre class="markup"><code>.
 ├── .git
 ├── .gitignore
 ├── .nojekyll
@@ -2470,34 +2541,32 @@ distill::create_blog(dir = here::here(),
 <p>Pretty cool! Note that there is a newly created <code>_posts</code> directory for future blogposts. And there is a directory called <code>docs</code> to store all our processed blogposts later. If we had set <code>gh_pages = FALSE</code> the <code>docs</code> directory would be automatically replaced by a <code>_site</code> directory. More on this point later.</p>
 <h2 id="step-4-customize-the-welcome-blogpost">Step 4: Customize the welcome blogpost</h2>
 <p>So <code>distill</code> already had us underway with a default welcome blogpost contained in the <code>welcome.Rmd</code> file for us. There are a bunch of javascript related files automatically generated in the <code>_posts/welcome/welcome_files</code> directory but these don’t need to be altered by the user. I just needed to modify <code>welcome.Rmd</code> contents per my preference as with any regular <code>Rmd</code> file and click <code>Knit</code> in RStudio to refresh it. We can see this in the <code>_posts</code> directory:</p>
-<pre class="markup"><code>
-./_posts/welcome
+<pre class="markup"><code>./_posts/welcome
 ├── welcome.Rmd
 ├── welcome.html
 └── welcome_files</code></pre>
 <p>One thing that slightly bothered me is that the default <strong>welcome</strong> blogpost has no <strong>date</strong> prefix in the directory. This would be nice to have in order to sort all future blogposts chronologically. I could’ve modified this default welcome blogpost <code>Rmd</code> and directory to include the date prefix manually. For simplicity I opted to delete the default welcome directory altogether and recreated it with the date prefix as I prefer as detailed below.</p>
 <p>To delete the default welcome directory, I just ran the following code at my terminal:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-rm -rf _posts/welcome</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> -rf _posts/welcome</span></code></pre></div>
 </div>
 <aside>
 <strong>Note:</strong> ⚠️ Always be careful using <code>rm -rf</code>
 </aside>
 <p>With the default welcome blogpost deleted, I created my own custom welcome blogpost as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-distill::create_post(title = &quot;Welcome to Shamindra’s Blog&quot;,
-                     author = &quot;Shamindra Shrotriya&quot;,
-                     date_prefix = TRUE)</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'>distill</span><span class='fu'>::</span><span class='fu'><a href='https://pkgs.rstudio.com/distill//reference/create_post.html'>create_post</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Welcome to Shamindra’s Blog"</span>,
+                     author <span class='op'>=</span> <span class='st'>"Shamindra Shrotriya"</span>,
+                     date_prefix <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <p>Now the welcome blogpost has this nice <strong>date prefix</strong> structure since we passed this option as <code>TRUE</code>. Let’s see what the <code>_posts</code> directory looks like now</p>
-<pre class="markup"><code>
-_posts/2019-07-10-welcome-to-shamindras-blog
+<pre class="markup"><code>_posts/2019-07-10-welcome-to-shamindras-blog
 └── welcome-to-shamindras-blog.Rmd`</code></pre>
 <p>Neat - just how I like it! I then modified the content of the new welcome blogpost by going to the following file:</p>
-<pre class="markup"><code>
-_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
+<pre class="markup"><code>_posts/2019-06-21-welcome-to-shamindras-blog/welcome-to-shamindras-blog.Rmd</code></pre>
 <p>I modified the contents and then <strong>knitted</strong> the <code>Rmd</code> file once done to refresh and save the contents.</p>
 <p>Now I had locally created my first personalized content, a simple welcome post 😎.</p>
 <aside>
@@ -2506,8 +2575,7 @@ My welcome blog entry can be found <a href="https://github.com/shamindras/ss_per
 <h2 id="step-5-customize-your-blog-layout">Step 5: Customize your blog layout</h2>
 <p>Now I needed to customize the blog header banner and setup links and update contents as required.</p>
 <p>We will start with the <code>_site.yml</code> contents which controls the page layout. I modified the <code>_site.yml</code> file which contains default metadata settings for the blog to have the following contents:</p>
-<pre class="markup"><code>
-name: &quot;test_distill_blog&quot;
+<pre class="markup"><code>name: &quot;test_distill_blog&quot;
 title: &quot;Shamindra&#39;s Blog&quot;
 description: |
   Shamindra Shrotriya&#39;s personal blog/ site. Some fun posts
@@ -2540,8 +2608,10 @@ My <code>README.md</code> can be found <a href="https://github.com/shamindras/ss
 </aside>
 <p>Now in <code>Rstudio</code> I just knit the <code>welcome.Rmd</code> post and also ran the following command in the <code>console</code></p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-rmarkdown::render_site(input = here::here())</code></pre>
+<div class="sourceCode">
+<pre><code><span class='fu'>rmarkdown</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rmarkdown/man/render_site.html'>render_site</a></span><span class='op'>(</span>input <span class='op'>=</span> <span class='fu'>here</span><span class='fu'>::</span><span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <p>The locally created <code>distill</code> blog was now created and rendered and looked like this in the <code>RStudio</code> viewer pane:</p>
 <center>
@@ -2558,15 +2628,14 @@ Figure 3: Newly Created Distill Blog (local)
 <h2 id="step-6-commit-and-push-changes-to-github">Step 6: Commit and push changes to github</h2>
 <p>Note that all our changes are so far in our local git repo. We need to get this blog online! A first step is to <code>commit</code> and <code>push</code> them to our <code>github</code> repo. I did this in my local directory in the terminal as follows: in git at my terminal as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-git add -A # Add all new changes
-git commit -m &quot;ENH: Created welcome post with date prefix, deleted default post&quot;
-git push origin master</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add -A <span class="co"># Add all new changes</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit -m <span class="st">&quot;ENH: Created welcome post with date prefix, deleted default post&quot;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin master</span></code></pre></div>
 </div>
 <p>And the changes are now reflected in the <code>github</code> <code>master</code> branch!</p>
 <h2 id="step-7-buy-a-domain-name-optional">Step 7: Buy a Domain name (optional)</h2>
 <p>Although the blog was our blog contents are in a public online place i.e. <code>github</code>, I just needed to link it to a service that deploys websites from <code>github</code>. But first I needed to go buy a domain name for my blog. I went to <a href="https://domains.google/#/">Google Domains</a> and bought <code>www.shamindras.com</code> for about $15/yr.</p>
-<p>There are free alternatives e.g. <a href="https://pages.github.com/" target="_blank">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
+<p>There are free alternatives e.g. <a href="https://pages.github.com/" target="_blank">Github Pages</a>, but I wanted to have ownership on my page and found the annual fee to be reasonable with Google Domains.</p>
 <h2 id="step-8-deploy-your-website-with-netlify">Step 8: Deploy your website with Netlify</h2>
 <p>Now that the domain name is bought, I just needed to deploy the newly created blog contents on the registered domain name. Enter <a href="https://www.netlify.com/" target="_blank">netlify</a>! This is a free (and awesome) deployment service. I created a personal account following the intructions on Netlify website.</p>
 <p>I then logged in to Netlify and clicked on the green <code>New site from Git</code> button to get started. In the following menu I clicked the <code>Github Continuous Deployment</code> icon:</p>
@@ -2578,7 +2647,7 @@ Figure 4: Creating New Site with Netlify
 </p>
 </div>
 </div>
-<p>I then manually searched for my blog repo i.e. <code>ss_personal_distill_blog</code>. Initially this did not appear, so I clicked the green <strong>Configure the Netlify app on GitHub</strong> link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my <code>github</code> blog repo.</p>
+<p>I then manually searched for my blog repo i.e. <code>ss_personal_distill_blog</code>. Initially this did not appear, so I clicked the green <strong>Configure the Netlify app on GitHub</strong> link at the bottom and gave Netlify permissions to access this site. This is so Netlify can automatically sync with the github repo and deploy changes going forward as I make them directly to my <code>github</code> blog repo.</p>
 <center>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:step-08-02-screenshot"></span>
@@ -2649,7 +2718,7 @@ Figure 10: All Custom Domains for Site with Netlify
 </div>
 </div>
 </center>
-<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t event need to write the <code>www.</code> going forward. Thanks Netlify 🙇‍♀.</p>
+<p>Netlify also tells me that the truncated url <code>shamindras.com</code> will also get routed to the blog. So I don’t event need to write the <code>www.</code> going forward. Thanks Netlify 🙇.</p>
 <h2 id="step-9-patiently-wait-for-deployment">Step 9: Patiently wait for deployment</h2>
 <p>With everything setup and configured on github/Netlify the deployment should be near instantaneous. But after about 20 mins my blog appeared at <a href="www.shamindras.com" target="_blank">www.shamindras.com</a>. So effectively Netlify and github were now talking to each other and site is setup!</p>
 <h2 id="step-10-future-additions-and-extras">Step 10: Future additions and extras</h2>
@@ -2664,6 +2733,7 @@ Figure 10: All Custom Domains for Site with Netlify
 <p>I will make sure to document the setup process as part of a series of future blog posts</p>
 <h2 id="concluding-thoughts">Concluding Thoughts</h2>
 <p>If you managed to read this far, then I sincerely thank you. I hope to make even better technical and personal blogposts going forward. Please feel free to leave a friendly comment below for any questions you may have or any feedback for future blogposts.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

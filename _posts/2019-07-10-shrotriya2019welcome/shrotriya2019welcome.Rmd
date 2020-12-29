@@ -15,6 +15,9 @@ preview: images/about-profile-circular-scaled-hex.jpg
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}

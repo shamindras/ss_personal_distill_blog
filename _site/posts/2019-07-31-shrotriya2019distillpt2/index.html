@@ -18,6 +18,72 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Shamindra Shrotriya: Upgrading Distill Blog Settings</title>
 
@@ -36,9 +102,9 @@
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="The second part of a series on how I upgraded this `Distill` themed blog"/>
 <meta property="og:url" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"/>
-<meta property="og:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png"/>
-<meta property="og:image:width" content="706"/>
-<meta property="og:image:height" content="568"/>
+<meta property="og:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/hex-distill.png"/>
+<meta property="og:image:width" content="2521"/>
+<meta property="og:image:height" content="2911"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Shamindra Shrotriya"/>
 
@@ -47,9 +113,9 @@
 <meta property="twitter:title" content="Shamindra Shrotriya: Upgrading Distill Blog Settings"/>
 <meta property="twitter:description" content="The second part of a series on how I upgraded this `Distill` themed blog"/>
 <meta property="twitter:url" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"/>
-<meta property="twitter:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png"/>
-<meta property="twitter:image:width" content="706"/>
-<meta property="twitter:image:height" content="568"/>
+<meta property="twitter:image" content="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/hex-distill.png"/>
+<meta property="twitter:image:width" content="2521"/>
+<meta property="twitter:image:height" content="2911"/>
 <meta property="twitter:site" content="@shamindraas"/>
 <meta property="twitter:creator" content="@shamindraas"/>
 
@@ -63,12 +129,12 @@
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","date","author","slug","base_url","preview","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Upgrading Distill Blog Settings"]},{"type":"character","attributes":{},"value":["The second part of a series on how I upgraded this `Distill` themed blog"]},{"type":"character","attributes":{},"value":["distill"]},{"type":"character","attributes":{},"value":["07-31-2019"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["shrotriya2019distillpt2"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]},{"type":"character","attributes":{},"value":["images/step_01_disqus_02.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","categories","date","author","slug","base_url","preview","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Upgrading Distill Blog Settings"]},{"type":"character","attributes":{},"value":["The second part of a series on how I upgraded this `Distill` themed blog"]},{"type":"character","attributes":{},"value":["distill"]},{"type":"character","attributes":{},"value":["07-31-2019"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Shamindra Shrotriya"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]}]}]},{"type":"character","attributes":{},"value":["shrotriya2019distillpt2"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/"]},{"type":"character","attributes":{},"value":["images/hex-distill.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]}]}]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"]},{"type":"character","attributes":{},"value":["https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/step_01_disqus_01.png","images/step_01_disqus_02.png","images/step_01_disqus_03.png","images/step_01_disqus_04.png","images/step_01_disqus_05.png","images/step_01_disqus_06.png","images/step_01_disqus_07.png","images/step_02_ga_00.png","images/step_02_ga_01.png","images/step_03_netlify_01.png","images/step_04_sharing_01.png","images/step_05_trackcorr_01.png","shrotriya2019distillpt2_files/bowser-1.9.3/bowser.min.js","shrotriya2019distillpt2_files/distill-2.2.21/template.v2.js","shrotriya2019distillpt2_files/jquery-1.11.3/jquery.min.js","shrotriya2019distillpt2_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/hex-distill.png","images/step_01_disqus_01.png","images/step_01_disqus_02.png","images/step_01_disqus_03.png","images/step_01_disqus_04.png","images/step_01_disqus_05.png","images/step_01_disqus_06.png","images/step_01_disqus_07.png","images/step_02_ga_00.png","images/step_02_ga_01.png","images/step_03_netlify_01.png","images/step_04_sharing_01.png","images/step_05_trackcorr_01.png","shrotriya2019distillpt2_files/anchor-4.2.2/anchor.min.js","shrotriya2019distillpt2_files/bowser-1.9.3/bowser.min.js","shrotriya2019distillpt2_files/distill-2.2.21/template.v2.js","shrotriya2019distillpt2_files/header-attrs-2.5/header-attrs.js","shrotriya2019distillpt2_files/jquery-1.11.3/jquery.min.js","shrotriya2019distillpt2_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2275,7 +2341,9 @@ d-appendix d-footnote-list a.footnote-backlink {
 	color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.5/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2327,7 +2395,12 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Upgrading Distill Blog Settings</h1>
-<p>The second part of a series on how I upgraded this <code>Distill</code> themed blog</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:distill" class="dt-tag">distill</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>The second part of a series on how I upgraded this <code>Distill</code> themed blog</p></p>
 </div>
 
 <div class="d-byline">
@@ -2337,8 +2410,9 @@ gtag('config', 'UA-145015693-1');
 </div>
 
 <div class="d-article">
-<h3 class="d-toc-header">Table of Contents</h3>
-<nav class="d-toc" id="TOC">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
 <li><a href="#step-0-introduction">Step 0: Introduction</a></li>
 <li><a href="#step-1-setup-disqus-comments">Step 1: Setup Disqus comments</a></li>
@@ -2348,9 +2422,10 @@ gtag('config', 'UA-145015693-1');
 <li><a href="#step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</a></li>
 <li><a href="#next-steps">Next Steps</a></li>
 <li><a href="#concluding-thoughts">Concluding Thoughts</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
 </ul>
 </nav>
-<hr class="d-toc-separator"/>
+</div>
 <h2 id="step-0-introduction">Step 0: Introduction</h2>
 <p>This is a meta blogpost and a second-part in a series to describe how I setup this personal academic blog using the amazing <a href="https://rstudio.github.io/distill/" target="_blank">distill</a> package by the <a href="h//www.rstudio.com/" target="_blank">RStudio</a> team.</p>
 <p>The first part of this meta blogpost series can be <a href="https://www.shamindras.com/posts/2019-07-11-setting-up-a-distill-blog-with-netlify/" target="_blank">found here</a>, where I detailed the steps to setup this blog using Netlify and Google Domains. If you haven’t setup a <code>distill</code> themed blog then you are encouraged to check it out before reading this post.</p>
@@ -2384,7 +2459,7 @@ Figure 2: Setup Disqus shortname
 </center>
 <p>After clicking <strong>Create Site</strong> in the previous menu I proceeded to select the <em>free</em> plan option by subscribing to the <em>Basic, Free, Ads Supported</em> comments option as seen below:</p>
 <aside>
-As a student got to always know when to get a freebie <code>r emo::ji(&quot;smile&quot;)</code>
+As a student got to always know when to get a freebie <code>r emo::ji("smile")</code>
 </aside>
 <center>
 <div class="layout-chunk" data-layout="l-body">
@@ -2423,12 +2498,11 @@ Figure 5: Disqus Configuration Settings
 <strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
 </aside>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-collections:
-  posts:
-    disqus:
-      shortname: shamindras-distill
-      hidden: true</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections</span>:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">posts</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">disqus</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="ex">shortname</span>: shamindras-distill</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">hidden</span>: true</span></code></pre></div>
 </div>
 <p>We now see the following comments option at the bottom of every post:</p>
 <center>
@@ -2459,8 +2533,7 @@ Figure 7: Google Analytics Settings
 <strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
 </aside>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-google_analytics: &quot;UA-145015693-1&quot;</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">google_analytics</span>: <span class="st">&quot;UA-145015693-1&quot;</span></span></code></pre></div>
 </div>
 <p>You can read more about setting up Google Analytics from the official <code>distill</code> blog <a href="https://rstudio.github.io/distill/website.html#google-analytics">here</a></p>
 <h2 id="step-3-add-netlify-status-badge">Step 3: Add Netlify Status Badge</h2>
@@ -2482,10 +2555,9 @@ Figure 8: Netlify Badge Code
 <h2 id="step-4-add-blog-post-sharing-options">Step 4: Add blog post sharing options</h2>
 <p>It is easy to configure distill to allow for easy sharing of posts using a variety of social media platforms. I allow for <strong>twitter, linkedin, pinterest, and facebook.</strong> I did this by simply adding the following line in the <code>_site.yml</code> file:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-collections:
-  posts:
-    share: [twitter, linkedin, pinterest, facebook]</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">collections</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">posts</span>:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">share</span>: [twitter, linkedin, pinterest, facebook]</span></code></pre></div>
 </div>
 <p>Now the following sharing options appear at the bottom of every post:</p>
 <center>
@@ -2503,16 +2575,14 @@ Figure 9: Distill Sharing Options
 <strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
 </aside>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-twitter:
-  site: &quot;@shamindraas&quot;
-  creator: &quot;@shamindraas&quot;</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">twitter</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">site</span>: <span class="st">&quot;@shamindraas&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">creator</span>: <span class="st">&quot;@shamindraas&quot;</span></span></code></pre></div>
 </div>
 <h2 id="step-5-add-correctionschange-tracking-and-rss-feed">Step 5: Add Corrections/Change Tracking and RSS feed</h2>
 <p>I frequently make edits to blogposts and intend to do so going forward. Fortunately <code>distill</code> makes it easy <strong>track changes/corrections</strong> made to blogposts. I did this by simply adding the site repo url to the <code>_site.yml</code> as follows:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-repository_url: https://github.com/shamindras/ss_personal_distill_blog</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">repository_url</span>: https://github.com/shamindras/ss_personal_distill_blog</span></code></pre></div>
 </div>
 <p>Now the following appears at the bottom of all blogposts:</p>
 <center>
@@ -2528,31 +2598,32 @@ Figure 10: Changes and Corrections Tracking
 <p>So users can easily track changes or file any concerns as issues, though hopefully the <code>Disqus</code> comment feature makes this easier for everyone.</p>
 <p>Finally it is easy to add an <strong>RSS feed</strong> for the blog by simply adding the following to <code>_site.yml</code>:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-base_url: https://www.shamindras.com/
-navbar:
-  left:
-    - icon: fa fa-rss
-      href: index.xml</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">base_url</span>: https://www.shamindras.com/</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">navbar</span>:</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">left</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">-</span> icon: fa fa-rss</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="ex">href</span>: index.xml</span></code></pre></div>
 </div>
 <aside>
 <strong>Note:</strong> You can see my <code>_site.yml</code> with these settings <a href="https://github.com/shamindras/ss_personal_distill_blog/blob/master/_site.yml">here</a>
 </aside>
 <p>The critical elements are adding in the <code>base_url</code> fields and adding in <code>fa fa-rss</code> which is derived from the <code>index.xml</code> file. The <code>index.xml</code> file is automatically generated from the <code>index.Rmd</code> when you render the <code>distill</code> blog using the usual command:</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="bash"><code>
-rmarkdown::render_site(here::here())</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rmarkdown</span>::render_site(here::here())</span></code></pre></div>
 </div>
 <h2 id="next-steps">Next Steps</h2>
 <p>In terms of core <code>distill</code> blog settings, these are the main options that I’m happy to implement for now. For me the next steps are more about <strong>customizing my own blog workflow</strong>. This will involve setting up utilities to automatically:</p>
 <ul>
 <li><strong>Wrap Rmd files</strong> to 80 characters for consistency</li>
-<li>Quickly <strong>delete unused files</strong> e.g. <code>DS_Store</code> files on mac</li>
+<li>Quickly <strong>delete unused files</strong> e.g. <code>DS_Store</code> files on mac</li>
 <li><strong>Clear knitr cache</strong> for all posts and thoroughly re-render the site</li>
 </ul>
 <p>I expect to do this using a combination of <code>R</code> functions/<code>Makefile</code> workflow, but do stay tuned!</p>
 <h2 id="concluding-thoughts">Concluding Thoughts</h2>
 <p>As it can be seen it is quite easy to customize <code>distill</code> for commonly required features. Really great work by the RStudio team in making such customizations so user-friendly 👍.</p>
+<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
+<p>I’d like to thank <a href="https://www.jungjulie.com/">Julie Jung</a> for creating the <code>distill</code> hex sticker which is the preview image for this post. This was originally sourced from <a href="https://blog.rstudio.com/2020/12/07/distill/#a-hex-sticker">this post</a>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">

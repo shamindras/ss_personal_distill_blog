@@ -19,6 +19,7 @@ output:
     self_contained: false
     toc: true
     toc_depth: 2
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}

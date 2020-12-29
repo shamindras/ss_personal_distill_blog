@@ -13,7 +13,17 @@ on math, statistics and the PhD student life.
       <link>https://www.shamindras.com/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Upgrading Distill Theme and Switching to Utterances</title>
+      <dc:creator>Shamindra Shrotriya</dc:creator>
+      <link>https://www.shamindras.com/posts/2020-12-29-shrotriya2020distillpt3</link>
+      <description>A short description of the post.</description>
+      <category>distill</category>
+      <guid>https://www.shamindras.com/posts/2020-12-29-shrotriya2020distillpt3</guid>
+      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://www.shamindras.com/posts/2020-12-29-shrotriya2020distillpt3/images/utterances-logo-256-256.png" medium="image" type="image/png" width="256" height="256"/>
+    </item>
     <item>
       <title>Shamindra's January 2020 Roundup</title>
       <dc:creator>Shamindra Shrotriya</dc:creator>
@@ -87,7 +97,7 @@ LaTeX `newcommand` macros</description>
       <category>distill</category>
       <guid>https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2</guid>
       <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
-      <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png" medium="image" type="image/png" width="706" height="568"/>
+      <media:content url="https://www.shamindras.com/posts/2019-07-31-shrotriya2019distillpt2/images/hex-distill.png" medium="image" type="image/png" width="2521" height="2911"/>
     </item>
     <item>
       <title>Reproducibility Challenge: Titanic Survivors Plot</title>
