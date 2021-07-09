@@ -18,6 +18,73 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Shamindra Shrotriya: Reproducibility Challenge: Titanic Survivors Plot</title>
 
@@ -2325,7 +2392,13 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
@@ -2406,7 +2479,14 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Reproducibility Challenge: Titanic Survivors Plot</h1>
-<p>Using the <code>Tidyverse</code> to reproduce a plot on the survivorship of the Titanic</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:tidyverse" class="dt-tag">tidyverse</a>
+  <a href="../../index.html#category:rstats" class="dt-tag">rstats</a>
+  <a href="../../index.html#category:reproducibility" class="dt-tag">reproducibility</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Using the <code>Tidyverse</code> to reproduce a plot on the survivorship of the Titanic</p></p>
 </div>
 
 <div class="d-byline">
@@ -2416,8 +2496,9 @@ gtag('config', 'UA-145015693-1');
 </div>
 
 <div class="d-article">
-<h3 class="d-toc-header">Table of Contents</h3>
-<nav class="d-toc" id="TOC">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
 <li><a href="#background">Background</a></li>
 <li><a href="#reproducibility-challenge">Reproducibility Challenge</a></li>
@@ -2427,9 +2508,9 @@ gtag('config', 'UA-145015693-1');
 <li><a href="#acknowledgments">Acknowledgments</a></li>
 </ul>
 </nav>
-<hr class="d-toc-separator"/>
+</div>
 <h2 id="background">Background</h2>
-<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(Friendly, Symanzik, and Onder <a href="#ref-friendly2019titanicviz">2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
+<p>In the February 2019 issue of <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2019.01229.x">Significance Magazine</a> notably featured a story of the titanic disaster <span class="citation" data-cites="friendly2019titanicviz">(<a href="#ref-friendly2019titanicviz" role="doc-biblioref">Friendly, Symanzik, and Onder 2019</a>)</span> and visualization of key survival statistics. As a fan of <code>R</code> and data visualization I enjoyed this article and recommended it to anyone with similar interests. Although the subject is rather tragic, by reading the article I did get a better appreciation of how the information of the crash survivorship was conveyed to the general public through data visualization.</p>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span id="fig:main-src-cover"></span>
@@ -2447,7 +2528,7 @@ Figure 1: Feb 2019 Significance Magazine cover
 <div class="figure"><span id="fig:main-src-poster"></span>
 <img src="images/main-titanic-poster.png" alt="G.Bron’s chart of &quot;The Loss of the Titanic&quot;, from The Sphere, May 1912." width="406" class=external />
 <p class="caption">
-Figure 2: G.Bron’s chart of “The Loss of the Titanic”, from The Sphere, May 1912.
+Figure 2: G.Bron’s chart of “The Loss of the Titanic,” from The Sphere, May 1912.
 </p>
 </div>
 </div>
@@ -2460,51 +2541,55 @@ Figure 2: G.Bron’s chart of “The Loss of the Titanic”, from The Sphere, Ma
 <h2 id="collecting-and-cleaning-the-data">Collecting and cleaning the data</h2>
 <p>First let’s begin by loading our required data cleaning and plotting packages.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-library(tidyverse)
-library(janitor)
-library(plotly)</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/sfirke/janitor'>janitor</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://plotly-r.com'>plotly</a></span><span class='op'>)</span>
+</code></pre>
 </div>
-<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient <code>r emo::ji(&quot;sunglasses&quot;)</code>.</p>
+</div>
+<p>In the article the authors cite several resources for collecting the data for this task. Per the article we note that the data is already <em>pre-baked</em> into <code>R</code> and located in <code>datasets::Titanic</code> when <code>R</code> loads, which is convenient <code>r emo::ji("sunglasses")</code>.</p>
 <p>We can source the data and start cleaning it for our exploration, using the handy <code>janitor::clean_names</code> function for column name cleaning and converting various categorical variables (<em>age, sex, survivorship, and passenger class</em>) to factors for easy plotting later.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre class="r"><code>
-# Basic cleaning of names and filtering out non-zero counts
-t1 &lt;- datasets::Titanic %&gt;%
-        as_tibble() %&gt;%
-        janitor::clean_names(dat = .) %&gt;%
-        dplyr::filter(.data = ., n != 0) %&gt;%
-        dplyr::mutate(.data = .,
-                      new_sex = ifelse(age == &quot;Child&quot;, age, sex),
-                      n_sgnd = ifelse(survived == &quot;No&quot;, -1*n, n)) %&gt;%
-        dplyr::select(class, new_sex, survived, n_sgnd)
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Basic cleaning of names and filtering out non-zero counts</span>
+<span class='va'>t1</span> <span class='op'>&lt;-</span> <span class='fu'>datasets</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/r/datasets/Titanic.html'>Titanic</a></span> <span class='op'>%&gt;%</span>
+        <span class='fu'>as_tibble</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>janitor</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/janitor/man/clean_names.html'>clean_names</a></span><span class='op'>(</span>dat <span class='op'>=</span> <span class='va'>.</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span>.data <span class='op'>=</span> <span class='va'>.</span>, <span class='va'>n</span> <span class='op'>!=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>.data <span class='op'>=</span> <span class='va'>.</span>,
+                      new_sex <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>age</span> <span class='op'>==</span> <span class='st'>"Child"</span>, <span class='va'>age</span>, <span class='va'>sex</span><span class='op'>)</span>,
+                      n_sgnd <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>survived</span> <span class='op'>==</span> <span class='st'>"No"</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>*</span><span class='va'>n</span>, <span class='va'>n</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>class</span>, <span class='va'>new_sex</span>, <span class='va'>survived</span>, <span class='va'>n_sgnd</span><span class='op'>)</span>
 
-# Passenger (non-crew) level aggregation
-t2 &lt;- t1 %&gt;%
-        dplyr::filter(class != &quot;Crew&quot;) %&gt;%
-        dplyr::mutate(class = &quot;Pass.&quot;) %&gt;%
-        dplyr::group_by(class, new_sex, survived) %&gt;%
-        dplyr::summarize(n_sgnd = sum(n_sgnd))
+<span class='co'># Passenger (non-crew) level aggregation</span>
+<span class='va'>t2</span> <span class='op'>&lt;-</span> <span class='va'>t1</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>class</span> <span class='op'>!=</span> <span class='st'>"Crew"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"Pass."</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>class</span>, <span class='va'>new_sex</span>, <span class='va'>survived</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n_sgnd <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n_sgnd</span><span class='op'>)</span><span class='op'>)</span>
 
-# Crew (non-passenger) level aggregation
-t3 &lt;- t1 %&gt;%
-        dplyr::mutate(class = &quot;Pass.\nCrew&quot;) %&gt;%
-        dplyr::group_by(class, new_sex, survived) %&gt;%
-        dplyr::summarize(n_sgnd = sum(n_sgnd))
+<span class='co'># Crew (non-passenger) level aggregation</span>
+<span class='va'>t3</span> <span class='op'>&lt;-</span> <span class='va'>t1</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>class <span class='op'>=</span> <span class='st'>"Pass.\nCrew"</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>class</span>, <span class='va'>new_sex</span>, <span class='va'>survived</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+        <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>n_sgnd <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>n_sgnd</span><span class='op'>)</span><span class='op'>)</span>
 
-# Combined cleaned plotting dataset
-ttnc_cln &lt;- t1 %&gt;%
-              dplyr::bind_rows(t2) %&gt;%
-              dplyr::bind_rows(t3) %&gt;%
-              dplyr::mutate(.data = .,
-                            class = as.factor(class),
-                            new_sex = as.factor(new_sex),
-                            survived = as.factor(survived))
+<span class='co'># Combined cleaned plotting dataset</span>
+<span class='va'>ttnc_cln</span> <span class='op'>&lt;-</span> <span class='va'>t1</span> <span class='op'>%&gt;%</span>
+              <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>t2</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+              <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>t3</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+              <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>.data <span class='op'>=</span> <span class='va'>.</span>,
+                            class <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>class</span><span class='op'>)</span>,
+                            new_sex <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>new_sex</span><span class='op'>)</span>,
+                            survived <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>survived</span><span class='op'>)</span><span class='op'>)</span>
 
-# Display first 8 rows in a nice centered table
-ttnc_cln %&gt;%
-  dplyr::slice(.data = ., 1:8) %&gt;%
-  knitr::kable(x = ., align = &#39;c&#39;)</code></pre>
+<span class='co'># Display first 8 rows in a nice centered table</span>
+<span class='va'>ttnc_cln</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/slice.html'>slice</a></span><span class='op'>(</span>.data <span class='op'>=</span> <span class='va'>.</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>.</span>, align <span class='op'>=</span> <span class='st'>'c'</span><span class='op'>)</span>
+</code></pre>
+</div>
 <table>
 <thead>
 <tr class="header">
@@ -2566,40 +2651,42 @@ ttnc_cln %&gt;%
 </tbody>
 </table>
 </div>
-<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e. <span class="math inline">\(1^{st}\)</span> Class, <span class="math inline">\(2^{nd}\)</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
+<p>Looks nice. As you can see, the data cleaning was done in stages where 3 datasets <code>t1, t2, t3</code> were built up. Essentially by staring at the plot it is clear that plots are split by class i.e. <span class="math inline">\(1^{st}\)</span> Class, <span class="math inline">\(2^{nd}\)</span> Class etc. This is the cleaned <code>t1</code> data frame. However there are aggregate versions of these classes at combined <em>Passenger</em> level and <em>Passenger and Crew</em> level which are the <code>t2</code> and <code>t3</code> tibbles respectively. Finally we concatenate them together into <code>ttnc_cln</code> and ensure our categorical variables are cast as <code>factors</code>.</p>
 <p>Next step - plotting!</p>
 <h2 id="plotting-the-data">Plotting the Data</h2>
 <p>The main chart object is a barplot by sex and adult status and faceted by passenger class i.e. first class, second class etc. Great, let’s do it!</p>
 <div class="layout-chunk" data-layout="l-page">
-<pre class="r"><code>
-out_plot &lt;- ttnc_cln %&gt;%
-              ggplot2::ggplot(data = .,
-                              aes(x = new_sex, y = n_sgnd, fill = survived)) +
-              ggplot2::geom_bar(stat = &quot;identity&quot;) +
-              ggplot2::facet_wrap(~ class, ncol = 1,
-                                  strip.position = &quot;right&quot;,
-                                  scales = &quot;free_y&quot;) +
-              ggplot2::coord_flip() +
-              scale_fill_manual(values=c(&quot;#3C4144&quot;, &quot;#D2D3D1&quot;)) +
-              ggplot2::theme_bw() +
-              ggplot2::theme(panel.background = element_rect(fill = &quot;#969898&quot;),
-                             panel.grid.major = element_blank(),
-                             panel.grid.minor = element_blank(),
-                             axis.title.x = element_blank(),
-                             axis.title.y = element_blank(),
-                             strip.text.y = element_text(angle = 360),
-                             legend.position = &quot;none&quot;) +
-              scale_y_continuous(breaks=seq(-1500,600,150)) +
-              ggplot2::labs(title = &#39;The LOSS of the &quot;TITANIC&quot;&#39;,
-                            subtitle = glue::glue(&quot;The Results Analyzed and Shown&quot;,
-                                                  &#39;in a special &quot;Sphere&quot; Diagram&#39;,
-                                                  .sep = &quot; &quot;),
-                            caption = glue::glue(&quot;Note: The Black color indicates&quot;,
-                                                 &quot;Passengers and Crew NOT SAVED.&quot;,
-                                                 &quot;The White color indicates SAVED.&quot;,
-                                                  .sep = &quot; &quot;))
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>out_plot</span> <span class='op'>&lt;-</span> <span class='va'>ttnc_cln</span> <span class='op'>%&gt;%</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>.</span>,
+                              <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>new_sex</span>, y <span class='op'>=</span> <span class='va'>n_sgnd</span>, fill <span class='op'>=</span> <span class='va'>survived</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>stat <span class='op'>=</span> <span class='st'>"identity"</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>class</span>, ncol <span class='op'>=</span> <span class='fl'>1</span>,
+                                  strip.position <span class='op'>=</span> <span class='st'>"right"</span>,
+                                  scales <span class='op'>=</span> <span class='st'>"free_y"</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/coord_flip.html'>coord_flip</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>scale_fill_manual</span><span class='op'>(</span>values<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"#3C4144"</span>, <span class='st'>"#D2D3D1"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_bw</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>panel.background <span class='op'>=</span> <span class='fu'>element_rect</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"#969898"</span><span class='op'>)</span>,
+                             panel.grid.major <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+                             panel.grid.minor <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+                             axis.title.x <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+                             axis.title.y <span class='op'>=</span> <span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+                             strip.text.y <span class='op'>=</span> <span class='fu'>element_text</span><span class='op'>(</span>angle <span class='op'>=</span> <span class='fl'>360</span><span class='op'>)</span>,
+                             legend.position <span class='op'>=</span> <span class='st'>"none"</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>scale_y_continuous</span><span class='op'>(</span>breaks<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1500</span>,<span class='fl'>600</span>,<span class='fl'>150</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ggplot2</span><span class='fu'>::</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>'The LOSS of the "TITANIC"'</span>,
+                            subtitle <span class='op'>=</span> <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span><span class='st'>"The Results Analyzed and Shown"</span>,
+                                                  <span class='st'>'in a special "Sphere" Diagram'</span>,
+                                                  .sep <span class='op'>=</span> <span class='st'>" "</span><span class='op'>)</span>,
+                            caption <span class='op'>=</span> <span class='fu'>glue</span><span class='fu'>::</span><span class='fu'><a href='https://glue.tidyverse.org/reference/glue.html'>glue</a></span><span class='op'>(</span><span class='st'>"Note: The Black color indicates"</span>,
+                                                 <span class='st'>"Passengers and Crew NOT SAVED."</span>,
+                                                 <span class='st'>"The White color indicates SAVED."</span>,
+                                                  .sep <span class='op'>=</span> <span class='st'>" "</span><span class='op'>)</span><span class='op'>)</span>
 
-out_plot</code></pre>
+<span class='va'>out_plot</span>
+</code></pre>
+</div>
 <p><img src="shrotriya2019reprtitanic_files/figure-html5/setup_ttnic_01_02-1.png" width="624" /></p>
 </div>
 <h2 id="conclusion">Conclusion</h2>
@@ -2609,11 +2696,13 @@ out_plot</code></pre>
 <li>I don’t quite like that the non-survivors here are shown on a negative scale, but this was the quick hack I could perform to get bars flipped for non-survivors vs. survivors</li>
 <li><strong>Summary:</strong> Overall this was a really fun challenge and I learned a lot about old-school data visualization using the glorius modern <code>tidyverse</code> ecosystem we have at our fingertips. Will do a similar reproducibility challenge again for sure ✌️. Have fun playing around with the above and please post in the comments any questions/feedback you may have 👍.</li>
 </ul>
-<h2 id="acknowledgments" class="appendix">Acknowledgments</h2>
+<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
 <p>I’d like to thank Salil Shrotriya for creating the preview image for this post. The hex sticker <code>png</code> files were sourced from <a href="https://github.com/rstudio/hex-stickers">here</a></p>
-<div id="refs" class="references">
-<div id="ref-friendly2019titanicviz">
-<p>Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. “Visualising the Titanic Disaster.” <em>Significance</em> 16 (1): 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2019.01229.x">https://doi.org/10.1111/j.1740-9713.2019.01229.x</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-friendly2019titanicviz" class="csl-entry" role="doc-biblioentry">
+Friendly, Michael, Jürgen Symanzik, and Ortac Onder. 2019. <span>“Visualising the Titanic Disaster.”</span> <em>Significance</em> 16 (1): 14–19. <a href="https://doi.org/10.1111/j.1740-9713.2019.01229.x">https://doi.org/10.1111/j.1740-9713.2019.01229.x</a>.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
