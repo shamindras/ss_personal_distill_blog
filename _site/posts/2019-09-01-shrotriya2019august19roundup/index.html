@@ -18,6 +18,73 @@
  <!--radix_placeholder_import_source-->
  <!--/radix_placeholder_import_source-->
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
   <!--radix_placeholder_meta_tags-->
 <title>Shamindra Shrotriya: Shamindra's August 2019 Roundup</title>
 
@@ -63,7 +130,7 @@
   
   <meta name="citation_reference" content="citation_title=Concrete mathematics: A foundation for computer science;citation_publication_date=1994;citation_publisher=Addison-Wesley Publishing Company;citation_author=Ronald L Graham;citation_author=Donald E Knuth;citation_author=Oren Patashnik"/>
   <meta name="citation_reference" content="citation_title=Prime suspects : The anatomy of integers and permutations;citation_publication_date=2019;citation_publisher=Princeton University Press;citation_author=Andrew Granville;citation_author=Jennifer Granville;citation_author=Robert J. Lewis"/>
-  <meta name="citation_reference" content="citation_title=Logicomix: An epic search for truth;citation_publication_date=2009;citation_publisher=Bloomsbury USA;citation_author=A. Doxiadis;citation_author=C.H. Papadimitriou;citation_author=A. Papadatos;citation_author=A. Di Donna"/>
+  <meta name="citation_reference" content="citation_title=Logicomix: An epic search for truth;citation_publication_date=2009;citation_publisher=Bloomsbury USA;citation_author=A. Doxiadis;citation_author=C. H. Papadimitriou;citation_author=A. Papadatos;citation_author=A. Di Donna"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -72,7 +139,7 @@
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/preview-august-2019-01.png","images/prime-suspects-book.png"]}
+  {"type":"character","attributes":{},"value":["images/preview-august-2019-01.png","images/prime-suspects-book.png","shrotriya2019august19roundup_files/bowser-1.9.3/bowser.min.js","shrotriya2019august19roundup_files/distill-2.2.21/template.v2.js","shrotriya2019august19roundup_files/jquery-1.11.3/jquery.min.js","shrotriya2019august19roundup_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2331,11 +2398,46 @@ d-appendix d-footnote-list a.footnote-backlink {
   color: var(--hover-color, white);
 }</style>
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!/posts/.test(location.pathname)) {
+        return;
+      }
+
+      var script = document.createElement("script");
+      script.src = "https://utteranc.es/client.js";
+      script.setAttribute("repo", "shamindras/ss_personal_distill_blog");
+      script.setAttribute("issue-term", "title");
+      script.setAttribute("crossorigin", "anonymous");
+      script.setAttribute("label", "comments");
+      script.setAttribute("theme", "github-light");
+
+      /* wait for article to load, append script to article element */
+      var observer = new MutationObserver(function (mutations, observer) {
+        var article = document.querySelector("d-article");
+        if (article) {
+          observer.disconnect();
+          /* HACK: article scroll */
+          article.setAttribute("style", "overflow-y: hidden");
+          article.appendChild(script);
+        }
+      });
+
+      observer.observe(document.body, { childList: true });
+    });
+</script>
+
 <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=UA-145015693-1"></script>
 <script type="text/javascript" cookie-consent="tracking">
 window.dataLayer = window.dataLayer || [];
@@ -2383,7 +2485,15 @@ gtag('config', 'UA-145015693-1');
 
 <div class="d-title">
 <h1>Shamindra’s August 2019 Roundup</h1>
-<p>A quick roundup of any interesting August 2019 activities</p>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../index.html#category:personal" class="dt-tag">personal</a>
+  <a href="../../index.html#category:roundup" class="dt-tag">roundup</a>
+  <a href="../../index.html#category:rstats" class="dt-tag">rstats</a>
+  <a href="../../index.html#category:math" class="dt-tag">math</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>A quick roundup of any interesting August 2019 activities</p></p>
 </div>
 
 <div class="d-byline">
@@ -2393,8 +2503,9 @@ gtag('config', 'UA-145015693-1');
 </div>
 
 <div class="d-article">
-<h3 class="d-toc-header">Table of Contents</h3>
-<nav class="d-toc" id="TOC">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#interesting-articles">Interesting Articles</a></li>
@@ -2404,18 +2515,18 @@ gtag('config', 'UA-145015693-1');
 <li><a href="#concluding-thoughts">Concluding Thoughts</a></li>
 </ul>
 </nav>
-<hr class="d-toc-separator"/>
+</div>
 <h2 id="introduction">Introduction</h2>
 <p>Welcome to the August 2019 roundup! Similar to <a href="https://www.shamindras.com/posts/2019-07-30-shrotriya2019july19roundup/" target="_blank">last time</a> I’m going to experiment with, namely documenting anything interesting I come across (articles, lectures, books, papers etc.) and any activities I get up to. This is more for my personal benefit but may also help others.</p>
 <h2 id="interesting-articles">Interesting Articles</h2>
 <ul>
 <li>Came across this <a href="http://mirrors.concertpass.com/tex-archive/biblio/bibtex/base/xampl.bib" target="_blank">exhaustive <code>BibTeX</code> example file</a> which will be a really handy reference going forward for <span class="math inline">\(\LaTeX\)</span> documents</li>
-<li>The document is written by the Oren Patashnik, the co-creator of BibTeX (😮) and the co-author of the great book <span class="citation" data-cites="grahamknuthpatashnik1994concrete_book">(Graham, Knuth, and Patashnik <a href="#ref-grahamknuthpatashnik1994concrete_book">1994</a>)</span></li>
+<li>The document is written by the Oren Patashnik, the co-creator of BibTeX (😮) and the co-author of the great book <span class="citation" data-cites="grahamknuthpatashnik1994concrete_book">(<a href="#ref-grahamknuthpatashnik1994concrete_book" role="doc-biblioref">Graham, Knuth, and Patashnik 1994</a>)</span></li>
 </ul>
 <h2 id="interesting-books">Interesting Books</h2>
 <h3 id="fiction">Fiction</h3>
 <ul>
-<li>Started reading this fantastic book <span class="citation" data-cites="granville2019primesuspects_book">(Granville, Granville, and Lewis <a href="#ref-granville2019primesuspects_book">2019</a>)</span> called the <em>Prime Suspects</em> by <strong>Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)</strong>. Here is a <a href="https://www.youtube.com/watch?v=82c2HDp-ntg&amp;feature=youtu.be" target="_blank">youtube trailer for the book</a> to get you excited!</li>
+<li>Started reading this fantastic book <span class="citation" data-cites="granville2019primesuspects_book">(<a href="#ref-granville2019primesuspects_book" role="doc-biblioref">Granville, Granville, and Lewis 2019</a>)</span> called the <em>Prime Suspects</em> by <strong>Andrew Granville, Jennifer Granville, and Robert J. Lewis (illustrator)</strong>. Here is a <a href="https://www.youtube.com/watch?v=82c2HDp-ntg&amp;feature=youtu.be" target="_blank">youtube trailer for the book</a> to get you excited!</li>
 </ul>
 <aside>
 <div class="layout-chunk" data-layout="l-body">
@@ -2428,13 +2539,15 @@ Figure 1: Prime Suspects cover
 </div>
 </aside>
 <details>
-<p><summary>Key Takeaways</summary></p>
+<summary>
+Key Takeaways
+</summary>
 <ul>
 <li>This is essentially an introduction to analytic number theory disguised as a fast-moving graphic novel murder mystery</li>
 <li>For any mathematics fans (who isn’t though?) there are lots of funny easter eggs to be found in the frame backgrounds</li>
 <li>This a very unique exposition on number theory, a subject in which I have negligible knowledge (like most subjects)</li>
 <li>The pedagogy is gentle and yet exciting emphasizing not just mathematics but the importance of communication of mathematical ideas to the wider public i.e. a meta novel if you like</li>
-<li>I hope to see more books in this mathematical graphic novel genre. The last one I read (and know of) is Logicomix <span class="citation" data-cites="doxiadis2009logicomix_book">(Doxiadis et al. <a href="#ref-doxiadis2009logicomix_book">2009</a>)</span> which I highly recommend as well for anyone wishing to venture into the mysteries of infinity!</li>
+<li>I hope to see more books in this mathematical graphic novel genre. The last one I read (and know of) is Logicomix <span class="citation" data-cites="doxiadis2009logicomix_book">(<a href="#ref-doxiadis2009logicomix_book" role="doc-biblioref">Doxiadis et al. 2009</a>)</span> which I highly recommend as well for anyone wishing to venture into the mysteries of infinity!</li>
 </ul>
 </details>
 <h2 id="interesting-interviews">Interesting Interviews</h2>
@@ -2445,7 +2558,9 @@ Figure 1: Prime Suspects cover
 <strong>Note:</strong> This interview was co-conducted Ms. Narkis Alon, the daughter of Prof. Alon which led to a really personal dynamic!
 </aside>
 <details>
-<p><summary>Key Takeaways</summary></p>
+<summary>
+Key Takeaways
+</summary>
 <ul>
 <li>This 20min interview is really part of a podcast on careers, and the focus here being the lessons/insights learned from a very successful career in theoretical mathematical research from Prof. Alon</li>
 <li>Prof. Alon appears to be extremely organized in all aspects of life, including packing for trips. Was asked specifically not to prepare for this interview 😄</li>
@@ -2462,7 +2577,7 @@ Figure 1: Prime Suspects cover
 <p>Many procedural things - teaching, meeting graduate students, reading mathematical papers.</p>
 </blockquote>
 <blockquote>
-<p>Part of the time I’m just thinking! Sometimes with other people over chalkboard/whiteboard, looking at a piece of paper on the table i.e. trying to do some computations that are relevant, thinking of relationships to the problem. Finding problems that are similar enough.</p>
+<p>Part of the time I’m just thinking! Sometimes with other people over chalkboard/whiteboard, looking at a piece of paper on the table i.e. trying to do some computations that are relevant, thinking of relationships to the problem. Finding problems that are similar enough.</p>
 </blockquote>
 <ul>
 <li>Question: It is so difficult to grasp the idea of just thinking! Most of the careers are based on the idea of responding to things. Often when visiting you in Princeton it seems you are in a room staring in the air, in another room people another mathematician is staring in the air, it seems like you are not doing anything!</li>
@@ -2516,25 +2631,21 @@ Figure 1: Prime Suspects cover
 <h2 id="concluding-thoughts">Concluding Thoughts</h2>
 <p>Overall August 2019 was the end of summer and the start of a new year of graduate school - yay!</p>
 <p>Please feel free to leave a comment if you found any useful articles, lectures, books, papers etc which I may find interesting.</p>
-<div id="refs" class="references">
-<div id="ref-doxiadis2009logicomix_book">
-<p>Doxiadis, A., C.H. Papadimitriou, A. Papadatos, and A. Di Donna. 2009. <em>Logicomix: An Epic Search for Truth</em>. Bloomsbury USA. <a href="https://books.google.com/books?id=sBpkPgAACAAJ">https://books.google.com/books?id=sBpkPgAACAAJ</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-doxiadis2009logicomix_book" class="csl-entry" role="doc-biblioentry">
+Doxiadis, A., C. H. Papadimitriou, A. Papadatos, and A. Di Donna. 2009. <em>Logicomix: An Epic Search for Truth</em>. Bloomsbury USA. <a href="https://books.google.com/books?id=sBpkPgAACAAJ">https://books.google.com/books?id=sBpkPgAACAAJ</a>.
 </div>
-<div id="ref-grahamknuthpatashnik1994concrete_book">
-<p>Graham, Ronald L, Donald E Knuth, and Oren Patashnik. 1994. <em>Concrete Mathematics: A Foundation for Computer Science</em>. 2nd ed. Addison-Wesley Publishing Company.</p>
+<div id="ref-grahamknuthpatashnik1994concrete_book" class="csl-entry" role="doc-biblioentry">
+Graham, Ronald L, Donald E Knuth, and Oren Patashnik. 1994. <em>Concrete Mathematics: A Foundation for Computer Science</em>. 2nd ed. Addison-Wesley Publishing Company.
 </div>
-<div id="ref-granville2019primesuspects_book">
-<p>Granville, Andrew, Jennifer Granville, and Robert J. Lewis. 2019. <em>Prime Suspects : The Anatomy of Integers and Permutations</em>. Princeton University Press.</p>
+<div id="ref-granville2019primesuspects_book" class="csl-entry" role="doc-biblioentry">
+Granville, Andrew, Jennifer Granville, and Robert J. Lewis. 2019. <em>Prime Suspects : The Anatomy of Integers and Permutations</em>. Princeton University Press.
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
-    <span class="disqus-comments">
-      <i class="fas fa-comments"></i>
-      &nbsp;
-      <span class="disqus-comment-count" data-disqus-identifier="posts/2019-09-01-shrotriya2019august19roundup/">Comment on this article</span>
-    </span>
     <span class="article-sharing">
       Share: &nbsp;
       <a href="https://twitter.com/share?text=Shamindra%27s%20August%202019%20Roundup&amp;url=https%3A%2F%2Fwww.shamindras.com%2Fposts%2F2019-09-01-shrotriya2019august19roundup%2F">
@@ -2551,20 +2662,6 @@ Figure 1: Prime Suspects cover
       </a>
     </span>
   </p>
-  <script id="dsq-count-scr" src="https://shamindras-distill.disqus.com/count.js" async></script>
-  <div id="disqus_thread" class="hidden"></div>
-  <script type="text/javascript" cookie-consent="functionality">
-var disqus_config = function () {
-  this.page.url = 'https://www.shamindras.com/posts/2019-09-01-shrotriya2019august19roundup/';
-  this.page.identifier = 'posts/2019-09-01-shrotriya2019august19roundup/';
-};
-(function() {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://shamindras-distill.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-</script>
 </div>
 <!--/radix_placeholder_article_footer-->
 </div>
