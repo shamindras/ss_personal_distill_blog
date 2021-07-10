@@ -3,7 +3,7 @@
   <channel>
     <title>Shamindra Shrotriya</title>
     <link>https://www.shamindras.com/</link>
-    <atom:link href="https://www.shamindras.com/index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://www.shamindras.com/blog.xml" rel="self" type="application/rss+xml"/>
     <description>Shamindra Shrotriya's personal blog/ site. Some fun posts
 on math, statistics and the PhD student life.
 </description>

@@ -1,5 +1,24 @@
 ---
-title: "Blog Posts"
-site: distill::distill_website
-listing: posts
+title: "Welcome!"
+image: "data/images/about-profile-circular-scaled-75.png"
+links:
+  - label: '<i class="fab fa-github fa-1x"></i>'
+    url: "https://github.com/shamindras"
+  - label: '<i class="fab fa-twitter fa-1x"></i>'
+    url: "https://twitter.com/shamindraas"
+  - label: '<i class="fab fa-linkedin-in fa-1x"></i>'
+    url: "https://www.linkedin.com/in/shamindras/"
+output:
+  postcards::jolla
+site: distill::distill_website  
 ---
+
+Hi there! I’m **Shamindra Shrotriya**, a graduate student in the 
+**Department of Statistics and Data Science** at the wonderful 
+**Carnegie Mellon University**. 
+
+This is my personal website which contains info about my research and where I 
+blog about various topics of interest in statistics.
+
+Please browse around, leave a comment, and join me so that we can
+explore together.

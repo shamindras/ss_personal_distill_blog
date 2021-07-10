@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
+  <link rel="alternate" type="application/rss+xml" href="https://www.shamindras.com/blog.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -86,24 +87,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Shamindra Shrotriya: About Me</title>
+  <title>Shamindra Shrotriya: Blog Posts</title>
 
-  <meta property="description" itemprop="description" content="A brief bio and welcome to my site"/>
 
   <link rel="icon" type="image/png" href="data/images/about-profile-circular-scaled-100.png"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Shamindra Shrotriya: About Me"/>
+  <meta property="og:title" content="Shamindra Shrotriya: Blog Posts"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="A brief bio and welcome to my site"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Shamindra Shrotriya"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Shamindra Shrotriya: About Me"/>
-  <meta property="twitter:description" content="A brief bio and welcome to my site"/>
+  <meta property="twitter:title" content="Shamindra Shrotriya: Blog Posts"/>
   <meta property="twitter:site" content="@shamindraas"/>
   <meta property="twitter:creator" content="@shamindraas"/>
 
@@ -111,7 +109,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Me"]},{"type":"character","attributes":{},"value":["A brief bio and welcome to my site"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog Posts"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2422,12 +2420,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body>
+<body class="layout-listing">
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Me","description":"A brief bio and welcome to my site","authors":[]}
+{"title":"Blog Posts","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2457,36 +2455,410 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
+<!--radix_placeholder_article_listing-->
+
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).load(function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash && window.location.hash.startsWith("#category:")) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace(/^#category:/, "");
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+
+      // update the list_caption
+      var list_caption = $('.posts-list-caption');
+      var caption = (page_category || '').toLowerCase() === "articles"
+        ? list_caption.attr('data-caption')
+        : ('Category: ' + page_category.replace(/_/g," "));
+      list_caption.text(caption);
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+      // reset list caption
+      var list_caption = $('.posts-list-caption');
+      list_caption.text(list_caption.attr('data-caption'));
+
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // click handling for tags
+  $('.dt-tag').click(function(ev) {
+    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
+    return false;
+  })
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
+<div class="posts-list">
+<h1 class="posts-list-caption" data-caption="Blog Posts">Blog Posts</h1>
+<a href="posts/2020-01-27-shrotriya2020january20roundup/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal","roundup","rstats","math"]}</script>
+<div class="metadata">
+<div class="publishedDate">Jan. 27, 2020</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2020-01-27-shrotriya2020january20roundup/images/preview-january-2020-01.png"/>
+</div>
+<div class="description">
+<h2>Shamindra's January 2020 Roundup</h2>
+<div class="dt-tags">
+<div class="dt-tag">personal</div>
+<div class="dt-tag">roundup</div>
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">math</div>
+</div>
+<p>A quick roundup of any interesting January 2020 activities</p>
+</div>
+</a>
+<a href="posts/2019-09-19-shrotriya2019september19roundup/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal","roundup","rstats","math"]}</script>
+<div class="metadata">
+<div class="publishedDate">Sept. 30, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2019-09-19-shrotriya2019september19roundup/images/preview-september-2019-01.png"/>
+</div>
+<div class="description">
+<h2>Shamindra's September 2019 Roundup</h2>
+<div class="dt-tags">
+<div class="dt-tag">personal</div>
+<div class="dt-tag">roundup</div>
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">math</div>
+</div>
+<p>A quick roundup of any interesting September 2019 activities</p>
+</div>
+</a>
+<a href="posts/2019-09-01-shrotriya2019august19roundup/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal","roundup","rstats","math"]}</script>
+<div class="metadata">
+<div class="publishedDate">Aug. 31, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2019-09-01-shrotriya2019august19roundup/images/preview-august-2019-01.png"/>
+</div>
+<div class="description">
+<h2>Shamindra's August 2019 Roundup</h2>
+<div class="dt-tags">
+<div class="dt-tag">personal</div>
+<div class="dt-tag">roundup</div>
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">math</div>
+</div>
+<p>A quick roundup of any interesting August 2019 activities</p>
+</div>
+</a>
+<a href="posts/2019-08-21-shrotriya2019tidyfunpt2/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["tidyverse","rstats"]}</script>
+<div class="metadata">
+<div class="publishedDate">Aug. 24, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2019-08-21-shrotriya2019tidyfunpt2/images/logo-01.jpg"/>
+</div>
+<div class="description">
+<h2>Tidyverse Fun - Part 2</h2>
+<div class="dt-tags">
+<div class="dt-tag">tidyverse</div>
+<div class="dt-tag">rstats</div>
+</div>
+<p>Second part in a series of doing useful tasks with
+the `Tidyverse`. This time auto-generating sequential
+LaTeX `newcommand` macros</p>
+</div>
+</a>
+<a href="posts/2019-07-30-shrotriya2019july19roundup/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal","roundup","rstats","math"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 31, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img src="posts/2019-07-30-shrotriya2019july19roundup/images/preview-july-2019-02.png"/>
+</div>
+<div class="description">
+<h2>Shamindra's July 2019 Roundup</h2>
+<div class="dt-tags">
+<div class="dt-tag">personal</div>
+<div class="dt-tag">roundup</div>
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">math</div>
+</div>
+<p>A quick roundup of any interesting July 2019 activities</p>
+</div>
+</a>
+<a href="posts/2019-07-31-shrotriya2019distillpt2/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["distill"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 31, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-31-shrotriya2019distillpt2/images/step_01_disqus_02.png"/>
+</div>
+<div class="description">
+<h2>Upgrading Distill Blog Settings</h2>
+<div class="dt-tags">
+<div class="dt-tag">distill</div>
+</div>
+<p>The second part of a series on how I upgraded this `Distill` themed blog</p>
+</div>
+</a>
+<a href="posts/2019-07-21-shrotriya2019reprtitanic/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["tidyverse","rstats","reproducibility"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 21, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-21-shrotriya2019reprtitanic/images/logo-01.jpg"/>
+</div>
+<div class="description">
+<h2>Reproducibility Challenge: Titanic Survivors Plot</h2>
+<div class="dt-tags">
+<div class="dt-tag">tidyverse</div>
+<div class="dt-tag">rstats</div>
+<div class="dt-tag">reproducibility</div>
+</div>
+<p>Using the `Tidyverse` to reproduce a plot on the
+survivorship of the Titanic</p>
+</div>
+</a>
+<a href="posts/2019-07-15-shrotriya2019tidyfunpt1/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["tidyverse","rstats"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 15, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-15-shrotriya2019tidyfunpt1/images/logo-01.jpg"/>
+</div>
+<div class="description">
+<h2>Tidyverse Fun - Part 1</h2>
+<div class="dt-tags">
+<div class="dt-tag">tidyverse</div>
+<div class="dt-tag">rstats</div>
+</div>
+<p>First part in a series of doing useful tasks with
+the `Tidyverse`. This time generating Oxford Comma
+triples and generating sequentially numbered BibTeX
+entries</p>
+</div>
+</a>
+<a href="posts/2019-07-11-shrotriya2019distillpt1/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["distill"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 11, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-11-shrotriya2019distillpt1/images/08_06_netlify_adding_custom_domain.png"/>
+</div>
+<div class="description">
+<h2>Setting up a Distill Blog with Netlify</h2>
+<div class="dt-tags">
+<div class="dt-tag">distill</div>
+</div>
+<p>First part of a series on how I setup this `Distill` themed blog with `Netlify`</p>
+</div>
+</a>
+<a href="posts/2019-07-10-shrotriya2019welcome/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["personal"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 10, 2019</div>
+<div class="dt-authors">
+<div class="dt-author">Shamindra Shrotriya</div>
+</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2019-07-10-shrotriya2019welcome/images/about-profile-circular-scaled-hex.jpg"/>
+</div>
+<div class="description">
+<h2>Welcome to Shamindra’s Site</h2>
+<div class="dt-tags">
+<div class="dt-tag">personal</div>
+</div>
+<p>Detailing interesting things in the life of a PhD statistics
+student at CMU</p>
+</div>
+</a>
+</div>
+<div class="posts-sidebar">
+<div class="sidebar-section categories">
+<h3>Categories</h3>
+<ul>
+<li>
+<a href="#category:articles">articles</a>
+<span class="category-count">(10)</span>
+</li>
+<li>
+<a href="#category:distill">distill</a>
+<span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:math">math</a>
+<span class="category-count">(4)</span>
+</li>
+<li>
+<a href="#category:personal">personal</a>
+<span class="category-count">(5)</span>
+</li>
+<li>
+<a href="#category:reproducibility">reproducibility</a>
+<span class="category-count">(1)</span>
+</li>
+<li>
+<a href="#category:roundup">roundup</a>
+<span class="category-count">(4)</span>
+</li>
+<li>
+<a href="#category:rstats">rstats</a>
+<span class="category-count">(7)</span>
+</li>
+<li>
+<a href="#category:tidyverse">tidyverse</a>
+<span class="category-count">(3)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="posts-more">
+<a href="#">More articles &raquo;</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>About Me</h1>
+<h1>Blog Posts</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>A brief bio and welcome to my site</p></p>
+
 </div>
 
 
 <div class="d-article">
-<center>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="data/images/about-profile-circular-scaled-75.png" width="280" /></p>
-</div>
-</center>
-<p>Hi there! I’m <strong>Shamindra Shrotriya</strong>, a graduate student in the <a href="http://www.stat.cmu.edu/" target="_blank">Department of Statistics and Data Science</a> at the wonderful <a href="https://www.cmu.edu/" target="_blank">Carnegie Mellon University</a>. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.</p>
-<p>I’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (<strong>statistical theory/methodology</strong>, <strong>research</strong>, <strong>rstats</strong>, <strong>python</strong> …) as well as anything else I am generally into e.g. <strong>books</strong>, <strong>sports</strong> etc.</p>
-<p>Feel free to pull up a chair, leave a comment, and join me so that we can explore together.</p>
-<p>My CV can be found <a href="data/pdfs/CV.pdf" target="_blank">here</a>.</p>
-<!-- Add icon library -->
-<p><link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></p>
-<!-- Add font awesome icons -->
-<p style="text-align: center;">
-<a href="https://twitter.com/shamindraas" target="_blank" class="fa fa-twitter" style="font-size:36px;"></a> <a href="https://www.linkedin.com/in/shamindras/" target="_blank" class="fa fa-linkedin-square" style="font-size:46px;"></a> <a href="https://github.com/shamindras" target="_blank" class="fa fa-github"  style="font-size:36px;"></a>
-</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
-<p>I’d like to thank Salil Shrotriya for taking the profile pic.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
