@@ -6,14 +6,21 @@
       "description": "A brief bio and welcome to my site",
       "author": [],
       "contents": "\n\n\n\n\n\nHi there! I’m Shamindra Shrotriya, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University. I’ve decided to start blogging to document my learning and development in statistics as a graduate student.\nI’d like it to be a fun place to document interesting things I like to read about in the statistics and machine learning space (statistical theory/methodology, research, rstats, python …) as well as anything else I am generally into e.g. books, sports etc.\nFeel free to pull up a chair, leave a comment, and join me so that we can explore together.\nMy CV can be found here.\n\n\n\n\n  \n\n\nAcknowledgments\nI’d like to thank Salil Shrotriya for taking the profile pic.\n\n\n\n",
-      "last_modified": "2021-07-08T20:37:59-04:00"
+      "last_modified": "2021-07-09T21:49:07-04:00"
     },
     {
-      "path": "index.html",
+      "path": "blog.html",
       "title": "Blog Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-07-08T20:48:12-04:00"
+      "last_modified": "2021-07-09T21:49:09-04:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Welcome!",
+      "author": [],
+      "contents": "\n\n          \n          \n          \n          \n          Shamindra Shrotriya\n          \n          \n          \n          \n          \n          Blog\n          CV\n          \n          \n          \n          ☰\n          \n          \n      \n        \n          \n            Welcome!\n          \n          \n            \n              Hi there! I’m Shamindra Shrotriya, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University.\n              This is my personal website which contains info about my research and where I blog about various topics of interest in statistics.\n              Please browse around, leave a comment, and join me so that we can explore together.\n            \n            \n              Hi there! I’m Shamindra Shrotriya, a graduate student in the Department of Statistics and Data Science at the wonderful Carnegie Mellon University.\n              This is my personal website which contains info about my research and where I blog about various topics of interest in statistics.\n              Please browse around, leave a comment, and join me so that we can explore together.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-07-09T21:49:47-04:00"
     }
   ],
   "collections": ["posts/posts.json"]

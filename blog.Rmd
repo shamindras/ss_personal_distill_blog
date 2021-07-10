@@ -1,0 +1,4 @@
+---
+title: "Blog Posts"  # Change to preferred Blog Post page title
+listing: posts # List all blog posts
+---
